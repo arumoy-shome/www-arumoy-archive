@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-01-30 Sat 15:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Curriculum Vitae</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Arumoy Shome" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Curriculum Vitae</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0ad8bf1">Education</a>
+<ul>
+<li><a href="#orgfd5e471">[2018-2020] Msc. Computer Science, Big Data Engineering</a></li>
+<li><a href="#org4d0967b">[2012-2018] Bsc. Honours System Design Engineering, Entrepreneurship Option</a></li>
+</ul>
+</li>
+<li><a href="#orgfa49223">Publications</a>
+<ul>
+<li><a href="#org8e1bfd9">[2019] ACE: Art, Color and Emotions</a></li>
+</ul>
+</li>
+<li><a href="#org49f75a3">Public Projects</a>
+<ul>
+<li><a href="#org6775bfc">[2018] 3D Kadaster</a></li>
+<li><a href="#orgcaf8c73">[2018] Knowledge Acquisition from CommonCrawl</a></li>
+<li><a href="#org09c3302">[2018] Elevate</a></li>
+</ul>
+</li>
+<li><a href="#orgda7baf8">Work Experience</a>
+<ul>
+<li><a href="#orgbcd8eb2">[Mar&#x2013;Sep 2020] Research Intern</a></li>
+<li><a href="#orga88eb19">[Apr&#x2013;Jun 2020] Graduate Teaching Assistant</a></li>
+<li><a href="#orgf3271ab">[2015&#x2013;2016] Web Developer Intern</a></li>
+<li><a href="#orgebb3f2d">[2014&#x2013;2015] Intern &amp; Freelance</a></li>
+</ul>
+</li>
+<li><a href="#orgc718504">Skills</a>
+<ul>
+<li><a href="#org3d3d8d0">Technical</a></li>
+<li><a href="#org67a3f03">Communication</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+[<a href="mailto:contact@arumoy.me">email</a>][<a href="https://github.com/arumoy-shome">Github</a>][<a href="https://www.linkedin.com/in/arumoyshome/">LinkedIn</a>]
+</p>
+
+<div id="outline-container-org0ad8bf1" class="outline-2">
+<h2 id="org0ad8bf1">Education</h2>
+<div class="outline-text-2" id="text-org0ad8bf1">
+</div>
+<div id="outline-container-orgfd5e471" class="outline-3">
+<h3 id="orgfd5e471">[2018-2020] Msc. Computer Science, Big Data Engineering</h3>
+<div class="outline-text-3" id="text-orgfd5e471">
+<p>
+<i>Vrije Universiteit Amsterdam &amp; Universiteit van Amsterdam,
+Amsterdam, The Netherlands</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4d0967b" class="outline-3">
+<h3 id="org4d0967b">[2012-2018] Bsc. Honours System Design Engineering, Entrepreneurship Option</h3>
+<div class="outline-text-3" id="text-org4d0967b">
+<p>
+<i>University of Waterloo, Waterloo, Canada</i>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa49223" class="outline-2">
+<h2 id="orgfa49223">Publications</h2>
+<div class="outline-text-2" id="text-orgfa49223">
+</div>
+<div id="outline-container-org8e1bfd9" class="outline-3">
+<h3 id="org8e1bfd9">[2019] ACE: Art, Color and Emotions</h3>
+<div class="outline-text-3" id="text-org8e1bfd9">
+<p>
+<i>ACM International Conference</i>
+</p>
+
+<ul class="org-ul">
+<li>Created a data driven platform for exploring visual sentiment and
+emotion in artistic paintings over time.</li>
+<li>Trained a custom visual artistic sentiment extraction model using
+the OmniArt dataset.</li>
+<li>The platform is web based and built using D3.js and Javascript.</li>
+<li>The paper can be accessed via the <a href="https://dl.acm.org/doi/10.1145/3343031.3350588">ACM Digital Library</a> and a short
+demo of the application can be found on <a href="https://youtu.be/B1ZM6EQgEvU">Youtube</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org49f75a3" class="outline-2">
+<h2 id="org49f75a3">Public Projects</h2>
+<div class="outline-text-2" id="text-org49f75a3">
+</div>
+<div id="outline-container-org6775bfc" class="outline-3">
+<h3 id="org6775bfc">[2018] 3D Kadaster</h3>
+<div class="outline-text-3" id="text-org6775bfc">
+<ul class="org-ul">
+<li>Developed a 3D model of all buildings in The Netherlands using
+AHN2 point cloud dataset and BAG building polygons dataset.</li>
+<li>Processed data using Apache Spark, ran algorithms on SurfSara's
+Hathi cluster and created visualisations using Three.js.</li>
+<li>Detailed information on the research question, datasets and
+methodology can be found in the <a href="assets/pdf/kadaster-optimized.pdf">paper</a> and the visualisation can
+be viewed on the <a href="https://arumoy.me/3d-kadaster/">project website</a>.</li>
+<li>The project received recognition and was added to the course
+instructor's <a href="https://event.cwi.nl/lsde/2018/showcase%5C_c1.shtml">Hall of Fame</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcaf8c73" class="outline-3">
+<h3 id="orgcaf8c73">[2018] Knowledge Acquisition from CommonCrawl</h3>
+<div class="outline-text-3" id="text-orgcaf8c73">
+<ul class="org-ul">
+<li>Applied a complete knowledge acquisition pipeline to WARC
+datasets using natural language processing, part of speech
+tagging, named entity recognition and entity linking.</li>
+<li>The algorithms were run in parallel using Apache Spark on the
+<a href="https://www.cs.vu.nl/das4/">DAS4 cluster</a>.</li>
+<li>Proposed a novel idea to improve entity retrieval using machine
+learning, details for which can be found in the <a href="assets/pdf/wdp.pdf">paper</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org09c3302" class="outline-3">
+<h3 id="org09c3302">[2018] Elevate</h3>
+<div class="outline-text-3" id="text-org09c3302">
+<ul class="org-ul">
+<li>Collaborated with the Waterloo Regional Down Syndrome Society,
+Canada and Fundacion Paraiso Down, El Salvador.</li>
+<li>Developed an improved and cheaper alternative to the
+state-of-the-art cognitive assessment tool for individuals with
+Down Syndrome using a Systems approach.</li>
+<li>Developed a business plan and presented the product at several
+startup incubators and pitch competitions to procure funding.</li>
+<li>An overview of user research, design methodology and engineering
+solution can be found on the <a href="https://arumoy.me/elevate/">project website</a> with additional
+details in the <a href="assets/pdf/elevate.pdf">paper</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgda7baf8" class="outline-2">
+<h2 id="orgda7baf8">Work Experience</h2>
+<div class="outline-text-2" id="text-orgda7baf8">
+</div>
+<div id="outline-container-orgbcd8eb2" class="outline-3">
+<h3 id="orgbcd8eb2">[Mar&#x2013;Sep 2020] Research Intern</h3>
+<div class="outline-text-3" id="text-orgbcd8eb2">
+<p>
+<i>Netherlands eScience Center, Amsterdam, The Netherlands</i>
+</p>
+
+<ul class="org-ul">
+<li>Conducted interdisciplinary research in the field of Computer
+Science, Artificial Intelligence and Particle Physics.</li>
+<li>Worked in collaboration with researchers from 3 institutes namely
+Universiteit van Amsterdam, Netherlands eScience Center and Nikhef.</li>
+<li>Conducted signal processing using multi layer perceptrons to
+identify highly elusive neutrino particles.</li>
+<li>Implemented a novel data processing pipeline for the <a href="https://km3net.org">KM3NeT
+Neutrino Telescope</a> using state-of-the-art graph convolutional networks.</li>
+<li>The pipeline was implemented using Python and deep learning
+models were developed using PyTorch.</li>
+<li>Details on the research question, dataset and methodology can be
+found in the <a href="assets/pdf/thesis-optimized.pdf">paper</a>. The project is open sourced and available on
+<a href="https://github.com/arumoy-shome/km3net">Github.</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga88eb19" class="outline-3">
+<h3 id="orga88eb19">[Apr&#x2013;Jun 2020] Graduate Teaching Assistant</h3>
+<div class="outline-text-3" id="text-orga88eb19">
+<p>
+<i>Vrije Universiteit Amsterdam, Amsterdam, The Netherlands</i>
+</p>
+
+<ul class="org-ul">
+<li>Part-time teaching assistant to the <a href="https://studiegids.vu.nl/en/Master/2019-2020/computer-science/X%5C_400108">Data Mining Techniques</a>
+graduate course at Vrije Universiteit Amsterdam presented by <a href="https://www.cs.vu.nl/%5C~mhoogen/">Dr.
+Mark Hoogendorn</a>.</li>
+<li>Managed 17 student teams and helped them with practical
+assignments presented in Python.</li>
+<li>Conducted weekly online tutorial sessions with students and
+clarified doubts regarding course logistics, concepts and theory.</li>
+<li>Graded 70+ student assignments and provided constructive
+feedback. Managed students performed well in the course with an
+average grade of 8.7.</li>
+<li>Received highly positive remarks from student evaluation.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf3271ab" class="outline-3">
+<h3 id="orgf3271ab">[2015&#x2013;2016] Web Developer Intern</h3>
+<div class="outline-text-3" id="text-orgf3271ab">
+<p>
+<i>Shopify, Ottawa, Canada</i>
+</p>
+
+<ul class="org-ul">
+<li>Worked as part of a dynamic team of developer, designers and
+product managers to implement numerous features such as web
+components, animations and styling on a mature Ruby on Rails
+project using Ruby, Javascript, HTML &amp; SCSS.</li>
+<li>Practised object oriented design principles and test driven
+development to refactor code and improve test coverage.</li>
+<li>Used object relational mapping to lazy load data, reduce database
+calls and minimise server response time thus improving the
+application load time.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgebb3f2d" class="outline-3">
+<h3 id="orgebb3f2d">[2014&#x2013;2015] Intern &amp; Freelance</h3>
+<div class="outline-text-3" id="text-orgebb3f2d">
+<p>
+<i>Various Employees &amp; Clients, Various Locations, Canada</i>
+</p>
+
+<ul class="org-ul">
+<li>Worked at several large and small scale companies as part of
+University of Waterloo's Co-op program.</li>
+<li>Worked as a freelance Ruby on Rails developer and created web
+applications as per client specifications.</li>
+<li>Developed soft skills such as critical thinking, clear
+communication and conflict resolution which are vital in a
+professional environment.</li>
+<li>Successfully completed technical projects such as designing,
+creating, testing and maintaining web applications.</li>
+<li>Wrote shell scripts to automate testing frameworks.</li>
+<li>More information can be found on <a href="https://linkedin.com/in/arumoyshome">LinkedIn</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc718504" class="outline-2">
+<h2 id="orgc718504">Skills</h2>
+<div class="outline-text-2" id="text-orgc718504">
+</div>
+<div id="outline-container-org3d3d8d0" class="outline-3">
+<h3 id="org3d3d8d0">Technical</h3>
+<div class="outline-text-3" id="text-org3d3d8d0">
+<ul class="org-ul">
+<li>Proficient in <b>Python, Ruby, Javascript, Latex &amp; Shell
+Scripting</b>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org67a3f03" class="outline-3">
+<h3 id="org67a3f03">Communication</h3>
+<div class="outline-text-3" id="text-org67a3f03">
+<ul class="org-ul">
+<li>Native or bi-lingual proficiency in <b>English &amp; Hindi</b>.</li>
+<li>Elementary proficiency in <b>Dutch</b>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Arumoy Shome</p>
+<p class="date">Created: 2021-01-30 Sat 15:05</p>
+</div>
+</body>
+</html>
