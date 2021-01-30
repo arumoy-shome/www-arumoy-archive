@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-01-30 Sat 20:21 -->
+<!-- 2021-01-30 Sat 20:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Km3NeT Log</title>
@@ -226,75 +226,75 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org038fc1b">Inbox</a>
+<li><a href="#orgb3f528b">Inbox</a>
 <ul>
-<li><a href="#orge8a6ca7">directions for speedup</a></li>
-<li><a href="#orge280c62">[paper] recommendations to improve model</a></li>
+<li><a href="#org67a6e0f">directions for speedup</a></li>
+<li><a href="#org5659a5b">[paper] recommendations to improve model</a></li>
 </ul>
 </li>
-<li><a href="#orgbb60d98">Pattern Matrix</a>
+<li><a href="#org8b7eeee">Pattern Matrix</a>
 <ul>
-<li><a href="#orgbc66574">Approach</a>
+<li><a href="#orgda92555">Approach</a>
 <ul>
-<li><a href="#orge09002f">MLP to predict <i>causally related</i> points</a></li>
+<li><a href="#org361b5ab">MLP to predict <i>causally related</i> points</a></li>
 </ul>
 </li>
-<li><a href="#org4685170">Creation of "Pattern Matrix" Dataset</a></li>
-<li><a href="#org001ef6c">Evaluation</a>
+<li><a href="#org16a8c61">Creation of "Pattern Matrix" Dataset</a></li>
+<li><a href="#orgfb99394">Evaluation</a>
 <ul>
-<li><a href="#org9a033e0">Testing datasets</a></li>
+<li><a href="#org29aa802">Testing datasets</a></li>
 </ul>
 </li>
-<li><a href="#org5b17d7b"><span class="done DONE">DONE</span> Experiments</a>
+<li><a href="#org2ebc555"><span class="done DONE">DONE</span> Experiments</a>
 <ul>
-<li><a href="#orgc79ac8d">Notes on selection of epochs</a></li>
-<li><a href="#orgf7118af"><span class="done DONE">DONE</span> Experiments with dataset</a></li>
-<li><a href="#org9e35883"><span class="done DONE">DONE</span> Experiments with optimizers</a></li>
-<li><a href="#orgcc2e27e"><span class="done DONE">DONE</span> Experiments with model architecture</a></li>
+<li><a href="#org9e56e08">Notes on selection of epochs</a></li>
+<li><a href="#org4e1aefd"><span class="done DONE">DONE</span> Experiments with dataset</a></li>
+<li><a href="#orgbfe98cb"><span class="done DONE">DONE</span> Experiments with optimizers</a></li>
+<li><a href="#org96516a6"><span class="done DONE">DONE</span> Experiments with model architecture</a></li>
 </ul>
 </li>
-<li><a href="#org3cf8cd8">Future Work</a>
+<li><a href="#orgfea82ee">Future Work</a>
 <ul>
-<li><a href="#org2dcdaf5">Advanced relations</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgd8a2602">Graph Community Detection</a>
-<ul>
-<li><a href="#orgf8b8726">Edge weights in GNNs</a></li>
-<li><a href="#orgd7d468f"><span class="done CANCELLED">CANCELLED</span> Why we do not need graphConv</a></li>
-<li><a href="#orgafc3ff6">Primer on Graph Neural Networks</a></li>
-<li><a href="#org1963fe2">Approach</a></li>
-<li><a href="#org911ce14">Data Preparation</a></li>
-<li><a href="#org38f99a9">Evaluation</a></li>
-<li><a href="#orgfaf79da">Experiments</a>
-<ul>
-<li><a href="#orgdfe2641">No edge features</a></li>
-<li><a href="#org671be84">Scalar edge features</a></li>
-<li><a href="#org12ee8de"><span class="done CANCELLED">CANCELLED</span> Vector edge features</a></li>
-</ul>
-</li>
-<li><a href="#org3b7fd84">Future Work</a>
-<ul>
-<li><a href="#org0822e23">evaluate entire pipeline</a></li>
-<li><a href="#org69a3a09">Limited testing and experimentation</a></li>
-<li><a href="#org8f40d22">Modeling the data as a heterogeneous graph</a></li>
-<li><a href="#orgd997a06">Modeling the problem as a graph classification task</a></li>
-<li><a href="#org8d42110">Better node and/or edge features</a></li>
-<li><a href="#orgd6e79ec">Advanced scalar edge features</a></li>
+<li><a href="#org17073ee">Advanced relations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org75efd78">References</a></li>
+<li><a href="#orgdad1005">Graph Community Detection</a>
+<ul>
+<li><a href="#orgd1ee1f7">Edge weights in GNNs</a></li>
+<li><a href="#org0a426f9"><span class="done CANCELLED">CANCELLED</span> Why we do not need graphConv</a></li>
+<li><a href="#orge603ac8">Primer on Graph Neural Networks</a></li>
+<li><a href="#org860840f">Approach</a></li>
+<li><a href="#org0038ecc">Data Preparation</a></li>
+<li><a href="#orgd19cb7a">Evaluation</a></li>
+<li><a href="#orgb361d64">Experiments</a>
+<ul>
+<li><a href="#org693718b">No edge features</a></li>
+<li><a href="#org57edca1">Scalar edge features</a></li>
+<li><a href="#org50ef498"><span class="done CANCELLED">CANCELLED</span> Vector edge features</a></li>
+</ul>
+</li>
+<li><a href="#orge0ea0c3">Future Work</a>
+<ul>
+<li><a href="#orgda1d9c8">evaluate entire pipeline</a></li>
+<li><a href="#orgba80451">Limited testing and experimentation</a></li>
+<li><a href="#org8f9464a">Modeling the data as a heterogeneous graph</a></li>
+<li><a href="#org21a1dcd">Modeling the problem as a graph classification task</a></li>
+<li><a href="#org06f7dc9">Better node and/or edge features</a></li>
+<li><a href="#orgbde872f">Advanced scalar edge features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4fb6234">References</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org038fc1b" class="outline-2">
-<h2 id="org038fc1b">Inbox</h2>
-<div class="outline-text-2" id="text-org038fc1b">
+<div id="outline-container-orgb3f528b" class="outline-2">
+<h2 id="orgb3f528b">Inbox</h2>
+<div class="outline-text-2" id="text-orgb3f528b">
 <ul class="org-ul">
 <li><span class="timestamp-wrapper"><span class="timestamp">[2020-08-21 Fri 13:47] </span></span> <a href="https://arxiv.org/abs/1206.5533">paper</a> on practical recommendations for common</li>
 </ul>
@@ -303,9 +303,9 @@ hyper parameters for gradient descent based models
 </p>
 </div>
 
-<div id="outline-container-orge8a6ca7" class="outline-3">
-<h3 id="orge8a6ca7">directions for speedup</h3>
-<div class="outline-text-3" id="text-orge8a6ca7">
+<div id="outline-container-org67a6e0f" class="outline-3">
+<h3 id="org67a6e0f">directions for speedup</h3>
+<div class="outline-text-3" id="text-org67a6e0f">
 <p>
 There are a few that I can think of:
 </p>
@@ -319,9 +319,9 @@ There are a few that I can think of:
 </div>
 </div>
 
-<div id="outline-container-orge280c62" class="outline-3">
-<h3 id="orge280c62">[paper] recommendations to improve model</h3>
-<div class="outline-text-3" id="text-orge280c62">
+<div id="outline-container-org5659a5b" class="outline-3">
+<h3 id="org5659a5b">[paper] recommendations to improve model</h3>
+<div class="outline-text-3" id="text-org5659a5b">
 <p>
 This <a href="https://arxiv.org/abs/1206.5533">paper</a> will be useful to cite as source for the
 recommendations I make on improving the km3net models. For a high
@@ -331,18 +331,18 @@ Learning book.
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb60d98" class="outline-2">
-<h2 id="orgbb60d98">Pattern Matrix</h2>
-<div class="outline-text-2" id="text-orgbb60d98">
+<div id="outline-container-org8b7eeee" class="outline-2">
+<h2 id="org8b7eeee">Pattern Matrix</h2>
+<div class="outline-text-2" id="text-org8b7eeee">
 <p>
 In this section strategies are explored to replace the <i>Hit
 Correlation</i> step of the existing data processing pipeline.
 </p>
 </div>
 
-<div id="outline-container-orgbc66574" class="outline-3">
-<h3 id="orgbc66574">Approach</h3>
-<div class="outline-text-3" id="text-orgbc66574">
+<div id="outline-container-orgda92555" class="outline-3">
+<h3 id="orgda92555">Approach</h3>
+<div class="outline-text-3" id="text-orgda92555">
 <p>
 Two approaches are considered:
 </p>
@@ -354,9 +354,9 @@ or not.</li>
 </ol>
 </div>
 
-<div id="outline-container-orge09002f" class="outline-4">
-<h4 id="orge09002f">MLP to predict <i>causally related</i> points</h4>
-<div class="outline-text-4" id="text-orge09002f">
+<div id="outline-container-org361b5ab" class="outline-4">
+<h4 id="org361b5ab">MLP to predict <i>causally related</i> points</h4>
+<div class="outline-text-4" id="text-org361b5ab">
 <dl class="org-dl">
 <dt>causally related</dt><dd>two points are causally related to each
 other if they occur close in space and time.</dd>
@@ -378,14 +378,14 @@ the same "event" ie. they have the same <code>event_id</code>.</li>
 </div>
 </div>
 
-<div id="outline-container-org4685170" class="outline-3">
-<h3 id="org4685170">Creation of "Pattern Matrix" Dataset</h3>
-<div class="outline-text-3" id="text-org4685170">
+<div id="outline-container-org16a8c61" class="outline-3">
+<h3 id="org16a8c61">Creation of "Pattern Matrix" Dataset</h3>
+<div class="outline-text-3" id="text-org16a8c61">
 <p>
 A sample of the <i>main</i> dataset was choosen as input to the "pattern
 matrix" dataset creation algorithm. Once generated, further random
 samples of varying sizes were considered in order to determine the
-optimal training data size. See <a href="#org5b17d7b">Experiments</a> for details.
+optimal training data size. See <a href="#org2ebc555">Experiments</a> for details.
 </p>
 
 <p>
@@ -411,9 +411,9 @@ timeslices thus free of any bias.</li>
 </div>
 </div>
 
-<div id="outline-container-org001ef6c" class="outline-3">
-<h3 id="org001ef6c">Evaluation</h3>
-<div class="outline-text-3" id="text-org001ef6c">
+<div id="outline-container-orgfb99394" class="outline-3">
+<h3 id="orgfb99394">Evaluation</h3>
+<div class="outline-text-3" id="text-orgfb99394">
 <p>
 The <i>main</i> dataset is highly skewed, with the <b>majority</b> class
 being hits from background noise and the <b>minority</b> class being
@@ -472,9 +472,9 @@ selecting a model evaluation metric when dealing with inbalanced classes</li>
 </ul>
 </div>
 
-<div id="outline-container-org9a033e0" class="outline-4">
-<h4 id="org9a033e0">Testing datasets</h4>
-<div class="outline-text-4" id="text-org9a033e0">
+<div id="outline-container-org29aa802" class="outline-4">
+<h4 id="org29aa802">Testing datasets</h4>
+<div class="outline-text-4" id="text-org29aa802">
 <p>
 The following variants were picked to test the model:
 </p>
@@ -488,9 +488,9 @@ The following variants were picked to test the model:
 </div>
 </div>
 
-<div id="outline-container-org5b17d7b" class="outline-3">
-<h3 id="org5b17d7b"><span class="done DONE">DONE</span> Experiments</h3>
-<div class="outline-text-3" id="text-org5b17d7b">
+<div id="outline-container-org2ebc555" class="outline-3">
+<h3 id="org2ebc555"><span class="done DONE">DONE</span> Experiments</h3>
+<div class="outline-text-3" id="text-org2ebc555">
 <p>
 This section provides a summary of all experiments (and their
 results) which were conducted in order to obtain the final model to
@@ -506,20 +506,20 @@ for the experiment categories follow.
 </p>
 
 <ol class="org-ol">
-<li><a href="#orgf7118af">Experiments with dataset</a>: 10% random sample from mixed
+<li><a href="#org4e1aefd">Experiments with dataset</a>: 10% random sample from mixed
 timeslices with equal number of samples for each class produced
 the best result.</li>
-<li><a href="#org9e35883">Experiments with optimizers</a>: No difference was noticed between
+<li><a href="#orgbfe98cb">Experiments with optimizers</a>: No difference was noticed between
 SGD and Adam, <code>lr\=0.001</code> produced the best results across
 optimizers.</li>
-<li><a href="#orgcc2e27e">Experiments with model architecture</a>: two hidden layers with 16
+<li><a href="#org96516a6">Experiments with model architecture</a>: two hidden layers with 16
 and 8 neurons respectively produced the best results.</li>
 </ol>
 </div>
 
-<div id="outline-container-orgc79ac8d" class="outline-4">
-<h4 id="orgc79ac8d">Notes on selection of epochs</h4>
-<div class="outline-text-4" id="text-orgc79ac8d">
+<div id="outline-container-org9e56e08" class="outline-4">
+<h4 id="org9e56e08">Notes on selection of epochs</h4>
+<div class="outline-text-4" id="text-org9e56e08">
 <p>
 The number of epochs is varied per experiment. This is
 because, this parameter is largely determined by the dataset
@@ -534,9 +534,9 @@ the validation loss did not deteriorate.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf7118af" class="outline-4">
-<h4 id="orgf7118af"><span class="done DONE">DONE</span> Experiments with dataset</h4>
-<div class="outline-text-4" id="text-orgf7118af">
+<div id="outline-container-org4e1aefd" class="outline-4">
+<h4 id="org4e1aefd"><span class="done DONE">DONE</span> Experiments with dataset</h4>
+<div class="outline-text-4" id="text-org4e1aefd">
 <p>
 In these experiments, variants of the data namely it's shape and
 size were manipulated whilst keeping other parameters same. Two
@@ -568,8 +568,8 @@ best results.
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orga09c1e6"></a>Summary of results<br />
-<div class="outline-text-5" id="text-orga09c1e6">
+<li><a id="orgf7cf6c7"></a>Summary of results<br />
+<div class="outline-text-5" id="text-orgf7cf6c7">
 <p>
 The following parameters were constant across all experiments:
 </p>
@@ -624,9 +624,9 @@ The slice-mixed-10-equal-diff dataset produced the best results.
 </ul>
 </div>
 
-<div id="outline-container-org9e35883" class="outline-4">
-<h4 id="org9e35883"><span class="done DONE">DONE</span> Experiments with optimizers</h4>
-<div class="outline-text-4" id="text-org9e35883">
+<div id="outline-container-orgbfe98cb" class="outline-4">
+<h4 id="orgbfe98cb"><span class="done DONE">DONE</span> Experiments with optimizers</h4>
+<div class="outline-text-4" id="text-orgbfe98cb">
 <p>
 In this class of experiments, different optimizers were used and
 their <i>learning rate</i> parameter was varied. This is because
@@ -636,7 +636,7 @@ hyper parameter.
 
 <p>
 The 50%-diff dataset variant was used (since it produced the best
-results in the previous class of experiment, see <a href="#orgf7118af">Experiments with
+results in the previous class of experiment, see <a href="#org4e1aefd">Experiments with
 dataset</a>), all parameters were kept constant whilst <i>lr</i> being
 varied to obtain the final model of the category. See
 <code>notebooks/pm/exp-optim.ipynb</code> for more details.
@@ -656,8 +656,8 @@ Overall no improvements were noticed.
 </div>
 
 <ul class="org-ul">
-<li><a id="org40e66e5"></a>Summary of results<br />
-<div class="outline-text-5" id="text-org40e66e5">
+<li><a id="orgf0c6823"></a>Summary of results<br />
+<div class="outline-text-5" id="text-orgf0c6823">
 <pre class="example">
 No discernable difference were noticed between SGD and Adam.
 Learning rate of 0.001 gave the best results for both optimizers.
@@ -667,9 +667,9 @@ Learning rate of 0.001 gave the best results for both optimizers.
 </ul>
 </div>
 
-<div id="outline-container-orgcc2e27e" class="outline-4">
-<h4 id="orgcc2e27e"><span class="done DONE">DONE</span> Experiments with model architecture</h4>
-<div class="outline-text-4" id="text-orgcc2e27e">
+<div id="outline-container-org96516a6" class="outline-4">
+<h4 id="org96516a6"><span class="done DONE">DONE</span> Experiments with model architecture</h4>
+<div class="outline-text-4" id="text-org96516a6">
 <p>
 In this class of experiments the length and breadth of the model
 are varied. Multiples of 2 were used to determine the number of
@@ -679,10 +679,10 @@ of <code>(8, 1)</code>).
 </div>
 
 <ul class="org-ul">
-<li><a id="org9913596"></a>Summary of results<br />
-<div class="outline-text-5" id="text-org9913596">
+<li><a id="org5974d47"></a>Summary of results<br />
+<div class="outline-text-5" id="text-org5974d47">
 <p>
-The parameters which gave the best results from the <a href="#orgf7118af">Experiments
+The parameters which gave the best results from the <a href="#org4e1aefd">Experiments
 with dataset</a> class of experiments were chosen whilst varying the
 length and depth of the model.
 </p>
@@ -699,9 +699,9 @@ experiments for the PM model were concluded.
 </div>
 </div>
 
-<div id="outline-container-org3cf8cd8" class="outline-3">
-<h3 id="org3cf8cd8">Future Work</h3>
-<div class="outline-text-3" id="text-org3cf8cd8">
+<div id="outline-container-orgfea82ee" class="outline-3">
+<h3 id="orgfea82ee">Future Work</h3>
+<div class="outline-text-3" id="text-orgfea82ee">
 <p>
 Improvements that can be made to the MLP model.
 </p>
@@ -713,9 +713,9 @@ EdgeConv network.
 </p>
 </div>
 
-<div id="outline-container-org2dcdaf5" class="outline-4">
-<h4 id="org2dcdaf5">Advanced relations</h4>
-<div class="outline-text-4" id="text-org2dcdaf5">
+<div id="outline-container-org17073ee" class="outline-4">
+<h4 id="org17073ee">Advanced relations</h4>
+<div class="outline-text-4" id="text-org17073ee">
 <p>
 The PM model is naive as it only treats event-event pairs from the
 same event as related and the rest as unrelated. This is too
@@ -736,18 +736,18 @@ assign varying weights or edge-types to the edges of the graph.
 </div>
 </div>
 
-<div id="outline-container-orgd8a2602" class="outline-2">
-<h2 id="orgd8a2602">Graph Community Detection</h2>
-<div class="outline-text-2" id="text-orgd8a2602">
+<div id="outline-container-orgdad1005" class="outline-2">
+<h2 id="orgdad1005">Graph Community Detection</h2>
+<div class="outline-text-2" id="text-orgdad1005">
 <p>
 This section describes the strategies explored to replace the <i>Graph
 Community Detection</i> step for the existing data processing pipeline.
 </p>
 </div>
 
-<div id="outline-container-orgf8b8726" class="outline-3">
-<h3 id="orgf8b8726">Edge weights in GNNs</h3>
-<div class="outline-text-3" id="text-orgf8b8726">
+<div id="outline-container-orgd1ee1f7" class="outline-3">
+<h3 id="orgd1ee1f7">Edge weights in GNNs</h3>
+<div class="outline-text-3" id="text-orgd1ee1f7">
 <p>
 According to the Deep Graph Library, the edge weights are
 incorporated differently in models. The general method is to scale
@@ -786,9 +786,9 @@ a high edge weight.
 </div>
 </div>
 
-<div id="outline-container-orgd7d468f" class="outline-3">
-<h3 id="orgd7d468f"><span class="done CANCELLED">CANCELLED</span> Why we do not need graphConv</h3>
-<div class="outline-text-3" id="text-orgd7d468f">
+<div id="outline-container-org0a426f9" class="outline-3">
+<h3 id="org0a426f9"><span class="done CANCELLED">CANCELLED</span> Why we do not need graphConv</h3>
+<div class="outline-text-3" id="text-org0a426f9">
 <p>
 Or, why the graph approach is a different research direction
 altogether.
@@ -814,9 +814,9 @@ Graph Networks.
 </p>
 </div>
 </div>
-<div id="outline-container-orgafc3ff6" class="outline-3">
-<h3 id="orgafc3ff6">Primer on Graph Neural Networks</h3>
-<div class="outline-text-3" id="text-orgafc3ff6">
+<div id="outline-container-orge603ac8" class="outline-3">
+<h3 id="orge603ac8">Primer on Graph Neural Networks</h3>
+<div class="outline-text-3" id="text-orge603ac8">
 <p>
 It is important to understand the different applications of Graph
 Neural Networks (GNNs) before we proceed. GNNs have two primary
@@ -837,9 +837,9 @@ In this project the data is modeled to facilitate <b>node classification</b>.
 </div>
 </div>
 
-<div id="outline-container-org1963fe2" class="outline-3">
-<h3 id="org1963fe2">Approach</h3>
-<div class="outline-text-3" id="text-org1963fe2">
+<div id="outline-container-org860840f" class="outline-3">
+<h3 id="org860840f">Approach</h3>
+<div class="outline-text-3" id="text-org860840f">
 <p>
 Let's say we have data for timeslices in the form of <code>(n, 5)</code>
 dataframe (5 features because <code>x, y, z, t and label</code>). Each row,
@@ -861,14 +861,14 @@ has column vector of shape <code>(m,)</code> as the weight.</li>
 
 <p>
 Results and conclusions from each experiment can be found in the
-<a href="#org5b17d7b">Experiments</a> section below.
+<a href="#org2ebc555">Experiments</a> section below.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org911ce14" class="outline-3">
-<h3 id="org911ce14">Data Preparation</h3>
-<div class="outline-text-3" id="text-org911ce14">
+<div id="outline-container-org0038ecc" class="outline-3">
+<h3 id="org0038ecc">Data Preparation</h3>
+<div class="outline-text-3" id="text-org0038ecc">
 <p>
 The training data consists of a <code>(n, 4)</code> node feature matrix, <code>(n,
    )</code> column vector of node labels and <code>(num_edges,)</code> column vector of
@@ -886,19 +886,19 @@ accepts a <code>model</code> parameter which should be set to 'gcd'.
 </div>
 </div>
 
-<div id="outline-container-org38f99a9" class="outline-3">
-<h3 id="org38f99a9">Evaluation</h3>
-<div class="outline-text-3" id="text-org38f99a9">
+<div id="outline-container-orgd19cb7a" class="outline-3">
+<h3 id="orgd19cb7a">Evaluation</h3>
+<div class="outline-text-3" id="text-orgd19cb7a">
 <p>
 Evaluation is done using the same datasets and metrics used for the
-PM model (see <a href="#org001ef6c">Evaluation</a>).
+PM model (see <a href="#orgfb99394">Evaluation</a>).
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfaf79da" class="outline-3">
-<h3 id="orgfaf79da">Experiments</h3>
-<div class="outline-text-3" id="text-orgfaf79da">
+<div id="outline-container-orgb361d64" class="outline-3">
+<h3 id="orgb361d64">Experiments</h3>
+<div class="outline-text-3" id="text-orgb361d64">
 <p>
 To summarize, training the model with edge weights produced the
 best results with a high precision and recall for <b>both</b> classes
@@ -968,9 +968,9 @@ Details for each experiment follow.
 </p>
 </div>
 
-<div id="outline-container-orgdfe2641" class="outline-4">
-<h4 id="orgdfe2641">No edge features</h4>
-<div class="outline-text-4" id="text-orgdfe2641">
+<div id="outline-container-org693718b" class="outline-4">
+<h4 id="org693718b">No edge features</h4>
+<div class="outline-text-4" id="text-org693718b">
 <p>
 Model was trained using no edge features for varying sizes of
 training data.
@@ -982,12 +982,12 @@ Resulted in a no skill classifier.
 </div>
 </div>
 
-<div id="outline-container-org671be84" class="outline-4">
-<h4 id="org671be84">Scalar edge features</h4>
-<div class="outline-text-4" id="text-org671be84">
+<div id="outline-container-org57edca1" class="outline-4">
+<h4 id="org57edca1">Scalar edge features</h4>
+<div class="outline-text-4" id="text-org57edca1">
 <p>
 Weights were assigned to the edges. A weight of 1 was assigned to
-nodes which are 'causally related' (see <a href="#orge09002f">MLP to predict <i>causally
+nodes which are 'causally related' (see <a href="#org361b5ab">MLP to predict <i>causally
 related</i> points</a>) whilst a weight of 0 was assigned to others (this
 is mimicking the output of the PM model).
 </p>
@@ -1005,8 +1005,8 @@ of 0.7
 </div>
 
 <ul class="org-ul">
-<li><a id="orgab764fd"></a>[exp,gcd] advanced weights<br />
-<div class="outline-text-5" id="text-orgab764fd">
+<li><a id="org2c1770c"></a>[exp,gcd] advanced weights<br />
+<div class="outline-text-5" id="text-org2c1770c">
 <p>
 <b>Motivation</b> Model is highly skewed to positive class when trained
 with naive weights. Probability threshold manipulation produces a
@@ -1050,8 +1050,8 @@ to learn anything meaningful from the node features.
 </div>
 </li>
 
-<li><a id="org694ab0c"></a>[exp,gcd] low weights for noise-noise edges<br />
-<div class="outline-text-5" id="text-org694ab0c">
+<li><a id="orgde44b14"></a>[exp,gcd] low weights for noise-noise edges<br />
+<div class="outline-text-5" id="text-orgde44b14">
 <p>
 <b>Motivation</b> high false positives in model trained with advanced
 weights when tested with timeslice with no event nodes.
@@ -1084,27 +1084,27 @@ features but this does not seem to be the case.
 </li>
 </ul>
 </div>
-<div id="outline-container-org12ee8de" class="outline-4">
-<h4 id="org12ee8de"><span class="done CANCELLED">CANCELLED</span> Vector edge features</h4>
-<div class="outline-text-4" id="text-org12ee8de">
+<div id="outline-container-org50ef498" class="outline-4">
+<h4 id="org50ef498"><span class="done CANCELLED">CANCELLED</span> Vector edge features</h4>
+<div class="outline-text-4" id="text-org50ef498">
 <p>
 This is possible to do however was deemed beyond the scope of this
-project see <a href="#org5b17d7b">Experiments</a> for reasoning.
+project see <a href="#org2ebc555">Experiments</a> for reasoning.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3b7fd84" class="outline-3">
-<h3 id="org3b7fd84">Future Work</h3>
-<div class="outline-text-3" id="text-org3b7fd84">
+<div id="outline-container-orge0ea0c3" class="outline-3">
+<h3 id="orge0ea0c3">Future Work</h3>
+<div class="outline-text-3" id="text-orge0ea0c3">
 <p>
 Several alternative paths of research are touched upon in this section.
 </p>
 </div>
-<div id="outline-container-org0822e23" class="outline-4">
-<h4 id="org0822e23">evaluate entire pipeline</h4>
-<div class="outline-text-4" id="text-org0822e23">
+<div id="outline-container-orgda1d9c8" class="outline-4">
+<h4 id="orgda1d9c8">evaluate entire pipeline</h4>
+<div class="outline-text-4" id="text-orgda1d9c8">
 <p>
 Evaluate the entire pipeline using the best performing models with
 various timeslices and observe how well the pipeline is able to
@@ -1118,9 +1118,9 @@ classification, suggest this as future work.
 </div>
 </div>
 
-<div id="outline-container-org69a3a09" class="outline-4">
-<h4 id="org69a3a09">Limited testing and experimentation</h4>
-<div class="outline-text-4" id="text-org69a3a09">
+<div id="outline-container-orgba80451" class="outline-4">
+<h4 id="orgba80451">Limited testing and experimentation</h4>
+<div class="outline-text-4" id="text-orgba80451">
 <p>
 Due to pytorch being built from source and the viltstift not
 having Nvidia GPUs, pytorch geometric could not be installed as it
@@ -1136,18 +1136,18 @@ limitations, models could only be trained on graphs with a max on
 </div>
 </div>
 
-<div id="outline-container-org8f40d22" class="outline-4">
-<h4 id="org8f40d22">Modeling the data as a heterogeneous graph</h4>
-<div class="outline-text-4" id="text-org8f40d22">
+<div id="outline-container-org8f9464a" class="outline-4">
+<h4 id="org8f9464a">Modeling the data as a heterogeneous graph</h4>
+<div class="outline-text-4" id="text-org8f9464a">
 <p>
-To accommodate <a href="#org12ee8de">Vector edge features</a> experiment.
+To accommodate <a href="#org50ef498">Vector edge features</a> experiment.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd997a06" class="outline-4">
-<h4 id="orgd997a06">Modeling the problem as a graph classification task</h4>
-<div class="outline-text-4" id="text-orgd997a06">
+<div id="outline-container-org21a1dcd" class="outline-4">
+<h4 id="org21a1dcd">Modeling the problem as a graph classification task</h4>
+<div class="outline-text-4" id="text-org21a1dcd">
 <p>
 We can construct a graph from a given timeslice and train a model
 to classify it as <code>SAVE</code> or <code>NOSAVE</code> based on presence of events.
@@ -1167,9 +1167,9 @@ dataframe).
 </div>
 </div>
 
-<div id="outline-container-org8d42110" class="outline-4">
-<h4 id="org8d42110">Better node and/or edge features</h4>
-<div class="outline-text-4" id="text-org8d42110">
+<div id="outline-container-org06f7dc9" class="outline-4">
+<h4 id="org06f7dc9">Better node and/or edge features</h4>
+<div class="outline-text-4" id="text-org06f7dc9">
 <p>
 The node feature and the edge features can be improved such that
 it is more meaningful to the model.
@@ -1177,9 +1177,9 @@ it is more meaningful to the model.
 </div>
 </div>
 
-<div id="outline-container-orgd6e79ec" class="outline-4">
-<h4 id="orgd6e79ec">Advanced scalar edge features</h4>
-<div class="outline-text-4" id="text-orgd6e79ec">
+<div id="outline-container-orgbde872f" class="outline-4">
+<h4 id="orgbde872f">Advanced scalar edge features</h4>
+<div class="outline-text-4" id="text-orgbde872f">
 <p>
 The current edge features are simplistic as a really high weight
 (of 1) if assigned to event nodes from the same event thus all
@@ -1196,9 +1196,9 @@ with the hopes that it helps the network classify the nodes better.
 </div>
 </div>
 
-<div id="outline-container-org75efd78" class="outline-2">
-<h2 id="org75efd78">References</h2>
-<div class="outline-text-2" id="text-org75efd78">
+<div id="outline-container-org4fb6234" class="outline-2">
+<h2 id="org4fb6234">References</h2>
+<div class="outline-text-2" id="text-org4fb6234">
 <dl class="org-dl">
 <dt>[goodfellow2016deep]</dt><dd>Goodfellow, I., Bengio, Y., Courville, A., &amp;
 Bengio, Y. (2016). Deep learning (Vol. 1). Cambridge: MIT press.</dd>
@@ -1209,7 +1209,7 @@ Bengio, Y. (2016). Deep learning (Vol. 1). Cambridge: MIT press.</dd>
 <div id="postamble" class="status">
 <p class="date">Date: August 20, 2020</p>
 <p class="author">Author: Arumoy Shome</p>
-<p class="date">Created: 2021-01-30 Sat 20:21</p>
+<p class="date">Created: 2021-01-30 Sat 20:45</p>
 </div>
 </body>
 </html>
