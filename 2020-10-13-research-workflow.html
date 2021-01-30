@@ -6,7 +6,7 @@
 <!-- 2021-01-30 Sat 16:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap for project posts</title>
+<title>Research Workflow</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Arumoy Shome" />
 <style type="text/css">
@@ -221,18 +221,133 @@
 </head>
 <body>
 <div id="content">
-<h1 class="title">Sitemap for project posts</h1>
-<ul class="org-ul">
-<li><a href="index.html">Arumoy</a></li>
-<li><a href="cv.html">Arumoy Shome | CV</a></li>
-<li><a href="2020-09-27-knowledge.html">Knowledge</a></li>
-<li><a href="2020-09-27-productivity.html">Productivity</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="2020-10-13-research-workflow.html">Research Workflow</a></li>
-<li><a href="zettel.html">Zettel</a></li>
+<h1 class="title">Research Workflow</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2ee9766">Finding papers</a></li>
+<li><a href="#org1ca55fa">Reading papers</a></li>
+<li><a href="#orgea786cb">Writing notes</a></li>
 </ul>
 </div>
+</div>
+<p>
+In this document I outline the workflow which I have developed (along
+with updates I have made to it along the way) whilst conducting
+scientific research.
+</p>
+
+<div id="outline-container-org2ee9766" class="outline-2">
+<h2 id="org2ee9766">Finding papers</h2>
+<div class="outline-text-2" id="text-org2ee9766">
+<p>
+  I save the bibtex entry in a bib file (generally in the project root
+along with the other latex files). This is because the bibtex-mode in
+emacs provides powerful search options, templates for adding entries,
+sorting entries, cleaning up, and much more. Besides, the bib files
+ultimately gets used in the report so it makes sense to group the two
+together and keep them in the same location.
+</p>
+
+<p>
+  <span class="timestamp-wrapper"><span class="timestamp">[2020-10-31 Sat 13:37] </span></span> I have made a org-capture template to make
+this process easier. With the bibtex key copied to my clipboard, the
+template automatically adds it as the title and the corresponding link
+to where the pdf is saved (I still have to save the pdf with the
+bibtex key manually).
+</p>
+
+<p>
+  First, I use good ol' Google Scholar (along with a plugin to enable
+my institution's proxy) to find papers. Once, I find a paper I open it
+and read the abstract. If the abstract appeals to my current research
+focus or is interesting to me in general, I download it and save it in
+a folder which syncs across my devices. Next, I grab the bibtex entry
+and create a task using org-capture where I save the bibtex entry, one
+liner on why I found the paper interesting. I add the location to the
+pdf on disk, I set the title of the task as the bibtex entry and I
+save it to my <i>inbox</i> (or relevant project org file).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ca55fa" class="outline-2">
+<h2 id="org1ca55fa">Reading papers</h2>
+<div class="outline-text-2" id="text-org1ca55fa">
+<p>
+  <span class="timestamp-wrapper"><span class="timestamp">[2020-10-14 Wed 17:41] </span></span> Notes on paper being read or highlights made
+will always be in relation to the current research focus/goal. So, a
+paper may be read multiple times but will have different notes since
+they will be made with reference to different research questions. So,
+it's better to just save the paper and it's bibtex entry and make a
+todo under the project's org file. Log the notes whilst reading the
+paper under this todo and use these notes to write the research paper.
+</p>
+
+<p>
+  I read the papers on my iPad Pro since it allows me to highlight or
+scribble notes as I make my passes through the paper. And last, I go
+though my highlights and rewrite the highlights in my own words. These
+notes I make in a dedicated file named <code>paper-{bibtex-key}.org</code> file
+placed in my <code>org-directory</code> so that I can run <code>rgrep</code> on all my notes
+when I need to find something.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea786cb" class="outline-2">
+<h2 id="orgea786cb">Writing notes</h2>
+<div class="outline-text-2" id="text-orgea786cb">
+<p>
+  Here, I try to outline some of the things to look out for when
+reading papers:
+</p>
+
+<dl class="org-dl">
+<dt>problem statement</dt><dd>What is the problem the paper is trying to
+solve? why is this problem important? why should I care? This
+generally leads to a good material for the introduction of my
+paper as well.</dd>
+<dt>solution</dt><dd>What is the solution the paper proposes? how is it
+better/compared to existing ones (do the authors try to show its
+worth by comparing to existing solutions)? why should I care about
+it?</dd>
+<dt>results</dt><dd><p>
+What were the analytical experiments conducted and
+what were their results? what datasets were used? what models
+were used and how did they perform? how were their performance
+evaluated?
+</p>
+
+<p>
+Generally, in my field these questions can be answered by reading
+the Results section, very rarely are results disclosed in the
+conclusion section. Note that falls out of the 'first pass'
+content so I may come back to this only if I need this information
+for the task at hand.
+</p></dd>
+<dt>limitations</dt><dd>Does the paper identify its limitations? what
+future work can be done?</dd>
+</dl>
+
+<p>
+  After writing down notes on the topics above, I try to write a one
+line summary of the paper along with my remarks. These are always
+guided by the research question or work at hand. This is also why I
+prefer <b>not</b> to make dedicated notes.
+</p>
+
+<p>
+  The "why should I care?" flavor questions will generally be guided
+by the research question or personal interest that I may have at the
+time of reading.
+</p>
+</div>
+</div>
+</div>
 <div id="postamble" class="status">
+<p class="date">Date: October 13, 2020</p>
 <p class="author">Author: Arumoy Shome</p>
 <p class="date">Created: 2021-01-30 Sat 16:17</p>
 </div>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-01-30 Sat 16:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zettel</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Arumoy Shome" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Zettel</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org85c53e7">Research workflow</a></li>
+<li><a href="#org91f1f2b">Knowledge</a></li>
+<li><a href="#org933110d">Productivity</a></li>
+<li><a href="#org1380f21">Notes on blogging (with Jekyll)</a></li>
+<li><a href="#org27067d5">Notes on responsive web design (as of 2020)</a></li>
+<li><a href="#orge076da1">Emacs <code>PATH</code> and <code>exec-path</code></a></li>
+<li><a href="#org3000728">Renaming files in Emacs</a></li>
+<li><a href="#org34720ac">Notes on working with Python in Emacs</a></li>
+<li><a href="#orgb85171d">Notes on working with Ruby</a></li>
+<li><a href="#org0ed2148">Notes on working with Python</a></li>
+</ul>
+</div>
+</div>
+<p>
+This is my personal knowledge base. Captured ideas, thoughts,
+observations from my journal get assimilated on a weekly basis. If I
+find something worthwhile, I take the time to elaborate on it. The
+result, is the information contained in this document.
+</p>
+
+<p>
+I have yet to figure out the procedure for organization and retrieval.
+I will get there, but in the mean time what is important is the
+information itself.
+</p>
+
+<div id="outline-container-org85c53e7" class="outline-2">
+<h2 id="org85c53e7">Research workflow</h2>
+<div class="outline-text-2" id="text-org85c53e7">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-11-24 Tue 09:40] </span></span> There is non-linearity in research which one
+must embrace. One day I might read 20 papers and make no sense of
+them however a single paper next day may make everything clear.
+There are more failures than successes and the failures determine
+the path of research to follow next.
+</p>
+
+<p>
+<a href="2020-10-13-research-workflow.html">Research Workflow</a> describes my process of finding scientific papers,
+reading papers and managing the information (notes) gathered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91f1f2b" class="outline-2">
+<h2 id="org91f1f2b">Knowledge</h2>
+<div class="outline-text-2" id="text-org91f1f2b">
+<p>
+In <a href="2020-09-27-knowledge.html">Knowledge</a> I outline areas in which I seek to improve my knowledge
+and tips on how to do so.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org933110d" class="outline-2">
+<h2 id="org933110d">Productivity</h2>
+<div class="outline-text-2" id="text-org933110d">
+<p>
+I consolidated several years worth of experiments, mistakes,
+discoveries into a separate file, see <a href="2020-09-27-productivity.html">Productivity</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1380f21" class="outline-2">
+<h2 id="org1380f21">Notes on blogging (with Jekyll)</h2>
+<div class="outline-text-2" id="text-org1380f21">
+<p>
+Github requires a <code>CNAME</code> file in the directory from which the
+website should be served. Now, the <code>github-pages</code> gem can be used
+to instruct Github Pages (GHP) to automatically build and serve the
+website.
+</p>
+
+<p>
+This works as long as you write your own page structure
+and styles, using a theme results in unexpected built errors (what
+I am experiencing right now).
+</p>
+
+<p>
+The alternative is to use the docs/ folder to serve the page, and
+manually transfer contents of the build directory (Jekyll default
+is _site/ directory) into docs/. This obviously is cumbersome and
+<code>mv</code> does not have a recursive flag!
+</p>
+
+<p>
+So, either I build my website using Jekyll from scratch (back to
+square one) or I give up this nonsense and just use simple HTML+CSS
+to build my site (requires a refresher on CSS) using org to write
+and org-publish to generate the HTML pages.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27067d5" class="outline-2">
+<h2 id="org27067d5">Notes on responsive web design (as of 2020)</h2>
+<div class="outline-text-2" id="text-org27067d5">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-01-30 Sat 16:06] </span></span> <a href="https://jgthms.com/web-design-in-4-minutes/">Web design in 4 minutes</a> is the single most
+valuable web design resource I have found. I used it to design my
+own, minimal, text-centric website.
+</p>
+
+<p>
+These notes summarize the detailed <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">article</a> on MDN web docs.
+</p>
+
+<p>
+There are 4 areas to keep in mind:
+</p>
+<ol class="org-ol">
+<li>responsive content: use flexbox and grid for this (media queries
+are a thing of the past)</li>
+<li>responsive images: always <code>max-width: 100%;</code> so that images
+scale based on the parent</li>
+<li>responsive typography: use a combination of <code>vw</code> and <code>rem</code> units
+to scale text on screen</li>
+<li><p>
+viewport meta tag: always set it to the following
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge076da1" class="outline-2">
+<h2 id="orge076da1">Emacs <code>PATH</code> and <code>exec-path</code></h2>
+<div class="outline-text-2" id="text-orge076da1">
+<p>
+Emacs maintains its own copy of the <code>PATH</code> variable which it copies
+over from the shell. However, on OSX it does not copy the paths set
+by <code>libexe</code>, but only the ones explicitly set in the shell config
+files.
+</p>
+
+<p>
+The <code>exec-path</code> is a list which Emacs uses to look for programs
+(such as find, grep, etc). Emacs documentation claims to set this up
+from <code>PATH</code> but this does not seem to be case (at least on OSX).
+</p>
+
+<p>
+So the simplest solution I have come across (as of
+<span class="timestamp-wrapper"><span class="timestamp">[2020-09-14 Mon 20:27]</span></span>) is to set them up manually. See
+<a href="https://github.com/arumoy-shome/emacs.d/blob/master/aru/aru-path.el">aru-path.el</a> for details.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3000728" class="outline-2">
+<h2 id="org3000728">Renaming files in Emacs</h2>
+<div class="outline-text-2" id="text-org3000728">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-01-30 Sat 16:09] </span></span> Since I use <code>dired-jump</code> on a regular basis,
+I have it mapped to <code>s-j</code> as part of my other super-based
+convenience keybindings.
+</p>
+
+<p>
+Others seem to write a function to do this, I find that dired works
+just as well for me (one less piece of elisp code to write/worry
+about). I have <code>C-x C-j</code> mapped to <code>dired-jump</code> which takes me to
+the directory containing the current file. Next, I can use dired's
+built in functionality to delete/rename files which automatically
+update the corresponding buffer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34720ac" class="outline-2">
+<h2 id="org34720ac">Notes on working with Python in Emacs</h2>
+<div class="outline-text-2" id="text-org34720ac">
+<p>
+I like to use python's builtin virtualenv package to manage virtual
+environments for my projects. Typically, I create a virtualenv per
+project and activate it with the <code>source venv/bin/activate</code> shell
+command (note that I always call my virtualenv venv, since it is
+inside the project directory, there is no namespace collision).
+</p>
+
+<p>
+I like the simplicity of the <code>activate</code> script, if you look at the
+source code, you find that all it does is append a certain directory
+to the <code>$PATH</code> environment variable such that the <code>python</code>
+executable from the virtualenv is picked up by the system.
+</p>
+
+<p>
+I dislike tools such as pyenv and pyenv-virtualenv simply because
+they are external dependencies which I may not have on remote
+machines and second because they add to my shell's startup time.
+</p>
+
+<p>
+In emacs, each buffer has a local value for the <code>default-directory</code>
+variable, which is set to the directory in which the file exists.
+This is a very reasonable default and should not be changes to
+perhaps the project root directory because other commands such as
+<code>find-file</code> depend on it.
+</p>
+
+<p>
+The manual way to start a python process is to open a dired buffer
+at the project root, and then issuing the <code>run-python</code> command with
+a universal argument (<code>C-u C-c C-p</code> if you want to do it the
+keybinding way). This is the simplest solution as it requires zero
+config on emacs and shell side.
+</p>
+
+<p>
+In the future, I would like to automate this, perhaps the
+functionality can be wrapped in a <code>aru/run-python</code> function.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb85171d" class="outline-2">
+<h2 id="orgb85171d">Notes on working with Ruby</h2>
+<div class="outline-text-2" id="text-orgb85171d">
+<p>
+I am aware of <a href="https://github.com/postmodern/chruby">chruby</a> and <a href="https://github.com/postmodern/ruby-install">ruby-install</a> projects which allow one to
+manage and install multiple ruby versions respectively. However, not
+being a ruby developer, I do not have such a use case and wish to
+circumvent the complexity that comes with such tools.
+</p>
+
+<p>
+My requirements for ruby (as of <span class="timestamp-wrapper"><span class="timestamp">[2021-01-29 Fri]</span></span>) is simply to build
+my personal website which uses Jekyll.
+</p>
+
+<p>
+As such, I opt to install ruby via Homebrew. This has a slight
+drawback that is, it requires me to manually add the location of the
+'gems' and the <code>ruby</code> executable to the <code>PATH</code>.
+</p>
+
+<p>
+The latter is easily done since brew keeps the latest executable at
+<code>/usr/local/opt/ruby/bin</code>. The prior requires some more manual updates
+everytime brew updates ruby since gems are stored at
+<code>/usr/local/lib/ruby/gems/x.x.x/bin</code> where the 'x's represent the
+latest version of ruby.
+</p>
+
+<p>
+I follow a similar strategy for Python (see ADDME). Also see notes on
+<a href="#orge076da1">Emacs <code>PATH</code> and <code>exec-path</code></a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ed2148" class="outline-2">
+<h2 id="org0ed2148">Notes on working with Python</h2>
+<div class="outline-text-2" id="text-org0ed2148">
+<p>
+Homebrew provides the <code>usr/local/opt/python@x.x/libexec/bin</code> directory
+which contains unversioned executables for python and pip which are
+correctly symlinked to the actual python@x.x executables.
+</p>
+
+<p>
+I add this to system and emacs <code>PATH</code> (see <a href="#orge076da1">Emacs <code>PATH</code> and
+<code>exec-path</code></a>). I prefer this to scripts such as <a href="https://github.com/pyenv/pyenv">pyenv</a> since it adds to
+my shell startup time.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Arumoy Shome</p>
+<p class="date">Created: 2021-01-30 Sat 16:13</p>
+</div>
+</body>
+</html>
