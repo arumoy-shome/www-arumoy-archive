@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-02 Tue 14:18 -->
+<!-- 2021-02-10 Wed 11:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zettel</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Arumoy Shome" />
+<meta name="generator" content="Org Mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -196,25 +196,23 @@
 <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
 <meta name="robots" content="noindex">
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
      function CodeHighlightOn(elem, id)
      {
        var target = document.getElementById(id);
        if(null != target) {
-         elem.cacheClassElem = elem.className;
-         elem.cacheClassTarget = target.className;
-         target.className = "code-highlighted";
-         elem.className   = "code-highlighted";
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
        }
      }
      function CodeHighlightOff(elem, id)
      {
        var target = document.getElementById(id);
-       if(elem.cacheClassElem)
-         elem.className = elem.cacheClassElem;
-       if(elem.cacheClassTarget)
-         target.className = elem.cacheClassTarget;
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
      }
     /*]]>*///-->
 // @license-end
@@ -262,9 +260,6 @@
 </ul>
 </li>
 <li><a href="#org0dc2e16">Notes on responsive web design</a></li>
-<li><a href="#orge506919">Emacs <code>PATH</code> and <code>exec-path</code></a></li>
-<li><a href="#org11a0f2f">Renaming files in Emacs</a></li>
-<li><a href="#orge5372e6">Notes on working with Python in Emacs</a></li>
 <li><a href="#orgbab46b0">Notes on working with Ruby</a></li>
 <li><a href="#orgde55f6c">Notes on working with Python</a></li>
 </ul>
@@ -788,97 +783,6 @@ viewport meta tag: always set it to the following
 </div>
 </div>
 
-<div id="outline-container-orge506919" class="outline-2">
-<h2 id="orge506919">Emacs <code>PATH</code> and <code>exec-path</code></h2>
-<div class="outline-text-2" id="text-orge506919">
-<p>
-Emacs maintains its own copy of the <code>PATH</code> variable which it copies
-over from the shell. However, on OSX it does not copy the paths set
-by <code>libexe</code>, but only the ones explicitly set in the shell config
-files.
-</p>
-
-<p>
-The <code>exec-path</code> is a list which Emacs uses to look for programs
-(such as find, grep, etc). Emacs documentation claims to set this up
-from <code>PATH</code> but this does not seem to be case (at least on OSX).
-</p>
-
-<p>
-So the simplest solution I have come across (as of
-<span class="timestamp-wrapper"><span class="timestamp">[2020-09-14 Mon 20:27]</span></span>) is to set them up manually. See
-<a href="https://github.com/arumoy-shome/emacs.d/blob/master/aru/aru-path.el">aru-path.el</a> for details.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org11a0f2f" class="outline-2">
-<h2 id="org11a0f2f">Renaming files in Emacs</h2>
-<div class="outline-text-2" id="text-org11a0f2f">
-<p>
-<span class="timestamp-wrapper"><span class="timestamp">[2021-01-30 Sat 16:09] </span></span> Since I use <code>dired-jump</code> on a regular basis,
-I have it mapped to <code>s-j</code> as part of my other super-based
-convenience keybindings.
-</p>
-
-<p>
-Others seem to write a function to do this, I find that dired works
-just as well for me (one less piece of elisp code to write/worry
-about). I have <code>C-x C-j</code> mapped to <code>dired-jump</code> which takes me to
-the directory containing the current file. Next, I can use dired's
-built in functionality to delete/rename files which automatically
-update the corresponding buffer.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge5372e6" class="outline-2">
-<h2 id="orge5372e6">Notes on working with Python in Emacs</h2>
-<div class="outline-text-2" id="text-orge5372e6">
-<p>
-I like to use python's builtin virtualenv package to manage virtual
-environments for my projects. Typically, I create a virtualenv per
-project and activate it with the <code>source venv/bin/activate</code> shell
-command (note that I always call my virtualenv venv, since it is
-inside the project directory, there is no namespace collision).
-</p>
-
-<p>
-I like the simplicity of the <code>activate</code> script, if you look at the
-source code, you find that all it does is append a certain directory
-to the <code>$PATH</code> environment variable such that the <code>python</code>
-executable from the virtualenv is picked up by the system.
-</p>
-
-<p>
-I dislike tools such as pyenv and pyenv-virtualenv simply because
-they are external dependencies which I may not have on remote
-machines and second because they add to my shell's startup time.
-</p>
-
-<p>
-In emacs, each buffer has a local value for the <code>default-directory</code>
-variable, which is set to the directory in which the file exists.
-This is a very reasonable default and should not be changes to
-perhaps the project root directory because other commands such as
-<code>find-file</code> depend on it.
-</p>
-
-<p>
-The manual way to start a python process is to open a dired buffer
-at the project root, and then issuing the <code>run-python</code> command with
-a universal argument (<code>C-u C-c C-p</code> if you want to do it the
-keybinding way). This is the simplest solution as it requires zero
-config on emacs and shell side.
-</p>
-
-<p>
-In the future, I would like to automate this, perhaps the
-functionality can be wrapped in a <code>aru/run-python</code> function.
-</p>
-</div>
-</div>
-
 <div id="outline-container-orgbab46b0" class="outline-2">
 <h2 id="orgbab46b0">Notes on working with Ruby</h2>
 <div class="outline-text-2" id="text-orgbab46b0">
@@ -910,7 +814,7 @@ latest version of ruby.
 
 <p>
 I follow a similar strategy for Python (see ADDME). Also see notes on
-<a href="#orge506919">Emacs <code>PATH</code> and <code>exec-path</code></a>.
+<a href="project-emacs.html#ID-EB6E0AC3-74F6-4904-9250-07AF42AC537C">Emacs <code>PATH</code> and <code>exec-path</code></a>.
 </p>
 </div>
 </div>
@@ -926,7 +830,7 @@ correctly symlinked to the actual python@x.x executables.
 
 <p>
 I add this to system and emacs <code>PATH</code> (see
-<a href="#orge506919">Emacs <code>PATH</code> and
+<a href="project-emacs.html#ID-EB6E0AC3-74F6-4904-9250-07AF42AC537C">Emacs <code>PATH</code> and
 <code>exec-path</code></a>). I prefer this to scripts such as
 <a href="https://github.com/pyenv/pyenv">pyenv</a> since it adds to my shell
 startup time.
@@ -936,7 +840,7 @@ startup time.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Arumoy Shome</p>
-<p class="date">Created: 2021-02-02 Tue 14:18</p>
+<p class="date">Created: 2021-02-10 Wed 11:56</p>
 </div>
 </body>
 </html>

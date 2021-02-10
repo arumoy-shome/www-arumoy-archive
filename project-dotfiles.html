@@ -6,7 +6,7 @@
 <!-- 2021-02-10 Wed 11:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap for project posts</title>
+<title>Project Dotfiles</title>
 <meta name="author" content="Arumoy Shome" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -220,19 +220,68 @@
 </head>
 <body>
 <div id="content">
-<h1 class="title">Sitemap for project posts</h1>
-<ul class="org-ul">
-<li><a href="index.html">Arumoy Shome</a></li>
-<li><a href="cv.html">Curriculum Vitae</a></li>
-<li><a href="project-km3net.html">Km3NeT Log</a></li>
-<li><a href="project-ppdl.html">PPDL Log</a></li>
-<li><a href="project-phd-tracker.html">PhD Tracker</a></li>
-<li><a href="project-dotfiles.html">Project Dotfiles</a></li>
-<li><a href="project-emacs.html">Project Emacs</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="2020-02-10-phd-position-xr.html">User-centered Optimization for Immersive Media</a></li>
-<li><a href="zettel.html">Zettel</a></li>
+<h1 class="title">Project Dotfiles</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org65f09c7">Inbox</a>
+<ul>
+<li><a href="#orge9bdc78"><span class="todo TODO">TODO</span> combine <code>recentf-file-file</code> and <code>find-file</code></a></li>
+<li><a href="#orgd6b44d4"><span class="todo TODO">TODO</span> fix <code>aru/tab-bar-select-tab-dwim</code></a></li>
+<li><a href="#org795d030"><span class="todo TODO">TODO</span> add current tab name to modeline</a></li>
 </ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org65f09c7" class="outline-2">
+<h2 id="org65f09c7">Inbox</h2>
+<div class="outline-text-2" id="text-org65f09c7">
+<p>
+Tasks for the project.
+</p>
+</div>
+<div id="outline-container-orge9bdc78" class="outline-3">
+<h3 id="orge9bdc78"><span class="todo TODO">TODO</span> combine <code>recentf-file-file</code> and <code>find-file</code></h3>
+<div class="outline-text-3" id="text-orge9bdc78">
+<p>
+Having two separate keys is overkill, I'd rather find another useful
+functionality for <code>s-r</code>. I want to combine the two lists and bind it
+directly to <code>s-f</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd6b44d4" class="outline-3">
+<h3 id="orgd6b44d4"><span class="todo TODO">TODO</span> fix <code>aru/tab-bar-select-tab-dwim</code></h3>
+<div class="outline-text-3" id="text-orgd6b44d4">
+<p>
+the function is broken, need to investigate.
+</p>
+</div>
+</div>
+<div id="outline-container-org795d030" class="outline-3">
+<h3 id="org795d030"><span class="todo TODO">TODO</span> add current tab name to modeline</h3>
+<div class="outline-text-3" id="text-org795d030">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-10-30 Fri 21:44] </span></span> I have gotten as far as extracting the name
+of the current tab. I am not sure how to display the text in the
+modeline. Moreover, how do I make sure that it updates as I change
+tabs?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(cdr(assoc 'name (tab-bar--current-tab)))
+</pre>
+</div>
+
+<p>
+Or flash it in the minibuffer works for me as well
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Arumoy Shome</p>

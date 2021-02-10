@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-02-10 Wed 11:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PhD Tracker</title>
+<meta name="author" content="Arumoy Shome" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+<meta name="robots" content="noindex">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">PhD Tracker</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org5db84bb">Inbox</a>
+<ul>
+<li><a href="#org283d969"><span class="todo TODO">TODO</span> design optimization algorithms for energy efficient and healthy buildings</a></li>
+<li><a href="#org89cf647"><span class="todo TODO">TODO</span> AI for programmable networks</a></li>
+<li><a href="#orgdd634d7"><span class="todo TODO">TODO</span> signal analysis and ML for multi-modal molecular imaging</a></li>
+</ul>
+</li>
+<li><a href="#org9f59df4">Archive</a>
+<ul>
+<li><a href="#orgd8f790a"><span class="done CANCELLED">CANCELLED</span> forensic detection of deep fake videos</a></li>
+<li><a href="#org25aef23"><span class="done DONE">DONE</span> algorithmic curation, adaptation and personalization&#xa0;&#xa0;&#xa0;<span class="tag"><span class="active">active</span></span></a></li>
+<li><a href="#org795b65b"><span class="done CANCELLED">CANCELLED</span> trustworthy AI</a></li>
+<li><a href="#org7d631c2"><span class="done DONE">DONE</span> engineering AI in the wild&#xa0;&#xa0;&#xa0;<span class="tag"><span class="active">active</span></span></a></li>
+<li><a href="#org8125f4c"><span class="done DONE">DONE</span> user-centered optimization for immersive media&#xa0;&#xa0;&#xa0;<span class="tag"><span class="shortlisted">shortlisted</span></span></a></li>
+<li><a href="#orgba0766d"><span class="done CANCELLED">CANCELLED</span> computational pangenomics</a></li>
+<li><a href="#orga637d25"><span class="done CANCELLED">CANCELLED</span> mathematical machine learning</a></li>
+<li><a href="#orgab1530e"><span class="done DONE">DONE</span> data management&#xa0;&#xa0;&#xa0;<span class="tag"><span class="active">active</span></span></a></li>
+<li><a href="#orge8ee764"><span class="done CANCELLED">CANCELLED</span> computer vision</a></li>
+<li><a href="#org7605d82"><span class="done DONE">DONE</span> knowledge graphs, NLP and ML&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#orga48f606"><span class="done CANCELLED">CANCELLED</span> dark matter theory, astroparticle physics and ML</a></li>
+<li><a href="#orge222116"><span class="done CANCELLED">CANCELLED</span> learning analytics</a></li>
+<li><a href="#org14d1a02"><span class="done CANCELLED">CANCELLED</span> quantum computing and quantum simulation for chemistry and materials</a></li>
+<li><a href="#org7ce4364"><span class="done CANCELLED">CANCELLED</span> artificial intelligence supported behaviour change</a></li>
+<li><a href="#org670436e"><span class="done CANCELLED">CANCELLED</span> position in biostatistics</a></li>
+<li><a href="#org964a790"><span class="done CANCELLED">CANCELLED</span> multi-robot motion planning and task assignment in dynamic human centered spaces</a></li>
+<li><a href="#orgcc56290"><span class="done CANCELLED">CANCELLED</span> improved ice sheet mass change estimates from remote sensing</a></li>
+<li><a href="#orgfdf5eb2"><span class="done CANCELLED">CANCELLED</span> seamless and sustainable multi-modal transport hubs</a></li>
+<li><a href="#orgc5a6557"><span class="done CANCELLED">CANCELLED</span> conversational search</a></li>
+<li><a href="#org80de826"><span class="done CANCELLED">CANCELLED</span> gravitational waves and cosmology</a></li>
+<li><a href="#org20b10ba"><span class="done CANCELLED">CANCELLED</span> dark universe physics and ML</a></li>
+<li><a href="#orge89d5b6"><span class="done DONE">DONE</span> explainable AI, Genetic Programming and Deep learning for medicine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#orgfc35a5f"><span class="done CANCELLED">CANCELLED</span> neuronal networks underlying learning and decision-making: dynamics and analysis</a></li>
+<li><a href="#orge2e1867"><span class="done DONE">DONE</span> model-based and data-driven non-linear control of continuum soft robots&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#orge846b01"><span class="done DONE">DONE</span> experimental particle physics (ATLAS)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#org59b0442"><span class="done DONE">DONE</span> positions in astronomy and astrophysics&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#org5093e5b"><span class="done CANCELLED">CANCELLED</span> comupter vision and ML</a></li>
+<li><a href="#org88cc4b5"><span class="done DONE">DONE</span> Geometric and Probabilistic Modeling for Explainable hybrid intelligence systems&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#org0f29016"><span class="done DONE">DONE</span> Situated AI Systems&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#orga192a88"><span class="done DONE">DONE</span> Cognitive assisted agile manufacturing for labor force supported by trust worthy AI&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></a></li>
+<li><a href="#org94c33d0"><span class="done CANCELLED">CANCELLED</span> I-GNSS positioning for assisted and automated driving</a></li>
+<li><a href="#org85117d7"><span class="done CANCELLED">CANCELLED</span> New machine learning strategies for data scarce materials science problems</a></li>
+<li><a href="#org26a68c8"><span class="done CANCELLED">CANCELLED</span> ICAI AFR deploying ML models at scale</a></li>
+<li><a href="#org2cb0eaa"><span class="done CANCELLED">CANCELLED</span> Distributed systems</a></li>
+<li><a href="#orgfb69ffd"><span class="done CANCELLED">CANCELLED</span> Socially embedded AI systems</a></li>
+<li><a href="#org2fb2a6f"><span class="done CANCELLED">CANCELLED</span> Socially intelligent AI</a></li>
+<li><a href="#org971e500"><span class="done CANCELLED">CANCELLED</span> Computer vision</a></li>
+<li><a href="#org19c9432"><span class="done CANCELLED">CANCELLED</span> ML for combating cybercrime</a></li>
+<li><a href="#orgf889c4a"><span class="done CANCELLED">CANCELLED</span> Interactive Optoelectronic platform</a></li>
+</ul>
+</li>
+<li><a href="#org4d88116">Notes</a>
+<ul>
+<li><a href="#org1b9adf3">preferred locations</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+This document tracks all the PhD positions which I did and did not
+apply to. I track the basic metadata associated with the position such
+as deadline of submission, location and url to the posting.
+</p>
+
+<div id="outline-container-org5db84bb" class="outline-2">
+<h2 id="org5db84bb">Inbox</h2>
+<div class="outline-text-2" id="text-org5db84bb">
+</div>
+<div id="outline-container-org283d969" class="outline-3">
+<h3 id="org283d969"><span class="todo TODO">TODO</span> design optimization algorithms for energy efficient and healthy buildings</h3>
+<div class="outline-text-3" id="text-org283d969">
+</div>
+</div>
+<div id="outline-container-org89cf647" class="outline-3">
+<h3 id="org89cf647"><span class="todo TODO">TODO</span> AI for programmable networks</h3>
+<div class="outline-text-3" id="text-org89cf647">
+</div>
+</div>
+<div id="outline-container-orgdd634d7" class="outline-3">
+<h3 id="orgdd634d7"><span class="todo TODO">TODO</span> signal analysis and ML for multi-modal molecular imaging</h3>
+<div class="outline-text-3" id="text-orgdd634d7">
+</div>
+</div>
+</div>
+<div id="outline-container-org9f59df4" class="outline-2">
+<h2 id="org9f59df4">Archive</h2>
+<div class="outline-text-2" id="text-org9f59df4">
+</div>
+<div id="outline-container-orgd8f790a" class="outline-3">
+<h3 id="orgd8f790a"><span class="done CANCELLED">CANCELLED</span> forensic detection of deep fake videos</h3>
+<div class="outline-text-3" id="text-orgd8f790a">
+</div>
+</div>
+<div id="outline-container-org25aef23" class="outline-3">
+<h3 id="org25aef23"><span class="done DONE">DONE</span> algorithmic curation, adaptation and personalization&#xa0;&#xa0;&#xa0;<span class="tag"><span class="active">active</span></span></h3>
+<div class="outline-text-3" id="text-org25aef23">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> draw from literature study: motivation for human involvement in DL,
+trust, fairness, bias</li>
+<li class="on"><code>[X]</code> mention interest in hybrid intelligence</li>
+<li class="on"><code>[X]</code> beef up Elevate: emphasize on the human-centric design and
+development part, mention adaptive learning</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org795b65b" class="outline-3">
+<h3 id="org795b65b"><span class="done CANCELLED">CANCELLED</span> trustworthy AI</h3>
+<div class="outline-text-3" id="text-org795b65b">
+</div>
+</div>
+<div id="outline-container-org7d631c2" class="outline-3">
+<h3 id="org7d631c2"><span class="done DONE">DONE</span> engineering AI in the wild&#xa0;&#xa0;&#xa0;<span class="tag"><span class="active">active</span></span></h3>
+<div class="outline-text-3" id="text-org7d631c2">
+</div>
+</div>
+<div id="outline-container-org8125f4c" class="outline-3">
+<h3 id="org8125f4c"><span class="done DONE">DONE</span> user-centered optimization for immersive media&#xa0;&#xa0;&#xa0;<span class="tag"><span class="shortlisted">shortlisted</span></span></h3>
+<div class="outline-text-3" id="text-org8125f4c">
+<p>
+Notes on interview prep can be found in <a href="2020-02-10-phd-position-xr.html">2020-02-10-phd-position-xr</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgba0766d" class="outline-3">
+<h3 id="orgba0766d"><span class="done CANCELLED">CANCELLED</span> computational pangenomics</h3>
+<div class="outline-text-3" id="text-orgba0766d">
+<p>
+Approach from the graph data structure angle.
+</p>
+
+<ul class="org-ul">
+<li>bioinformatics</li>
+<li>sequence analysis</li>
+<li>graph data structures</li>
+<li>exabyte-scale (big data)</li>
+<li>comparing graphs</li>
+<li>whole-pan-genome alignment</li>
+<li>existing graph comparison techniques do not work for pan-genome graphs</li>
+<li>phylogenetic relations</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga637d25" class="outline-3">
+<h3 id="orga637d25"><span class="done CANCELLED">CANCELLED</span> mathematical machine learning</h3>
+<div class="outline-text-3" id="text-orga637d25">
+</div>
+</div>
+<div id="outline-container-orgab1530e" class="outline-3">
+<h3 id="orgab1530e"><span class="done DONE">DONE</span> data management&#xa0;&#xa0;&#xa0;<span class="tag"><span class="active">active</span></span></h3>
+<div class="outline-text-3" id="text-orgab1530e">
+<p>
+Although the position description is scarse, the group website does
+a better job at explaining the research focus of the group. I
+definitely have relevant background and also care about the topic,
+not to mention it has high industry relevance.
+</p>
+</div>
+</div>
+<div id="outline-container-orge8ee764" class="outline-3">
+<h3 id="orge8ee764"><span class="done CANCELLED">CANCELLED</span> computer vision</h3>
+<div class="outline-text-3" id="text-orge8ee764">
+</div>
+</div>
+<div id="outline-container-org7605d82" class="outline-3">
+<h3 id="org7605d82"><span class="done DONE">DONE</span> knowledge graphs, NLP and ML&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-org7605d82">
+<p>
+The position involves creating a new search engine, has huge market
+potential. I do not have enough exposure to NLP to decide if I like
+the work or not.
+</p>
+
+<p>
+Uncertain if I will like the work, particularly, if I will develop
+an interest in computational linguistics.
+</p>
+</div>
+</div>
+<div id="outline-container-orga48f606" class="outline-3">
+<h3 id="orga48f606"><span class="done CANCELLED">CANCELLED</span> dark matter theory, astroparticle physics and ML</h3>
+<div class="outline-text-3" id="text-orga48f606">
+<p>
+Open ended position, possible projects to be discussed during
+interview. Application requires a research statement (containing
+future reseach interests).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge222116" class="outline-3">
+<h3 id="orge222116"><span class="done CANCELLED">CANCELLED</span> learning analytics</h3>
+<div class="outline-text-3" id="text-orge222116">
+<p>
+Besides being obsessed with the act of learning and how to make it
+better, it obviously is extremely relevant due to online learning on
+the rise with online courses (coursera). The pandemic will no doubt
+shift the face of education and online learning is definitely be a
+part of the next iteration of education systems.
+</p>
+
+<p>
+I can spin the Bsc. project and propose applications of DL in the
+application.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14d1a02" class="outline-3">
+<h3 id="org14d1a02"><span class="done CANCELLED">CANCELLED</span> quantum computing and quantum simulation for chemistry and materials</h3>
+<div class="outline-text-3" id="text-org14d1a02">
+<p>
+The position is very cryptic, does not provide much info on the work
+or the requirements (except a background in CS or theoretical
+physics). I have to do a bit more research, but I am very interested.
+</p>
+
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> what is many-body simulation?</li>
+<li class="off"><code>[&#xa0;]</code> what is NISQ devices?</li>
+<li class="off"><code>[&#xa0;]</code> history of the QuSoft research group, what is their goal?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ce4364" class="outline-3">
+<h3 id="org7ce4364"><span class="done CANCELLED">CANCELLED</span> artificial intelligence supported behaviour change</h3>
+<div class="outline-text-3" id="text-org7ce4364">
+<p>
+Interdisciplinary research topic with connections to health, mobile
+communication, edge computation.
+</p>
+
+<ul class="org-ul">
+<li>has many industry applications and job opportuinities</li>
+<li>I have never been interested in NLP tbh</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org670436e" class="outline-3">
+<h3 id="org670436e"><span class="done CANCELLED">CANCELLED</span> position in biostatistics</h3>
+<div class="outline-text-3" id="text-org670436e">
+</div>
+</div>
+<div id="outline-container-org964a790" class="outline-3">
+<h3 id="org964a790"><span class="done CANCELLED">CANCELLED</span> multi-robot motion planning and task assignment in dynamic human centered spaces</h3>
+<div class="outline-text-3" id="text-org964a790">
+</div>
+</div>
+<div id="outline-container-orgcc56290" class="outline-3">
+<h3 id="orgcc56290"><span class="done CANCELLED">CANCELLED</span> improved ice sheet mass change estimates from remote sensing</h3>
+<div class="outline-text-3" id="text-orgcc56290">
+<p>
+The position has links to climate change (a global cause of concern),
+aerospace engineering, large scale computing and big data engineering.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfdf5eb2" class="outline-3">
+<h3 id="orgfdf5eb2"><span class="done CANCELLED">CANCELLED</span> seamless and sustainable multi-modal transport hubs</h3>
+<div class="outline-text-3" id="text-orgfdf5eb2">
+<p>
+A systems problem, quite interesting.   
+</p>
+</div>
+</div>
+<div id="outline-container-orgc5a6557" class="outline-3">
+<h3 id="orgc5a6557"><span class="done CANCELLED">CANCELLED</span> conversational search</h3>
+<div class="outline-text-3" id="text-orgc5a6557">
+</div>
+</div>
+<div id="outline-container-org80de826" class="outline-3">
+<h3 id="org80de826"><span class="done CANCELLED">CANCELLED</span> gravitational waves and cosmology</h3>
+<div class="outline-text-3" id="text-org80de826">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-11-13 Fri 11:34] </span></span> <a href="https://www.academictransfer.com/en/295050/phd-student-in-dark-matter-research/">another position</a> which can be used to contact
+the prof.
+</p>
+
+<p>
+Although the position asks for a BG in physics, I am really interested
+in the field and have past experience directly working with the KM3NeT
+data. Perhaps reach out to the professors and tell them my story. I
+can tell them that I am really interested in the field, want to
+continue working on the Msc. Thesis and other related work.   
+</p>
+</div>
+</div>
+<div id="outline-container-org20b10ba" class="outline-3">
+<h3 id="org20b10ba"><span class="done CANCELLED">CANCELLED</span> dark universe physics and ML</h3>
+<div class="outline-text-3" id="text-org20b10ba">
+<p>
+The position is for postdoc but I can still convince the prof to
+perhaps consider a PhD position. They are linked with Nikhef and I
+have direct experience.   
+</p>
+</div>
+</div>
+<div id="outline-container-orge89d5b6" class="outline-3">
+<h3 id="orge89d5b6"><span class="done DONE">DONE</span> explainable AI, Genetic Programming and Deep learning for medicine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-orge89d5b6">
+<p>
+I think this is also an interesting application of AI, need to read a
+bit of literature to understand problems of the field.   
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc35a5f" class="outline-3">
+<h3 id="orgfc35a5f"><span class="done CANCELLED">CANCELLED</span> neuronal networks underlying learning and decision-making: dynamics and analysis</h3>
+<div class="outline-text-3" id="text-orgfc35a5f">
+</div>
+</div>
+<div id="outline-container-orge2e1867" class="outline-3">
+<h3 id="orge2e1867"><span class="done DONE">DONE</span> model-based and data-driven non-linear control of continuum soft robots&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-orge2e1867">
+</div>
+</div>
+<div id="outline-container-orge846b01" class="outline-3">
+<h3 id="orge846b01"><span class="done DONE">DONE</span> experimental particle physics (ATLAS)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-orge846b01">
+<p>
+Possibility of working at CERN for 1 year.   
+</p>
+</div>
+</div>
+<div id="outline-container-org59b0442" class="outline-3">
+<h3 id="org59b0442"><span class="done DONE">DONE</span> positions in astronomy and astrophysics&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-org59b0442">
+</div>
+</div>
+<div id="outline-container-org5093e5b" class="outline-3">
+<h3 id="org5093e5b"><span class="done CANCELLED">CANCELLED</span> comupter vision and ML</h3>
+<div class="outline-text-3" id="text-org5093e5b">
+<p>
+One of the projects is on FL.   
+</p>
+</div>
+</div>
+<div id="outline-container-org88cc4b5" class="outline-3">
+<h3 id="org88cc4b5"><span class="done DONE">DONE</span> Geometric and Probabilistic Modeling for Explainable hybrid intelligence systems&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-org88cc4b5">
+</div>
+</div>
+
+<div id="outline-container-org0f29016" class="outline-3">
+<h3 id="org0f29016"><span class="done DONE">DONE</span> Situated AI Systems&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-org0f29016">
+</div>
+</div>
+
+<div id="outline-container-orga192a88" class="outline-3">
+<h3 id="orga192a88"><span class="done DONE">DONE</span> Cognitive assisted agile manufacturing for labor force supported by trust worthy AI&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rejected">rejected</span></span></h3>
+<div class="outline-text-3" id="text-orga192a88">
+<ul class="org-ul">
+<li>another systems engineering, human factors oriented, applied AI
+position</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org94c33d0" class="outline-3">
+<h3 id="org94c33d0"><span class="done CANCELLED">CANCELLED</span> I-GNSS positioning for assisted and automated driving</h3>
+<div class="outline-text-3" id="text-org94c33d0">
+</div>
+</div>
+
+<div id="outline-container-org85117d7" class="outline-3">
+<h3 id="org85117d7"><span class="done CANCELLED">CANCELLED</span> New machine learning strategies for data scarce materials science problems</h3>
+<div class="outline-text-3" id="text-org85117d7">
+</div>
+</div>
+
+<div id="outline-container-org26a68c8" class="outline-3">
+<h3 id="org26a68c8"><span class="done CANCELLED">CANCELLED</span> ICAI AFR deploying ML models at scale</h3>
+<div class="outline-text-3" id="text-org26a68c8">
+<ul class="org-ul">
+<li>this position focuses more in the devops side</li>
+<li>approach it from software engineering and big data side of things</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2cb0eaa" class="outline-3">
+<h3 id="org2cb0eaa"><span class="done CANCELLED">CANCELLED</span> Distributed systems</h3>
+<div class="outline-text-3" id="text-org2cb0eaa">
+<ul class="org-ul">
+<li>goal of the project is to develop distributed machine learning
+algorithms</li>
+<li>opportunity to learn about distributed computing (for machine learning)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfb69ffd" class="outline-3">
+<h3 id="orgfb69ffd"><span class="done CANCELLED">CANCELLED</span> Socially embedded AI systems</h3>
+<div class="outline-text-3" id="text-orgfb69ffd">
+<ul class="org-ul">
+<li>interesting but need time to ponder of it</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2fb2a6f" class="outline-3">
+<h3 id="org2fb2a6f"><span class="done CANCELLED">CANCELLED</span> Socially intelligent AI</h3>
+<div class="outline-text-3" id="text-org2fb2a6f">
+</div>
+</div>
+
+<div id="outline-container-org971e500" class="outline-3">
+<h3 id="org971e500"><span class="done CANCELLED">CANCELLED</span> Computer vision</h3>
+<div class="outline-text-3" id="text-org971e500">
+</div>
+</div>
+
+<div id="outline-container-org19c9432" class="outline-3">
+<h3 id="org19c9432"><span class="done CANCELLED">CANCELLED</span> ML for combating cybercrime</h3>
+<div class="outline-text-3" id="text-org19c9432">
+</div>
+</div>
+
+<div id="outline-container-orgf889c4a" class="outline-3">
+<h3 id="orgf889c4a"><span class="done CANCELLED">CANCELLED</span> Interactive Optoelectronic platform</h3>
+<div class="outline-text-3" id="text-orgf889c4a">
+</div>
+</div>
+</div>
+<div id="outline-container-org4d88116" class="outline-2">
+<h2 id="org4d88116">Notes</h2>
+<div class="outline-text-2" id="text-org4d88116">
+</div>
+<div id="outline-container-org1b9adf3" class="outline-3">
+<h3 id="org1b9adf3">preferred locations</h3>
+<div class="outline-text-3" id="text-org1b9adf3">
+<ul class="org-ul">
+<li>Amsterdam</li>
+<li>Utrecht</li>
+<li>Delft/Leiden</li>
+<li>Eindhoven</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Arumoy Shome</p>
+<p class="date">Created: 2021-02-10 Wed 11:56</p>
+</div>
+</body>
+</html>
