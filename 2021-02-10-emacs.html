@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-02-24 Wed 20:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs</title>
+<meta name="author" content="Arumoy Shome" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+<meta name="robots" content="noindex">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Emacs</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge5e4e2c">Fundamentals and General Concepts</a>
+<ul>
+<li><a href="#org9fb07c7">The display</a></li>
+<li><a href="#orgd57e56b">Killing &amp; yanking</a></li>
+<li><a href="#org6b36107">The mark</a></li>
+<li><a href="#org123176b">The region</a></li>
+<li><a href="#org6b5c208">Indentation</a></li>
+<li><a href="#org6b3ac6b">Screen lines and logical lines</a></li>
+<li><a href="#org8758d7b">Completion</a></li>
+<li><a href="#org1439e7e">Minibuffer</a></li>
+<li><a href="#orgd38ffe5">Renaming files in Emacs</a></li>
+<li><a href="#orgf175261">Help and info</a></li>
+<li><a href="#orgb38ec69"><code>PATH</code> and <code>exec-path</code></a></li>
+</ul>
+</li>
+<li><a href="#orge9101f3">Working with text</a></li>
+<li><a href="#org90faa32">Working with programs</a>
+<ul>
+<li><a href="#org4fb95ce">Python</a></li>
+</ul>
+</li>
+<li><a href="#org3f274df">init.el archive</a>
+<ul>
+<li><a href="#org5dd6ca3">Custom function to visit recent files</a></li>
+<li><a href="#orge8be357">org-ref config</a></li>
+<li><a href="#org374998b">ido config</a></li>
+<li><a href="#org5e2fbf7">projectile config</a></li>
+<li><a href="#orgeeb88bc">fish-mode config</a></li>
+<li><a href="#orgd09fcb4">exec-from-shell-package config</a></li>
+<li><a href="#orgb5b49a9">smartparens config</a></li>
+<li><a href="#org24fcf0c">mu4e config</a></li>
+<li><a href="#orgf493632">evil config</a></li>
+<li><a href="#orgba220d9">linum-relative config</a></li>
+<li><a href="#orgce9ddb6">powerline config</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+This document captures my journey of learning Emacs. My first
+interaction with Emacs was through Spacemacs - the popular Emacs
+starter kit. Since then, I have migrated to my own config using
+straight.el and use-package.
+</p>
+
+<p>
+As of <span class="timestamp-wrapper"><span class="timestamp">[2021-02-09 Tue] </span></span> I find the urge to dive deeper into Emacs and
+Emacs Lisp. The primary motivation for this is to simplify my personal
+configuration files and stick (as much as possible) to built-in Emacs
+functionality.
+</p>
+
+<p>
+The primary method to accomplish such a task is to read the Emacs and
+the Intro to Elisp manuals cover-to-cover, like a book. The goal here
+is to develop a deep understanding of Emacs and ultimately gain the
+ability to write custom elisp functions.
+</p>
+
+<div id="outline-container-orge5e4e2c" class="outline-2">
+<h2 id="orge5e4e2c">Fundamentals and General Concepts</h2>
+<div class="outline-text-2" id="text-orge5e4e2c">
+</div>
+<div id="outline-container-org9fb07c7" class="outline-3">
+<h3 id="org9fb07c7">The display</h3>
+<div class="outline-text-3" id="text-org9fb07c7">
+<p>
+The <code>narrow</code> functionality is my most treasured piece of functionality
+which working with large bodies of text (which is often!). I usually
+use <code>C-x n n</code> or <code>C-x n s</code> to narrow to region or subtree (when in
+org-mode) respectively. Once done with editing, I use <code>C-x n w</code> to
+"widen" back to the entire buffer.
+</p>
+
+<p>
+Emacs also have the <code>view-mode</code>, a minor mode which makes scrolling
+through a buffer easier. It diables editing and enables the scrolling
+functionality available in info-mode ie. <code>SPC</code> and <code>BACKSPC</code> scroll
+the buffer forward and backward respectively.
+</p>
+
+<p>
+<code>follow-mode</code> is another lesser known but useful feature. It allows us
+to view the same buffer in multiple windows in a continuation. This is
+especially useful when working on a large text document where we need
+to read/refer back to a prior/later section of the text.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd57e56b" class="outline-3">
+<h3 id="orgd57e56b">Killing &amp; yanking</h3>
+<div class="outline-text-3" id="text-orgd57e56b">
+<p>
+Killing refers to cutting text while yanking refers to pasting text.
+Killing text cuts the text from the buffer and puts it in the kill
+ring. Yanking pulls the latest text from the kill ring and puts it in
+the buffer. Deleting is also a thing and these commands remove text
+from the buffer but do not save it in the kill ring.
+</p>
+
+<p>
+<code>C-k</code> is the most basic killing command (<code>kill-line</code>) which kills the
+line after point. But a more useful command is <code>kill-whole-line</code> bound
+to <code>C-S-backspace</code> which kills the entire line regardless of the point
+position. <code>zap-to-char</code> is another less used command bound to <code>M-z</code>
+which asks for a <code>CHAR</code> and kills through to its next occurrance.
+</p>
+
+<p>
+Rectangle operations are equivalent to vertical editing in vim. All
+the killing and yanking commands are prefixed with <code>C-x r</code>. <code>C-x SPC</code>
+toggles rectangle mark mode.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b36107" class="outline-3">
+<h3 id="org6b36107">The mark</h3>
+<div class="outline-text-3" id="text-org6b36107">
+<p>
+The mark is how Emacs refers to highlighting text using a mouse. We
+can set the mark using <code>C-SPC</code> and then use any movement commands to
+move the point. One useful command is the <code>exchange-point-and-mark</code>
+bound to <code>C-x C-x</code> which sets the mark at point and moves the point to
+the previous mark. This (default) behavior is called transient mark
+mode.
+</p>
+
+<p>
+Emacs automatically sets a mark whenever the point jumps to a far away
+location (for example using search). <code>C-c C-SPC</code> can be used to jump
+back to the previous location. The history of the mark is saved in the
+mark ring. Besides a local mark ring which operates only on the
+buffer, there is a global mark ring which tracks movement across
+movement. <code>C-x C-SPC</code> can be used to pop the global mark ring,
+analogous to <code>C-u C-SPC</code>.
+</p>
+
+<p>
+The mark can also be set by holding down the shift (called shift
+selection) key while issuing any movement commands (for example
+<code>S-M-f</code> or <code>S-M-b</code>). Other commands I frequently use are
+<code>mark-paragraph</code> (bound to <code>M-h</code>) and <code>mark-defun</code> (bound to <code>C-M-h</code>)
+to quickly mark text-mode paragraphs and sexpressions respectively.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org123176b" class="outline-3">
+<h3 id="org123176b">The region</h3>
+<div class="outline-text-3" id="text-org123176b">
+<p>
+One feature of Emacs which I constantly overlook is the fact that most
+commands operate only on the region if active. For instance,
+<code>query-replace</code> command (bound to <code>M-%</code>) which targets the entire
+buffer by default, can be limited to a select region.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b5c208" class="outline-3">
+<h3 id="org6b5c208">Indentation</h3>
+<div class="outline-text-3" id="text-org6b5c208">
+<p>
+<code>electric-indent-mode</code> which is a global minor mode, turned on by
+default, indents all new lines based on the major mode. I prefer to
+turn this functionality off in org files since I want all lines to be
+a uniform length of roughly 75 characters.
+</p>
+
+<p>
+Other useful (and frequently forgotten) commands include:
+</p>
+<ul class="org-ul">
+<li><code>delete-horizontal-space</code> (bound to <code>M-\</code>)</li>
+<li><code>just-one-space</code> (bound to <code>M-SPC</code> by default but I rebind this key
+to <code>cycle-spacing</code> which is a dwim functionality and includes
+<code>just-one-space</code>).</li>
+<li><code>delete-blank-lines</code> (bound to <code>C-x C-o</code>)</li>
+<li><code>delete-indentation</code> (bound to <code>M-Q</code> and <code>M-^</code> although I prefer the
+prior as it analogous to <code>M-q</code> which runs <code>fill-paragraph</code>)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6b3ac6b" class="outline-3">
+<h3 id="org6b3ac6b">Screen lines and logical lines</h3>
+<div class="outline-text-3" id="text-org6b3ac6b">
+<p>
+Emacs automatically wraps lines and displays them on multiple "screen
+lines" when the line is longer than the width of the window (assuming
+it is not hard wrapped). The default behaviour is to wrap exactly at
+the window edge, however a better alternative is to use
+<code>visual-line=mode</code> which breaks the lines at spaces/tabs.
+</p>
+
+<p>
+<code>C-n</code> and <code>C-p</code> work on screenlines whereas all other movement keys
+such as <code>C-a</code> and <code>C-e</code> work on logical lines. This is a really sane
+and smart default.
+</p>
+
+<p>
+To prevent long lines from wrapping, Emacs can be instructed to
+"truncate" the line instead. When a line is truncated, it only
+consumes a single screen line, and the excess is marked by a double
+arrow in the right fringe.
+</p>
+
+<p>
+I prefer to hard wrap my lines at 75 characters. Hard wrapping is
+referred to as filling in Emacs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8758d7b" class="outline-3">
+<h3 id="org8758d7b">Completion</h3>
+<div class="outline-text-3" id="text-org8758d7b">
+<p>
+In emacs, 'completion' primarily refers to completion in the
+minibuffer (see <a href="#org1439e7e">Minibuffer</a>), while 'symbolic completion' refers to the
+usual completion we are used to in the regular buffers.
+</p>
+
+<p>
+<code>TAB</code> is the most useful key which completes as much as possible.
+<code>SPC</code> completes one word but I rarely use this. <code>?</code> displays a list of
+completions. <code>M-v</code> can be used to move focus to the completion buffer.
+Here, use the arrow keys, <code>TAB</code> or <code>S-TAB</code> to move around. <code>q</code> closes
+the completion buffer while <code>z</code> kills it. <code>RET</code> confirms the
+completion candidate at all times.
+</p>
+
+<p>
+The style of completion is determined by the <code>completion-styles</code> list.
+See <a href="https://www.gnu.org/software/emacs/manual/html_mono/emacs.html#Completion-Styles">info:emacs#Completion Styles</a> for more details. The default value
+is <code>(basic partial-completion emacs22)</code> however, I think I would want
+it to be <code>flex</code>.
+</p>
+
+<p>
+I use <a href="https://github.com/raxod502/selectrum">selectrum</a> as my completion interface (rather than the
+default minibuffer) along with <a href="https://github.com/raxod502/prescient.el">percient.el</a> for better sorting and
+filtering (rather than the built in <code>completion-styles</code>). I am aware
+of the several wonderful packages released and maintained by <a href="https://github.com/oantolin">oantolin</a>
+(<a href="https://github.com/oantolin/consult">consult</a>, <a href="https://github.com/oantolin/orderless">orderless</a> and <a href="https://github.com/oantolin/embark">embark</a> to mention a few). However my current
+config has not disappointed me so I am sticking with it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1439e7e" class="outline-3">
+<h3 id="org1439e7e">Minibuffer</h3>
+<div class="outline-text-3" id="text-org1439e7e">
+<p>
+Minibuffer history is the most underrated and under-utilised feature.
+Besides <code>M-p</code> and <code>M-n</code> to cycle between past completions, <code>M-r</code> and
+<code>M-s</code> are available to do a regex search of the previous candidates.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd38ffe5" class="outline-3">
+<h3 id="orgd38ffe5">Renaming files in Emacs</h3>
+<div class="outline-text-3" id="text-orgd38ffe5">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-01-30 Sat 16:09] </span></span> Since I use <code>dired-jump</code> on a regular basis,
+I have it mapped to <code>s-j</code> as part of my other super-based
+convenience keybindings.
+</p>
+
+<p>
+Others seem to write a function to do this, I find that dired works
+just as well for me (one less piece of elisp code to write/worry
+about). I have <code>C-x C-j</code> mapped to <code>dired-jump</code> which takes me to
+the directory containing the current file. Next, I can use dired's
+built in functionality to delete/rename files which automatically
+update the corresponding buffer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf175261" class="outline-3">
+<h3 id="orgf175261">Help and info</h3>
+<div class="outline-text-3" id="text-orgf175261">
+<p>
+The help system in Emacs is impecable and in combination with the info
+guides, are an invaluable resource to learn from. I typically use the
+help system in two ways:
+</p>
+
+<ul class="org-ul">
+<li>first by invoking <code>C-h</code> after a prefix key and</li>
+<li>second by invoking <code>C-h m</code> to revise/familiarise myself with the
+keybindings of a particular major mode</li>
+</ul>
+
+<p>
+The info guides provide indepth and comprehensive information on all
+topics relevant to Emacs. Typing <code>C-h i</code> opens the info page. From
+here, <code>C-h m</code> can summarize the keybindings to navigate info pages
+(use <code>h</code> for detailed help).
+</p>
+
+<p>
+Consult <a href="https://www.gnu.org/software/emacs/manual/html_mono/emacs.html#Help">info:emacs#Help</a> for more info on the help system.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb38ec69" class="outline-3">
+<h3 id="orgb38ec69"><code>PATH</code> and <code>exec-path</code></h3>
+<div class="outline-text-3" id="text-orgb38ec69">
+<p>
+Emacs maintains its own copy of the <code>PATH</code> variable which it copies
+over from the shell. However, on OSX it does not copy the paths set
+by <code>libexe</code>, but only the ones explicitly set in the shell config
+files.
+</p>
+
+<p>
+The <code>exec-path</code> is a list which Emacs uses to look for programs
+(such as find, grep, etc). Emacs documentation claims to set this up
+from <code>PATH</code> but this does not seem to be case (at least on OSX).
+</p>
+
+<p>
+So the simplest solution I have come across (as of
+<span class="timestamp-wrapper"><span class="timestamp">[2020-09-14 Mon 20:27]</span></span>) is to set them up manually. See
+<a href="https://github.com/arumoy-shome/emacs.d/blob/master/aru/aru-path.el">aru-path.el</a> for details.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge9101f3" class="outline-2">
+<h2 id="orge9101f3">Working with text</h2>
+<div class="outline-text-2" id="text-orge9101f3">
+<p>
+<code>M-=</code> runs the <code>count-words-region</code> command which reports the number
+of words, lines and characters in the region. Use a prefix to target
+entire buffer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90faa32" class="outline-2">
+<h2 id="org90faa32">Working with programs</h2>
+<div class="outline-text-2" id="text-org90faa32">
+</div>
+<div id="outline-container-org4fb95ce" class="outline-3">
+<h3 id="org4fb95ce">Python</h3>
+<div class="outline-text-3" id="text-org4fb95ce">
+<p>
+I like to use python's builtin virtualenv package to manage virtual
+environments for my projects. Typically, I create a virtualenv per
+project and activate it with the <code>source venv/bin/activate</code> shell
+command (note that I always call my virtualenv venv, since it is
+inside the project directory, there is no namespace collision).
+</p>
+
+<p>
+I like the simplicity of the <code>activate</code> script, if you look at the
+source code, you find that all it does is append a certain directory
+to the <code>$PATH</code> environment variable such that the <code>python</code>
+executable from the virtualenv is picked up by the system.
+</p>
+
+<p>
+I dislike tools such as pyenv and pyenv-virtualenv simply because
+they are external dependencies which I may not have on remote
+machines and second because they add to my shell's startup time.
+</p>
+
+<p>
+In emacs, each buffer has a local value for the <code>default-directory</code>
+variable, which is set to the directory in which the file exists.
+This is a very reasonable default and should not be changes to
+perhaps the project root directory because other commands such as
+<code>find-file</code> depend on it.
+</p>
+
+<p>
+The manual way to start a python process is to open a dired buffer
+at the project root, and then issuing the <code>run-python</code> command with
+a universal argument (<code>C-u C-c C-p</code> if you want to do it the
+keybinding way). This is the simplest solution as it requires zero
+config on emacs and shell side.
+</p>
+
+<p>
+In the future, I would like to automate this, perhaps the
+functionality can be wrapped in a <code>aru/run-python</code> function.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3f274df" class="outline-2">
+<h2 id="org3f274df">init.el archive</h2>
+<div class="outline-text-2" id="text-org3f274df">
+<p>
+Here I store snippets of my config which I no longer use but document
+for future reference.
+</p>
+</div>
+
+<div id="outline-container-org5dd6ca3" class="outline-3">
+<h3 id="org5dd6ca3">Custom function to visit recent files</h3>
+<div class="outline-text-3" id="text-org5dd6ca3">
+<p>
+The consult.el package provides the <code>consult-buffer</code> which includes
+recent files. This makes the custom functions <code>aru/recentf-find-file</code>
+and <code>aru/recentf-find-file-other-window</code> redundant and thus have been
+removed from my config. For future reference however, I document the
+functions here.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun aru/get-recentf-files ()
+  "Get a list of recent files."
+  (mapcar 'abbreviate-file-name recentf-list))
+
+(defun aru/recentf-find-file ()
+  "Taken from
+  https://github.com/raxod502/selectrum/wiki/Useful-Commands#switch-to-recent-file"
+  (interactive)
+  (let ((files (aru/get-recentf-files)))
+    (find-file (completing-read "Find recent file: " files nil t))))
+
+(defun aru/recentf-find-file-other-window ()
+  "Like aru/recentf-find-file but in other window."
+  (interactive)
+  (let ((files (aru/get-recentf-files)))
+    (find-file-other-window (completing-read "Find recent file: " files nil t))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge8be357" class="outline-3">
+<h3 id="orge8be357">org-ref config</h3>
+<div class="outline-text-3" id="text-orge8be357">
+<p>
+I use latex to author the final documents and org-mode for managing my
+notes. I find that implicit links works perfectly well in notes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package org-ref
+  :disabled t
+  :after org
+  :straight t
+  :init
+  (setq reftex-default-bibliography '("~/org/bib/ref.bib")
+        org-ref-bibliography-notes "~/org/bib/notes.org"
+        org-ref-default-bibliography '("~/org/bib/ref.bib")
+        org-ref-pdf-directory "~/org/bib/pdfs/")
+  (setq bibtex-completion-bibliography reftex-default-bibliography
+        bibtex-completion-library-path org-ref-pdf-directory
+        bibtex-completion-notes-path org-ref-bibliography-notes)
+  :commands
+  (doi-add-bibtex-entry)
+  :bind
+  ("C-c ]" . org-ref-helm-insert-cite-link))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org374998b" class="outline-3">
+<h3 id="org374998b">ido config</h3>
+<div class="outline-text-3" id="text-org374998b">
+<p>
+I made the switch the selectrum.el combined with prescient.el.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package ido
+  :disabled t
+  :config
+  (ido-mode +1)
+  (ido-everywhere +1)
+  (setq ido-enable-flex-matching t)
+  (setq ido-use-filename-at-point 'guess)
+  (setq ido-enable-dot-prefix t))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e2fbf7" class="outline-3">
+<h3 id="org5e2fbf7">projectile config</h3>
+<div class="outline-text-3" id="text-org5e2fbf7">
+<p>
+The built in functionality for projects satisfy my needs.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package projectile
+  :disabled t
+  :straight t
+  :config
+  (setq projectile-completion-system 'default) ; use selectrum instead of ido
+  (setq projectile-switch-project-action 'projectile-commander) ; ask what to do when switching
+
+  (def-projectile-commander-method ?\C-m
+    "Find file in project."
+    (call-interactively #'find-file))
+
+  (projectile-mode +1)
+
+  (defun aru/projectile-indexing-method-p (method)
+    "Non-nil if METHOD is a safe value for `projectile-indexing-method'."
+    (memq method '(native alien)))
+
+  (put 'projectile-indexing-method 'safe-local-variable
+       #'aru/projectile-indexing-method-p)
+
+  (dolist (key '("C-r" "R"))
+    (bind-key key #'projectile-replace-regexp projectile-command-map))
+  :bind-keymap*
+  (("C-c p" . projectile-command-map))
+  :blackout t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeeb88bc" class="outline-3">
+<h3 id="orgeeb88bc">fish-mode config</h3>
+<div class="outline-text-3" id="text-orgeeb88bc">
+<p>
+I switched to zsh as my default shell.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package fish-mode
+  :disabled t
+  :straight t
+  :mode ("\\.fish\\'" .	fish-mode))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd09fcb4" class="outline-3">
+<h3 id="orgd09fcb4">exec-from-shell-package config</h3>
+<div class="outline-text-3" id="text-orgd09fcb4">
+<p>
+This package adds a lot to my startup time (and I like things snappy).
+I fix the problem by manually setting up <code>PATH</code> in emacs (see <a href="#orgb38ec69"><code>PATH</code>
+and <code>exec-path</code></a>).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package exec-path-from-shell
+  :disabled t
+  :straight t
+  :if (memq window-system '(mac ns))
+  :hook
+  (after-init . exec-path-from-shell-initialize))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb5b49a9" class="outline-3">
+<h3 id="orgb5b49a9">smartparens config</h3>
+<div class="outline-text-3" id="text-orgb5b49a9">
+<p>
+The <code>electric-pair-mode</code> built into emacs does the same thing.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package smartparens
+  :disabled t
+  :straight t
+  :config
+  (require 'smartparens-config)
+  :hook ((prog-mode . smartparens-mode)
+         (text-mode . smartparens-mode))
+  :blackout t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org24fcf0c" class="outline-3">
+<h3 id="org24fcf0c">mu4e config</h3>
+<div class="outline-text-3" id="text-org24fcf0c">
+<p>
+I have not found a strong motivation for dealing with email in emacs
+yet. I would also like to try the built in package (gnus) before
+switching to mu4e.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package mu4e
+  :commands
+  (mu4e)
+  :config
+  (mu4e-maildir "~/mail")
+  ;; mu4e binary comes with mu which I install with brewn
+  :load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf493632" class="outline-3">
+<h3 id="orgf493632">evil config</h3>
+<div class="outline-text-3" id="text-orgf493632">
+<p>
+I prefer to use the emacs keybindings in emacs. I find this keeps a
+clear segregation and a lesser congitive load when switching from one
+program to another. I have noticed that I automatically adapt to the
+correct style of keybindings when I switch over to vim and vice-versa.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package evil-magit :straight t :after magit)
+
+(use-package evil
+  :straight t
+  :init
+  (setq evil-want-C-u-scroll t
+        evil-want-C-u-delete t
+        evil-split-window-below t
+        evil-vsplit-window-right t)
+  :config
+  (evil-mode 1)
+  (evil-set-initial-state 'term-mode 'emacs))
+
+(use-package evil-surround
+  :straight t
+  :after (evil)
+  :config (global-evil-surround-mode 1))
+
+(use-package evil-commentary
+  :straight t
+  :after (evil)
+  :config (evil-commentary-mode))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgba220d9" class="outline-3">
+<h3 id="orgba220d9">linum-relative config</h3>
+<div class="outline-text-3" id="text-orgba220d9">
+<p>
+I thing emacs can do this by itself, also I prefer to use search
+instead.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package linum-relative
+  :straight t
+  :config (linum-relative-global-mode))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgce9ddb6" class="outline-3">
+<h3 id="orgce9ddb6">powerline config</h3>
+<div class="outline-text-3" id="text-orgce9ddb6">
+<p>
+I switched to doom-modeline which is much quicker and satisfies my
+requirements.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package powerline
+  :straight t
+  :config (powerline-center-theme))
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: Feb 09, 2021</p>
+<p class="author">Author: Arumoy Shome</p>
+<p class="date">Created: 2021-02-24 Wed 20:53</p>
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-10 Wed 11:56 -->
+<!-- 2021-02-24 Wed 20:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project Dotfiles</title>
@@ -227,9 +227,9 @@
 <ul>
 <li><a href="#org65f09c7">Inbox</a>
 <ul>
-<li><a href="#orge9bdc78"><span class="todo TODO">TODO</span> combine <code>recentf-file-file</code> and <code>find-file</code></a></li>
-<li><a href="#orgd6b44d4"><span class="todo TODO">TODO</span> fix <code>aru/tab-bar-select-tab-dwim</code></a></li>
-<li><a href="#org795d030"><span class="todo TODO">TODO</span> add current tab name to modeline</a></li>
+<li><a href="#org0fc6743"><span class="todo TODO">TODO</span> scroll by half page</a></li>
+<li><a href="#org352a488"><span class="todo TODO">TODO</span> maximise current window</a></li>
+<li><a href="#orgd41c3ed"><span class="todo TODO">TODO</span> setup RSS feed in Emacs</a></li>
 </ul>
 </li>
 </ul>
@@ -243,41 +243,39 @@
 Tasks for the project.
 </p>
 </div>
-<div id="outline-container-orge9bdc78" class="outline-3">
-<h3 id="orge9bdc78"><span class="todo TODO">TODO</span> combine <code>recentf-file-file</code> and <code>find-file</code></h3>
-<div class="outline-text-3" id="text-orge9bdc78">
+<div id="outline-container-org0fc6743" class="outline-3">
+<h3 id="org0fc6743"><span class="todo TODO">TODO</span> scroll by half page</h3>
+<div class="outline-text-3" id="text-org0fc6743">
 <p>
-Having two separate keys is overkill, I'd rather find another useful
-functionality for <code>s-r</code>. I want to combine the two lists and bind it
-directly to <code>s-f</code>.
+I have wanted this bit of functionality from the very beginning. Emacs
+by default scrolls the entire page but this isn't enough context for
+me. A possible way to do this would be to write a wrapper around
+<code>move-to-window-line-top-bottom</code> (bound to <code>M-r</code>), see the docstrings
+on its args for more info.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd6b44d4" class="outline-3">
-<h3 id="orgd6b44d4"><span class="todo TODO">TODO</span> fix <code>aru/tab-bar-select-tab-dwim</code></h3>
-<div class="outline-text-3" id="text-orgd6b44d4">
+<div id="outline-container-org352a488" class="outline-3">
+<h3 id="org352a488"><span class="todo TODO">TODO</span> maximise current window</h3>
+<div class="outline-text-3" id="text-org352a488">
 <p>
-the function is broken, need to investigate.
+I want to be able to focus in a single window without losing the
+current window configuration. Protesilaos has something does this,
+worth taking a look.
 </p>
 </div>
 </div>
-<div id="outline-container-org795d030" class="outline-3">
-<h3 id="org795d030"><span class="todo TODO">TODO</span> add current tab name to modeline</h3>
-<div class="outline-text-3" id="text-org795d030">
+<div id="outline-container-orgd41c3ed" class="outline-3">
+<h3 id="orgd41c3ed"><span class="todo TODO">TODO</span> setup RSS feed in Emacs</h3>
+<div class="outline-text-3" id="text-orgd41c3ed">
 <p>
-<span class="timestamp-wrapper"><span class="timestamp">[2020-10-30 Fri 21:44] </span></span> I have gotten as far as extracting the name
-of the current tab. I am not sure how to display the text in the
-modeline. Moreover, how do I make sure that it updates as I change
-tabs?
+There are few institutes and individuals whom I want to follow. In
+order to prevent check their webpages for updates, I want to subscribe
+to their RSS feed, and I want to do it in Emacs.
 </p>
 
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(cdr(assoc 'name (tab-bar--current-tab)))
-</pre>
-</div>
-
 <p>
-Or flash it in the minibuffer works for me as well
+Protasilaos's config may come in handy here.
 </p>
 </div>
 </div>
@@ -285,7 +283,7 @@ Or flash it in the minibuffer works for me as well
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Arumoy Shome</p>
-<p class="date">Created: 2021-02-10 Wed 11:56</p>
+<p class="date">Created: 2021-02-24 Wed 20:53</p>
 </div>
 </body>
 </html>
