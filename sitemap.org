@@ -1,0 +1,5 @@
+#+TITLE: Sitemap for project website
+
+- [[file:index.org][Arumoy Shome]]
+- [[file:cv.org][Curriculum Vitae]]
+- [[file:projects.org][Projects]]

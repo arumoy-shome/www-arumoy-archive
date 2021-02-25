@@ -1,0 +1,32 @@
+#+TITLE: Arumoy Shome
+
+I am a Msc. Computer Science graduate from the [[https://www.vu.nl/en][Vrije Universiteit
+Amsterdam]] and [[https://www.uva.nl/en][Universiteit van Amsterdam]] in the Netherlands,
+specializing in [[https://masters.vu.nl/en/programmes/computer-science-big-data-engineering/index.aspx][Big Data Engineering]]. Recently, I conducted
+interdisciplinary research with [[https://www.nikhef.nl/en/][Nikhef]] and [[https://www.esciencecenter.nl/][The Netherlands eScience
+Center]] to improve the data processing pipeline of the [[https://www.km3net.org/][KM3NeT Neutrino
+Telescope]] using Graph Convolutional Neural Networks.
+
+I obtained my Bachelor's in The Applied Sciences from the [[https://uwaterloo.ca/][University
+of Waterloo]] in Canada, specializing in [[https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering][System Design Engineering]] with
+an [[https://uwaterloo.ca/engineering/future-undergraduate-students/programs-and-options/enriching-your-program-options][option in Entrepreneurship]]. Here, I learned to bring creative
+solutions to complex problems with multiple facets such as society,
+economics, environment and politics. I also learned how to nurture an
+idea at it's inception, develop it using systems theory and
+successfully bring it to the market as a finished product.
+
+My professional experience is two pronged. I have over 5 years of
+software development experience through professional web development
+positions at [[https://linkedin.com/in/arumoyshome][large and small companies]]. I am also versed with [[file:projects.org][data
+driven, research oriented projects]] rooted in diverse topics such as
+Large Scale Data Engineering, Data Visualization and Artificial
+Intelligence. One such project, ACE: Art, Color and Emotions was
+published as part of the [[https://dl.acm.org/doi/abs/10.1145/3343031.3350588][ACM International Conference on Multimedia,
+2019]]. You can find more details about my professional experience in my
+Curriculum Vitae[[[file:cv.org][html]]][[[file:assets/pdf/cv-redacted.pdf][pdf]]].
+
+After my Master's I would like to obtain my Doctorate. My research
+interests lie in applying Artificial Intelligence to large scale, real
+world problems with an emphasis on Human Centric Design.
+
+[[[mailto:contact@arumoy.me][email]]][[[https://github.com/arumoy-shome][Github]]][[[https://www.linkedin.com/in/arumoyshome/][LinkedIn]]]
