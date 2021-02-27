@@ -10,30 +10,50 @@ project whilst the papers can be read if one wishes for more depth on
 the matter. I usually host my projects on Github, the README can be
 consulted to get familiar with the structure of the repository.
 
-I am a strong proponent of open, reproducible research. To that
-extent, where possible, I also link to my research logs. These logs
-provide a granular look at the development of the projects. A word of
-caution: these logs are not intended to be read in a top-down fashion.
-They are simply there to serve as reference to those curious gain an
-insight into scientific research.
-
 * [2020] KM3NeT
   /Python, Pytorch, Pytorch Geometric/
 
-  I collaborated with [[https://www.esciencecenter.nl/][The Netherlands eScience Center]] and [[https://www.nikhef.nl/en/][Nikhef]] to
-  improve the data processing pipeline of the [[https://www.km3net.org][KM3NeT Neutrino
-  Telescope]] using Graph Convolutional Neural Networks.
+  Neutrinos are highly elusive subatomic particles which can only be
+  detected with the help of large particle detectors. The KM3NeT
+  neutrino telescope is one such detector currently being constructed
+  at the bottom on the Mediterranean Sea. Due to its large volume and
+  the presence of background noise, ``event trigger'' algorithms are
+  utilized by the data acquisition pipeline of the detector to sift
+  through the noise. A GPU Pipeline was also developed to improve the
+  quality of filtration of the event trigger algorithms without
+  compromising their runtime performance. Despite these efforts, the
+  quality of filtration require further improvements. The goal of this
+  paper is to improve upon the GPU Pipeline using Artificial Neural
+  Networks. The paper explores the possibility of replacing parts of
+  the GPU Pipeline using Multi Layer Perceptrons and Graph
+  Convolutional Neural Networks. The Multi Layer Perception performs
+  better compared to the existing solution while the results of the
+  Graph Convolutional Network are inconclusive in its existing form.
+  Overall, the outcome is promising and new avenues of research are
+  discovered through this work.
 
   [[[https://github.com/arumoy-shome/km3net][Github]]][[[file:assets/pdf/thesis-optimized.pdf][Paper]]]
 
 * [2020] Privacy Preserving Deep Learning for Medical Imaging
-  /Latex/
-  
-  I conducted a systematic literature review of deep learning systems
-  that are inherently privacy preserving in nature. Practical
-  applications include applying deep learning to sensitive data
-  such as patient records from medical institutes.
+  /Latex/ 
 
+  The success of Deep Neural Networks with image classification
+  prompted researchers to explore the applications of Deep Learning in
+  Medical Imaging and Medical Image Analysis (MIA). Deep Neural
+  Networks have sufficiently demonstrated their capabilities of
+  performing MIA tasks tirelessly and with fewer errors as opposed to
+  their human counterpart. However the challenge of training neural
+  networks using sensitive medical data, without violating the privacy
+  of patients remains an active field of research. Many solutions
+  exist to address this concern, however a systematic review and
+  analysis of these techniques is yet to be conducted. This paper
+  attempts to conduct the first systematic review of
+  privacy-preserving techniques to train deep learning models.
+  Emphasis is especially put on the performance and privacy analysis
+  of the techniques. In addition, the communication and runtime costs,
+  the ability of the solutions to scale, tolerance to faults and the
+  level of security against threats and attacks are also studied.
+  
   [[[file:assets/pdf/ppdl.pdf][Paper]]]
 
 * [2020] vim-zettel
@@ -54,21 +74,20 @@ insight into scientific research.
   
 * [2019] ACE: Art, Color and Emotions
   /JavaScript, D3.js/
-  
-  We created a data driven, web based platform for exploring visual
-  sentiment and emotion in artistic paintings over time. The project
-  resulted in a demo paper which was published in ACM Multi
-  Media 2019.
+
+  Art has been the cornerstone of human expression and social progress
+  through time. It is no wonder that art historians and daily
+  enthusiasts alike have spent countless hours trying to understand
+  more than what meets the eye. What an individual can draw from a
+  painting is very subjective, but we now know that human mind has a
+  high sensibility for well-defined subset of traits - one of them
+  being colour. This paper describes the process of bringing a new
+  light on how colours and emotional tone (sentiment) can be
+  interlaced with one another. This is achieved with the use of
+  widespread artificial intelligence techniques, a vast dataset of art
+  meta-data(OmniArt) and state-of-the-art visual interaction tools.
 
   [[[file:assets/pdf/ace-optimized.pdf][Paper]]][[[https://dl.acm.org/doi/abs/10.1145/3343031.3350588][Publication]]]
-
-* TODO [2018] Metacognition
-
-As a knowledge worker, I often like to reflect upon how I consume,
-organize and retreat information. Much like our brain, this website is
-intended to function as a web of interconnected ideas.
-
-+ link to some relevant notes
 
 * [2018] 3D Kadaster
   /Python, Apache Spark, Three.js/
@@ -91,9 +110,23 @@ intended to function as a web of interconnected ideas.
 * [2017] Elevate
   /JavaScript, Phaser.io/
 
-  We Collaborated with the Waterloo Regional Down Syndrome Society,
-  Canada and Fundacion Paraiso Down, El Salvador to develop an improved
-  and cheaper alternative to the state of the art cognitive assessment
-  tool for individuals with Down Syndrome.
+  Specialized educational resources for individuals with Down Syndrome
+  are lacking. This problem space was explored in detail through
+  surveys and interviews with both the primary and secondary users.
+  Several problems were discovered in this space of which, the lack of
+  an affordable, easy to use and engaging cognitive test was deemed
+  critical. This problem was further explored and an improved form of
+  this assessment using web based games was proposed. The design
+  process was broken down into three iterative phases. The first was
+  defining the problem, followed by validating the solutions and
+  finally iterating on the final solution. Throughout the phases, five
+  main approaches were used to help with the analysis and iterative
+  process. The approaches included user surveys, user Interviews,
+  Wizard of Oz testing, usability testing, and user testing.
+  Engagement, key usability issues and scoring correlation with
+  standard methods were the primary testing protocols used for
+  validation of the final designed solution. The results and
+  limitations of the designed solution are touched upon and a few
+  reasonable next steps are laid upon for the future.
 
   [[[file:assets/pdf/elevate.pdf][Paper]]][[[https://github.com/arumoy-shome/elevate][Github]]][[[https://arumoy.me/elevate][Website]]]
