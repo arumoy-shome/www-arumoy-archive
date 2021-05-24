@@ -4,6 +4,9 @@
 
 * Education
   
+** [2021-2025] PhD. Software Engineering for AI
+   /Technische Universiteit Delft, Delft, The Netherlands/
+
 ** [2018-2020] Msc. Computer Science, Big Data Engineering
    /Vrije Universiteit Amsterdam & Universiteit van Amsterdam,
    Amsterdam, The Netherlands/
