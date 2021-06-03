@@ -32,4 +32,6 @@ published as part of the [[https://dl.acm.org/doi/abs/10.1145/3343031.3350588][A
 2019]]. You can find more details about my professional experience in my
 Curriculum Vitae[[[file:cv.org][html]]][[[file:assets/pdf/cv-redacted.pdf][pdf]]].
 
+From time to time, I write about my [[https://arumoy.me/org][topics that interest me]].
+
 [[[mailto:contact@arumoy.me][email]]][[[https://github.com/arumoy-shome][Github]]][[[https://www.linkedin.com/in/arumoyshome/][LinkedIn]]]
