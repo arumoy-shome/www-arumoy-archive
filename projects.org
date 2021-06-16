@@ -10,6 +10,14 @@ project whilst the papers can be read if one wishes for more depth on
 the matter. I usually host my projects on Github, the README can be
 consulted to get familiar with the structure of the repository.
 
+* [2021] aocp.el
+  /elisp/
+
+  An emacs package to manage bibliographic information in org-mode (a
+  major mode for Emacs).
+
+  [[[https://github.com/arumoy-shome/aocp.el][Github]]]
+
 * [2020] KM3NeT
   /Python, Pytorch, Pytorch Geometric/
 
