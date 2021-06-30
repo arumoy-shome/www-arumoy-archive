@@ -1,11 +1,17 @@
 #+TITLE: Arumoy Shome
 
+/"Software Engineering is the ultimate tool that enables others to do
+what needs to get done." -- Me (2021)/
+
 I am a researcher at [[https://www.tudelft.nl/en/][TU Delft]], working towards my doctorate as part of
-the [[https://se.ewi.tudelft.nl/][Software Engineering Research Group]]. My research interests lie in
+the [[https://se.ewi.tudelft.nl/][Software Engineering Research Group]]. My research interests lie at
 the intersection of Data Science, Software Engineering and Design.
 Here I am developing tools, techniques and best practises which allow
-us to build, test, deploy, scale and maintain modern software projects
-with AI components.
+us to build, test, deploy, scale and maintain modern software systems
+with Machine Learning (ML) components. While we must look to the micro
+to identify and understand a problem, I try to keep an eye towards the
+current era of big-data and large-scale ML as a long-term area of
+research.
 
 I completed my Msc. in Computer Science from the [[https://www.vu.nl/en][Vrije Universiteit
 Amsterdam]] and [[https://www.uva.nl/en][Universiteit van Amsterdam]] in the Netherlands,
