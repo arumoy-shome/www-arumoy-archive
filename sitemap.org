@@ -3,3 +3,4 @@
 - [[file:index.org][Arumoy Shome]]
 - [[file:cv.org][Curriculum Vitae]]
 - [[file:projects.org][Projects]]
+- [[file:talks.org][Talks]]
