@@ -1,9 +1,0 @@
-#+TITLE: Talks
-
-Following is a list of talks I have given in the past.
-
-* [2021-07-14 Wed] Research Workflow in Plaintext
-I gave a talk to the [[https://se.ewi.tudelft.nl/][SERG]] and [[https://se.ewi.tudelft.nl/ai4fintech/][AFR]] groups on managing scientific work
-and crafting workflows in plaintext, using Emacs and org-mode.
-
-[[[https://arumoy.me/org/20210712_105544--emacs-talk--research-workflow-in-plaintext.html][html]]][[[file:assets/pdf/20210712_105544--emacs-talk--research-workflow-in-plaintext.pdf][pdf]]]
