@@ -11,4 +11,4 @@ I gave a talk to the [SERG](https://se.ewi.tudelft.nl/) and
 scientific work and crafting workflows in plaintext, using Emacs and
 org-mode.
 
-[[html](https://arumoy.me/org/20210712_105544--emacs-talk--research-workflow-in-plaintext.html)][[pdf](assets/pdf/20210712_105544--emacs-talk--research-workflow-in-plaintext.pdf)]
+[[html](https://arumoy.me/org/2021-07-12--talk--research-workflow-in-plaintext)][[pdf](assets/pdf/20210712_105544--emacs-talk--research-workflow-in-plaintext.pdf)]
