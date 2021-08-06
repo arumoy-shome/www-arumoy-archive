@@ -49,6 +49,6 @@ Multimedia,
 
 I enjoy sharing knowledge and having discussions and am always happy
 to [engage with other publicly](talks). From time to time, I also
-write about [topics that interest me](https://arumoy.me/org).
+write about [topics that interest me](org).
 
 [[email](mailto:contact@arumoy.me)][[Github](https://github.com/arumoy-shome)][[LinkedIn](https://www.linkedin.com/in/arumoyshome/)]
