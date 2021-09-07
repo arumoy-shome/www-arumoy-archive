@@ -4,6 +4,13 @@ title: Talks
 
 Following is a list of talks I have given in the past.
 
+# [2021-09-08 Wed] Privacy Preserving Deep Learning
+
+I gave a talk to the [SERG]() and [AFR]() groups on privacy preserving
+deep learning for medical imaging.
+
+[[html](org/2021-09-07--talk--privacy-preserving-deep-learning)][[slides](https://docs.google.com/presentation/d/1uN-YCxvvbOsUNJwpClJBCn98DVKlmD2x-vd8s7tDvdA/edit?usp=sharing)]
+
 # [2021-07-14 Wed] Research Workflow in Plaintext
 
 I gave a talk to the [SERG](https://se.ewi.tudelft.nl/) and
