@@ -49,6 +49,9 @@ Multimedia,
 
 I enjoy sharing knowledge and having discussions and am always happy
 to [engage with other publicly](talks). From time to time, I also
-write about [topics that interest me](org).
+write about [topics that interest me](org). All materials (excluding
+links to external websites or third party products) on this website
+are open sourced under the [Creative Commons BY-NC-SA 3.0
+license](license).
 
 [[email](mailto:contact@arumoy.me)][[Github](https://github.com/arumoy-shome)][[LinkedIn](https://www.linkedin.com/in/arumoyshome/)]
