@@ -48,8 +48,10 @@ Multimedia,
      Curriculum Vitae[[html](cv)][[pdf](assets/pdf/cv-redacted.pdf)].
 
 I enjoy sharing knowledge and having discussions and am always happy
-to [engage with other publicly](talks). All materials (excluding links
-to external websites or third party products) on this website are open
-sourced under the [Creative Commons BY-NC-SA 3.0 license](license).
+to [engage with other publicly](talks). Sometimes, I [write about my
+day-to-day challenges](blogs) as a software engineering, data
+scientist & researcher. All materials (excluding links to external
+websites or third party products) on this website are open sourced
+under the [Creative Commons BY-NC-SA 3.0 license](license).
 
 [[email](mailto:contact@arumoy.me)][[Github](https://github.com/arumoy-shome)][[LinkedIn](https://www.linkedin.com/in/arumoyshome/)]
