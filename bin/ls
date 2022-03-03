@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+
+# ls: List (un)published files.
+
+# Usage: ls [OPT] [FILE]
+# Without any arguments, ls will list all published files.
+# With the optional -v | --inverse-match option, ls will list all
+# unpublished files.
+# If filenames are passed to ls, it will list which ones are published
+# and which are unpublished.
+
+SRCFMT="md"
+PUBFMT="html"
+SRCDIR="$PWD"
+PUBDIR="$SRCDIR/docs"
+SRCFILES=$(mktemp)
+PUBFILES=$(mktemp)
+
+if [[ ! -d "$PUBDIR" ]]; then
+  echo "Error: $PUBDIR does not exist."
+  return 1
+fi
+
+__cleanup() {
+  rm -f "$@"
+}
+
+__sync() {
+  # Helper function to compare files in SRCDIR & PUBDIR.
+
+  # names of all SRCFMT files in SRCDIR, sorted
+  fd . --extension "$SRCFMT" --max-depth 1 "$SRCDIR" --exec echo {/.} | \
+    sort > "$SRCFILES"
+
+  if [[ ! -s "$SRCFILES" ]]; then
+    echo "Info: there are no $SRCFMT files in $SRCDIR."
+    return 1
+  fi
+
+  # names of all PUBFMT files in PUBDIR, sorted
+  fd . --extension "$PUBFMT" --max-depth 1 "$PUBDIR" --exec echo {/.} | \
+    sort > "$PUBFILES"
+
+  if [[ ! -s "$PUBFILES" ]]; then
+    echo "Info: there are no $PUBFMT files in $PUBDIR."
+    return 1
+  fi
+}
+
+__ls() {
+  # Usage: ls [OPT FILE]
+  # Without any arguments, list all published files. If filenames are
+  # given, then provide details on which ones are published and which
+  # are unpublished.
+  # If the optional -v | --invert-match option is passed, list
+  # unpublished files instead.
+
+  local INVERT_FLAG=1
+  local PUBLISHED=$(mktemp)
+  local UNPUBLISHED=$(mktemp)
+
+  while [[ "$1" =~ ^-+ && ! "$1" == "--" ]]; do
+    case "$1" in
+      -v | --inverse-match)
+        INVERT_FLAG=0
+        ;;
+      *)
+        # do nothing, silently ignore
+        ;;
+    esac; shift
+  done
+
+  if [[ "$#" -gt 0 ]]; then
+    for f in "$@"; do
+      local NAME="${f%."$SRCFMT"}"
+
+      if [[ -e "$PUBDIR/$NAME.$PUBFMT" ]]; then
+        echo "$f" >> "$PUBLISHED"
+      else
+        echo "$f" >> "$UNPUBLISHED"
+      fi
+    done
+
+    if [[ -s "$PUBLISHED" ]]; then
+      echo "Info: Published files:"
+      column "$PUBLISHED"
+    fi
+
+    if [[ -s "$UNPUBLISHED" ]]; then
+      echo "Info: Unpublished files:"
+      column "$UNPUBLISHED"
+    fi
+    return 0
+  fi
+
+  if __sync; then
+    if [[ "$INVERT_FLAG" -eq 0 ]]; then
+      comm -13 "$SRCFILES" "$PUBFILES" | column
+    else
+      comm -12 "$SRCFILES" "$PUBFILES" | column
+    fi
+  fi
+
+  __cleanup "$PUBLISHED" "$UNPUBLISHED" "$SRCFILES" "$PUBFILES"
+}
+
+__ls "$@"
