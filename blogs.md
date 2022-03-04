@@ -14,6 +14,12 @@ your keywords to search within my blog posts. Your milage may vary as
 I don't perform any SEO optimisation so the search engine may not have
 indexed all my pages.
 
+# [2022-03-04 Fri 22:48] There and Back Again A Tale of Website Management
+
+After years of using [orgmode](https://orgmode.org) along with the
+[org-publish](https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html)
+package to run my website, I came back to markdown, shell & vim.
+
 # [2022-03-02 Wed 16:16] Keeping Terminal & Vim Colors in Sync
 
 When you are staring at text all day long, little things such as the
