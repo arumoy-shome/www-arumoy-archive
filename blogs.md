@@ -41,6 +41,17 @@ towards my workflow as a researcher and how I manage my digital notes.
 
 [[html](2022-02-28--blog--aims)]
 
+# [2021-11-13 Sat 15:31] Computational Notebooks using Emacs & org-mode
+
+I tried an experiment where I did data analysis in the
+terminal. I wrote a python module consisting of all the analysis code
+(where each method corresponds to a cell). I redirected the output to
+files/images and viewed the results using unix commands/vim. I wrote
+down my observations and interpretations of the results in a separate
+markdown file.
+
+[[html](2021-11-13--blog--computational-notebooks-orgmode)]
+
 # [2021-10-08 Fri 19:17] Ethics & AI
 
 I attended the [ICAI](https://icai.ai/) session on *Ethics & AI*. It
