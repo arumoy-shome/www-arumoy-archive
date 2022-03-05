@@ -41,6 +41,15 @@ towards my workflow as a researcher and how I manage my digital notes.
 
 [[html](2022-02-28--blog--aims)]
 
+# [2021-10-08 Fri 19:17] Ethics & AI
+
+I attended the [ICAI](https://icai.ai/) session on *Ethics & AI*. It
+was a really informative session which touched upon some very
+interesting and intriguing topics. In this article, I share some of my
+thoughts on the matter.
+
+[[html](2021-10-08--blog--ethics-ai)]
+
 # [2021-08-01 Sun 15:12] Vim vs. Emacs
 
 After 5 years of using vim, I switched to emacs in 2021. In this

@@ -11,12 +11,12 @@ for ultimately switching back to vim.
 The biggest selling point for Emacs is org-mode. Back then, I was
 spending a lot of time thinking about and developing an efficient
 system for managing information (see
-[[file:zettel--productivity.org][productivity]]). Following this,
-I was interested in carrying out this task in plaintext. When early
-efforts to create a solution using unix tools failed (see commit
-[[https://github.com/arumoy-shome/dotfiles/commit/1661626][1661626]]),
-I developed a workflow using emacs and org-mode (see
-[[file:zettel--research-workflow.org][research workflow]]).
+[productivity](LINKME)). Following this, I was interested in carrying
+out this task in plaintext. When early efforts to create a solution
+using unix tools failed (see commit
+[1661626](https://github.com/arumoy-shome/dotfiles/commit/1661626)),
+I developed a workflow using emacs and org-mode (see [research
+workflow](LINKME)).
 
 There are several reasons for switching back to Vim, the primary one
 being that org is exclusive to emacs and thus results in a "vendor
