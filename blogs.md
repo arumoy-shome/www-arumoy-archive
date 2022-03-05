@@ -41,6 +41,15 @@ towards my workflow as a researcher and how I manage my digital notes.
 
 [[html](2022-02-28--blog--aims)]
 
+# [2021-12-13 Mon 13:49] Reflections on Scientific Research
+
+I have been working as a researcher for several months now and have
+been working towards my first publication for the past few
+weeks. I have a few points of reflection on the scientific process and
+what constitutes as a good researcher.
+
+[[html](2021-12-13--blog--reflections-scientific-research)]
+
 # [2021-11-13 Sat 15:31] Computational Notebooks using Emacs & org-mode
 
 I tried an experiment where I did data analysis in the
