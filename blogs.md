@@ -20,6 +20,8 @@ After years of using [orgmode](https://orgmode.org) along with the
 [org-publish](https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html)
 package to run my website, I came back to markdown, shell & vim.
 
+[[html](2022-03-04--blog--website-management-pandoc)]
+
 # [2022-03-02 Wed 16:16] Keeping Terminal & Vim Colors in Sync
 
 When you are staring at text all day long, little things such as the
@@ -38,3 +40,11 @@ functionalities which I frequently use. AIMS is completely tuned
 towards my workflow as a researcher and how I manage my digital notes.
 
 [[html](2022-02-28--blog--aims)]
+
+# [2021-08-01 Sun 15:12] Vim vs. Emacs
+
+After 5 years of using vim, I switched to emacs in 2021. In this
+article, I lay down some of my observations along with my rationale
+for ultimately switching back to vim.
+
+[[html](2021-08-01--blog--vim-vs-emacs)]
