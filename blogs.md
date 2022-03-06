@@ -77,3 +77,25 @@ article, I lay down some of my observations along with my rationale
 for ultimately switching back to vim.
 
 [[html](2021-08-01--blog--vim-vs-emacs)]
+
+# [2021-06-09 Wed 16:26] Scientific Paper Discovery
+
+In this article I describe my process for discovering relevant and
+important papers in a new scientific field. Researchers need to read
+a lot to develop a deep understanding of their field of research and
+stay current on the latest developments.
+
+[[html](2021-06-09--blog--scientific-paper-discovery)]
+
+# [2021-06-03 Thu 17:25] Research Workflow
+
+Here I outline a workflow which I have developed to handle the
+non-linear nature of scientific research. There are days when one
+reads several papers without making much sense of them. However,
+a single paper the next day can result in a clear picture of the
+domain. The workflow acknowledges the fact that there are many more
+failures rather than successes in research. However, a failure is
+still an outcome---and this is what helps us decide what to do
+next---so it should still be recorded.
+
+[[html](2021-06-03--blog--research-workflow)]

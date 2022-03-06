@@ -16,7 +16,7 @@ out this task in plaintext. When early efforts to create a solution
 using unix tools failed (see commit
 [1661626](https://github.com/arumoy-shome/dotfiles/commit/1661626)),
 I developed a workflow using emacs and org-mode (see [research
-workflow](LINKME)).
+workflow](2021-06-03--blog--research-workflow)).
 
 There are several reasons for switching back to Vim, the primary one
 being that org is exclusive to emacs and thus results in a "vendor

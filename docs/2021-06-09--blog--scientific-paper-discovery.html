@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Arumoy Shome" />
-  <title>Vim vs. Emacs</title>
+  <title>Scientific Paper Discovery</title>
   <style>
     html {
       line-height: 1.5;
@@ -171,15 +171,22 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Vim vs. Emacs</h1>
+<h1 class="title">Scientific Paper Discovery</h1>
 <p class="author">Arumoy Shome</p>
-<p class="date">2021-08-01 Sun 15:12</p>
+<p class="date">2021-06-09 Wed 16:26</p>
 </header>
-<p>After 5 years of using vim, I switched to emacs in 2021. In this article, I lay down some of my observations along with my rationale for ultimately switching back to vim.</p>
-<p>The biggest selling point for Emacs is org-mode. Back then, I was spending a lot of time thinking about and developing an efficient system for managing information (see <a href="LINKME">productivity</a>). Following this, I was interested in carrying out this task in plaintext. When early efforts to create a solution using unix tools failed (see commit <a href="https://github.com/arumoy-shome/dotfiles/commit/1661626">1661626</a>), I developed a workflow using emacs and org-mode (see <a href="2021-06-03--blog--research-workflow">research workflow</a>).</p>
-<p>There are several reasons for switching back to Vim, the primary one being that org is exclusive to emacs and thus results in a “vendor lock-in” situation. Versus, in Vim I use markdown to write text which is more universal, has a larger community thus more tools and information is available.</p>
-<p>Another major motivation to move back to vim was that I prefer to work in the shell environment. My workflow—whether that is writing or coding—involves typing followed by running commands in the shell. I found that the tight integration with the shell in emacs was lacking for my needs. For instance, on osx, the <code>PATH</code> environment variable is not properly setup in emacs (it requires manual setup using <code>exec-path</code>). This results in a lot of plumbing for trivial tasks such as writing and building code (working with python and virtualenv was a nightmare!). Although emacs provides a shell written in emacs-lisp along with a full terminal emulator, they never felt quite as powerful and comfortable as a proper terminal emulator such as iTerm.</p>
-<p>I am fast in vim. Initially I did not notice this difference when I moved to Emacs. However, since switching back, I noticed that I can type what I am thinking in vim. I was not able to do that in emacs.</p>
-<p>Ultimately, it all comes down to a tradeoff between visual looks versus editing speed and shell environment. Things look a little nicer in emacs since its a gui (working with pros is especially pleasing in emacs). However, I am willing to make this compromise for a more productive working environment.</p>
+<p>In this article I describe my process for discovering relevant and important papers in a new scientific field. Since I am working towards a doctoral degree, I need to read a lot to develop a deep understanding of my field of research and stay current on the latest developments.</p>
+<h1 id="where-to-start">Where to Start</h1>
+<p>The starting point is always the most difficult. If possible, the best place to start is through recommendation from your peers/supervisor/advisor. If this is not possible, then coming up with a few good keywords from your research question is the next best approach. Reading a few non-scientific work (such as wikipedia) might be necessary to obtain the “buzz words” of technical jargon which are required to formulate the search queries.</p>
+<p>The right way to familiarize oneself with a new field is through a systematic literature review. However, I find that to be too big a commitment for a new field of research (I may not stick with it if I don’t find it that interesting). So the smarter (and quicker way) to familiarize oneself with the literature is to read the related papers.</p>
+<h1 id="finding-more-papers">Finding More Papers</h1>
+<p>I categorise this search process into two parts: 1. Intrinsic and 2. Extrinsic.</p>
+<p>We can find relevant papers from within the current paper we are reading. This can be done by first reading the <em>related work</em> section of the paper and second by reviewing the <em>reference</em> section of the paper. The <em>related work</em> section often leads to papers that are at a similar level of technical depth as the current paper. The papers in the <em>reference</em> section tend to be more general and provide a good high level overview of the field.</p>
+<p>We can also find relevant papers from the search engine (Google Scholar in my case). The <em>cited by</em> feature of GS is a good place to find forward references or the papers which are citing the current paper. These tend to be more specific and bleeding edge as they came after the current paper. The <em>related articles</em> are also a good place to find similar bodies of work. Google Scholar and Connected Papers are good resources to explore this.</p>
+<p>Usually, 5-10 good, well reputed papers is sufficient to start with. And then, reading their related papers (and in turn their related papers, so on and so forth as necessary), should result in a collection of bibliography which paints a good picture of the field.</p>
+<h1 id="staying-current">Staying Current</h1>
+<p>One also needs to stay current on the field. For this, Google Scholar alerts are a good start. By now the “position papers” and important authors in the field should be known. Following these authors on Google Scholar and creating an alert for when a position paper gets cited is a good way to stay up to speed. Another approach is to keep an eye on the relevant conferences and find papers directly from there.</p>
+<h1 id="concluding-remarks-and-acknowledgements">Concluding Remarks and Acknowledgements</h1>
+<p>I was surprised to find that not a lot of information on this matter is easily available. It is similar to how students are not taught how to learn effectively, before they start attending university classes. The emphasis on the “meta”, the methodology of doing something is lacking. I cannot take credit for the wisdom above, a lot of it came from conversations with my peers and <a href="https://scholar.google.com/intl/en/scholar/help.html">Google Scholar help website</a>.</p>
 </body>
 </html>
