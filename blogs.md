@@ -78,6 +78,13 @@ for ultimately switching back to vim.
 
 [[html](2021-08-01--blog--vim-vs-emacs)]
 
+# [2021-06-16 Wed 01:03] Aru's Org Capture Template (aocp.el)
+
+After observing my workflow of managing bibliographic information in
+Emacs, I extracted the repeated actions into an Emacs package.
+
+[[html](2021-06-16--blog--aocp)]
+
 # [2021-06-09 Wed 16:26] Scientific Paper Discovery
 
 In this article I describe my process for discovering relevant and

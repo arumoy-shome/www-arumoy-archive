@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Arumoy Shome" />
+  <title>Aru’s Org Capture Template (aocp.el)</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+    body {
+      font-family: "Source Code Pro", monospace;
+      color: #566b78;
+    }
+
+    h1,h2,strong {
+      color: #333;
+    }
+
+    code {
+      vertical-align: text-bottom;
+    }
+
+    pre {
+      padding: 1em;
+      border-left: 2px solid #69c;
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Aru’s Org Capture Template (aocp.el)</h1>
+<p class="author">Arumoy Shome</p>
+<p class="date">2021-06-16 Wed 01:03</p>
+</header>
+<p>After observing my workflow of managing bibliographic information in Emacs, I extracted the repeated actions into an Emacs package.</p>
+<p>To gain some perspective on my workflow, see my prior article on my <a href="2021-06-03--blog--research-workflow">research workflow</a>.</p>
+<p>The package is available on <a href="https://github.com/arumoy-shome/aocp.el">github</a> with two alternative installation methods: 1. By manually downloading the <code>aocp.el</code> file and sticking it in your Emacs <code>load-path</code>, or 2. Using <a href="https://github.com/raxod502/straight.el">straight.el</a> which is what I recommend.</p>
+<p>The package works under the assumption that you manage your bibliographic information in <a href="https://orgmode.org">org-mode</a> (a major-mode for Emacs). The functions made available through this package are intended to be used in an <a href="https://orgmode.org/manual/Capture.html">org-capture</a> template, they are not meant to be called interactively (ie. by using <code>M-x</code>).</p>
+<p>Assuming that you have a bibtex entry in your <code>kill-ring</code> (either by killing text within Emacs or by coping text from an external application into your clipboard), this package will do the following:</p>
+<ul>
+<li>Extract the bibkey</li>
+<li>Extract the first author</li>
+<li>Extract the last author</li>
+<li>Extract the source of publication</li>
+</ul>
+<pre><code>* TODO %(aocp--get-bibkey nil)
+  :PROPERTIES:
+  :PDF: file:~/Documents/papers/%(aocp--get-bibkey t).pdf
+  :FIRST_AUTHOR: %(aocp--get-first-author)
+  :LAST_AUTHOR: %(aocp--get-last-author)
+  :SOURCE: %(aocp--get-source)
+  :END:
+%?
++ problem statement ::
++ solution ::
++ results ::
++ limitations ::
++ remarks ::
+
+  #+begin_src bibtex :tangle yes
+  %c
+  #+end_src</code></pre>
+<p>Assuming you have the above template in <code>paper.txt</code>, you can configure org as follows (replace <code>your-org-inbox-file</code> appropriately):</p>
+<pre class="elisp"><code>(setq org-capture-templates
+    &#39;((&quot;p&quot; &quot;Paper&quot; entry (file+headline your-org-inbox-file &quot;Inbox&quot;)
+    &quot;%[~/.emacs.d/org-templates/paper.txt]&quot;)))</code></pre>
+<p>With this in place, you can quickly collect all bibliographic information within an org file. Leveraging the powerful functionality provided by <a href="https://orgmode.org/guide/Properties.html">org-properties</a>, one can quickly find relevant papers. For instance, I can look up all papers by author X or all papers by author X published at Y.</p>
+<p>A nice little tip is to download a local copy of the pdf and save them all in a folder. To make this easier, aocp.el also pushes the bibkey to the kill-ring. So all that is left to do is click the download button and paste the bibkey as the file name. This ensure 1. That you have all pdfs names consistently and 2. You have a link to the pdf from your org file (see the <code>:PDF:</code> property in the template above) which you can open by hitting <code>C-c C-o</code> over the link. You do not need to poke around in the directory containing the pdfs, all the context is available in the org file and should be the point of entry for all your bibliographic needs!</p>
+</body>
+</html>
