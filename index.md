@@ -2,9 +2,6 @@
 title: Arumoy Shome
 ---
 
-*"Software Engineering is the ultimate tool that enables others to do
-what needs to get done." -- Me (2021)*
-
 I am a researcher at [TU Delft](https://www.tudelft.nl/en/), working
 towards my doctorate as part of the [Software Engineering Research
 Group](https://se.ewi.tudelft.nl/). My research interests lie at the
