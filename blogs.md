@@ -22,6 +22,14 @@ package to run my website, I came back to markdown, shell & vim.
 
 [[html](2022-03-04--blog--website-management-pandoc)]
 
+# [2022-03-03 Thu 02:22] Timestamps in the Shell (today)
+
+I often work with text files containing pros (such as blog posts and
+git commit messages) and require adding a timestamp containing the
+current date, day & time.
+
+[[html](2022-03-03--blog--today)]
+
 # [2022-03-02 Wed 16:16] Keeping Terminal & Vim Colors in Sync
 
 When you are staring at text all day long, little things such as the
