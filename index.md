@@ -11,7 +11,7 @@ build, test, deploy, scale and maintain modern software systems with
 Machine Learning (ML) components. While we must look to the micro to
 identify and understand a problem, I try to keep an eye towards the
 current era of big-data and large-scale ML as a long-term area of
-research.
+research. You can find a list of my publications [here](publications).
 
 I completed my Msc. in Computer Science from the [Vrije Universiteit
 Amsterdam](https://www.vu.nl/en) and [Universiteit van

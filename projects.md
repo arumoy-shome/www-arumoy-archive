@@ -87,24 +87,6 @@ plain text lists.
 
 [[Github](https://github.com/arumoy-shome/vim-text-lists)]
 
-# [2019] ACE: Art, Color and Emotions
-
-*JavaScript, D3.js*
-
-Art has been the cornerstone of human expression and social progress
-through time. It is no wonder that art historians and daily
-enthusiasts alike have spent countless hours trying to understand more
-than what meets the eye. What an individual can draw from a painting
-is very subjective, but we now know that human mind has a high
-sensibility for well-defined subset of traits - one of them being
-colour. This paper describes the process of bringing a new light on
-how colours and emotional tone (sentiment) can be interlaced with one
-another. This is achieved with the use of widespread artificial
-intelligence techniques, a vast dataset of art meta-data(OmniArt) and
-state-of-the-art visual interaction tools.
-
-[[Paper](assets/pdf/ace.pdf)][[Publication](https://dl.acm.org/doi/abs/10.1145/3343031.3350588)]
-
 # [2018] 3D Kadaster
 
 *Python, Apache Spark, Three.js*
