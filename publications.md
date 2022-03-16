@@ -20,7 +20,7 @@ technical debt in machine learning systems. To understand the
 prevalence of data quality issues in datasets, we analyse 25 public
 datasets and identify 14 data smells.
 
-[[Preprint](LINKME)][[Publication](LINKME)][[Slides](https://arumoy.me/data-smells/slides)]
+[[Preprint](https://arxiv.org/abs/2203.08007)][[Publication](LINKME)][[Slides](https://arumoy.me/data-smells/slides)][[Website](https://arumoy.me/data-smells)]
 
 ```bibtex
 TODO
