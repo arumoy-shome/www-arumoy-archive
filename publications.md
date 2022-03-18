@@ -20,7 +20,7 @@ technical debt in machine learning systems. To understand the
 prevalence of data quality issues in datasets, we analyse 25 public
 datasets and identify 14 data smells.
 
-[[Preprint](https://arxiv.org/abs/2203.08007)][[Publication](LINKME)][[Slides](https://arumoy.me/data-smells/slides)][[Website](https://arumoy.me/data-smells)]
+[[Preprint](https://arxiv.org/abs/2203.08007)][[Publication](LINKME)][[Website](https://arumoy.me/data-smells)]
 
 ```bibtex
 TODO
@@ -45,10 +45,10 @@ state-of-the-art visual interaction tools.
 
 ```bibtex
 @inproceedings{strezoski2019ace,
-  title		={Ace: Art, color and emotion},
-  author	={Strezoski, Gjorgji and Shome, Arumoy and Bianchi, Riccardo and Rao, Shruti and Worring, Marcel},
-  booktitle	={Proceedings of the 27th ACM International Conference on Multimedia},
-  pages		={1053--1055},
-  year		={2019}
+  title     = {Ace: Art, color and emotion},
+  author    = {Strezoski, Gjorgji and Shome, Arumoy and Bianchi, Riccardo and Rao, Shruti and Worring, Marcel},
+  booktitle = {Proceedings of the 27th ACM International Conference on Multimedia},
+  pages     = {1053--1055},
+  year      = {2019}
 }
 ```
