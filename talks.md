@@ -4,6 +4,21 @@ title: Talks
 
 Following is a list of talks I have given in the past.
 
+# [2022-05-16 Mon] Data Validation for Machine Learning
+
+I gave a guest lecture on Data Validation for ML using Tensorflow Data
+Validation at the [REMLA
+course](https://se.ewi.tudelft.nl//remla/2022/), TU Delft.
+
+[[slides](LINKME)]
+
+# [2022-05-04 Wed] Data Smells in Public Datasets
+
+I presented out paper titled *Data Smells in Public Datasets* to the
+[SERG](https://se.ewi.tudelft.nl/) group.
+
+[[preprint](https://arxiv.org/abs/2203.08007)][[slides](https://docs.google.com/presentation/d/1ZC93nJs6bZHGRpN-I6xxyJfL7vKEc1ViGCepwzb5tM4/edit?usp=sharing)]
+
 # [2021-09-08 Wed] Privacy Preserving Deep Learning
 
 I gave a talk to the [SERG](https://se.ewi.tudelft.nl/) and
