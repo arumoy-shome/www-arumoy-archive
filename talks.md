@@ -14,8 +14,9 @@ course](https://se.ewi.tudelft.nl//remla/2022/), TU Delft.
 
 # [2022-05-04 Wed] Data Smells in Public Datasets
 
-I presented out paper titled *Data Smells in Public Datasets* to the
-[SERG](https://se.ewi.tudelft.nl/) group.
+I presented out paper titled *Data Smells in Public Datasets* at the
+[1^st^ International Conference on AI
+Engineering](https://conf.researchr.org/home/cain-2022).
 
 [[html](2022-05-04_talk_data-smells-public-datasets)][[preprint](https://arxiv.org/abs/2203.08007)][[slides](https://docs.google.com/presentation/d/1ZC93nJs6bZHGRpN-I6xxyJfL7vKEc1ViGCepwzb5tM4/edit?usp=sharing)]
 
