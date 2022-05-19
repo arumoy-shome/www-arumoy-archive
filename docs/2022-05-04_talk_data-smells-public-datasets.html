@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Arumoy Shome" />
+  <title>Data Smells in Public Datasets</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+    body {
+      font-family: "Source Code Pro", monospace;
+      color: #566b78;
+    }
+
+    h1,h2,strong {
+      color: #333;
+    }
+
+    code {
+      vertical-align: text-bottom;
+    }
+
+    pre {
+      padding: 1em;
+      border-left: 2px solid #69c;
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Data Smells in Public Datasets</h1>
+<p class="author">Arumoy Shome</p>
+<p class="date">2022-05-04 Wed</p>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>In this talk I will present our recent paper titled <em>Data Smells in Public Datasets</em> which was published at the <em><a href="https://conf.researchr.org/home/cain-2022">1<sup>st</sup> International Conference on AI Engineering (CAIN) 2022</a></em>. I will first present the problem we are trying to solve along with the contributions that we made. I will present the methodology which was followed along with the results obtained. I will present a select few smells which I personally find interesting &amp; hope will generate some discussion. Finally, we will conclude the talk with some high level takeaways from our study along with the limitations &amp; future directions of work.</p>
+<h1 id="problem-contributions">Problem &amp; Contributions</h1>
+<p>Compared to traditional software systems—which typically mature by experiencing change in the <em>code</em>—machine learning systems experience change in the <em>code, model &amp; data</em>. These three pillars of change are tangled with one another, where a small change or bug in any part of the pipeline, ripples through to the downstream stages. Thus it becomes extremely important to catch such problems in the early, upstream stages of the ML lifecycle, which typically revolve around the data.</p>
+<p>ML tends to be very data-centric in nature and majority of the work involves working with the data. When we put a software engineering lens on this, <strong>data for data science is equivalent to code for software engineering</strong>. While software engineers have several tools &amp; techniques to aid them in their day-to-day lives, the same cannot be said for data scientists.</p>
+<p>With this study, we wish to aid data scientists with their day-to-day tasks. In line with this motivation, we first identify the recurrent data quality issues that occur in popular public datasets. Our contributions here was to provide a formal definition of data smells which we define as data anti-patterns in the datasets that may indicate early signs of problems or technical debt. Our second research question was to analyse the prevalence of such data smells in public datasets. Here we contributed by creating a catalogue of 14 data smells by analysing 25 popular public datasets.</p>
+<h1 id="methodology">Methodology</h1>
+<p>Our methodology consists of 3 distinct phases.</p>
+<p>We start with the data selection phase. We used Kaggle—a popular public data repository–to identify datasets for this study. We consider structured datasets with the most number of votes which are lesser than 1GB in size for this study.</p>
+<p>Next we manually conduct a preliminary analysis of the datasets. This consists of observing the <code>head</code>, the <code>tail</code> &amp; the descriptive statistics of the dataset, reading the data documentation when available and such. Through the preliminary analysis we identify the data smells. We conduct this phase twice to ensure that the older datasets are also tagged with relevant smells which were discovered during analysis of newer datasets.</p>
+<p>Finally we conduct the catalogue creation phase. We hold all the data smells identified in the prior phase against a few exclusion criterion and create the final catalogue.</p>
+<h1 id="results">Results</h1>
+<p>This 2 dimensional histogram presents a nice overview of the “meta” analysis of the datasets &amp; smells. The plot presents the datasets along the X axis and the smells along the Y axis which allows us to observe the most frequent smells and where they were recorded. The plot also consists of two marginal plots. The marginal plot along the Y axis presents a count of smells across all datasets while the plot along the X axis presents the count of smells in each dataset.</p>
+<h1 id="catalogue">Catalogue</h1>
+<p>I will present 5 smells from the catalogue which I personally find interesting and hope will spark some discussion.</p>
+<h2 id="correlated-features">Correlated Features</h2>
+<p>I will start with the presence of correlated features smell which many of us are perhaps already familiar with. I want to start with this smell as it was most frequently observed in our sample of datasets.</p>
+<p>When two features A &amp; B are correlated, inducing a positive or negative change in A does the same in B. This presents an opportunity to perform feature engineering and construct a more efficient dataset. ML is highly experimental and any optimisation—no matter how smalls—counts. Small datasets ultimately are easier to understand, faster to train a model on &amp; take up less storage.</p>
+<h2 id="presence-of-sensitive-features">Presence of Sensitive Features</h2>
+<p>I want to motivate this smell with this figure. This is a probability density plot from the adult census dataset. This dataset consists information regarding individuals including their race &amp; sex. The supervised learning task is to predict the income class they belong to.</p>
+<p>Lets focus primarily on the top left plot which shows that for this dataset, a male individual of fairer skin is likely to earn more. Such a bias also exist between male &amp; female individuals of the same race. A model trained &amp; tested on this dataset will perform well however putting such a model in production will result in devastating consequences since the model was trained using biased historical data which does not reflect the real world.</p>
+<p>And we see examples of this in the real world, when financial institutes use ML to predict if an individual is entitled to a loan, or when the criminal justice system want to predict the severity of sentencing and when police try to identify if an individual is a threat using video surveillance.</p>
+<h2 id="hierarchy-from-label-encoding">Hierarchy from Label Encoding</h2>
+<p>The figure presents a probability density plot from the adult census dataset. Here we compare the income class of individuals to their level of education. We can see that for this dataset, an individual with a higher level of education is likely to earn more.</p>
+<p>Such a hierarchy in categorical features is useful information which can be utilised by the model. A common practise is to encode categorical features using numbers. As an example we can encode the education levels using numbers between 0 and 4, where higher education gets a larger number. Such an encoding scheme can be beneficial to the model as it exposes the hierarchy amongst the values of a categorical feature. However applying the same encoding scheme for the <em>race</em> or <em>sex</em> feature can introduce an unwanted hierarchy amongst the values where non should exist.</p>
+<h2 id="binary-missing-values">Binary Missing Values</h2>
+<p>Two features from the permit dataset contain a lot of missing values (over 90% of the data in these features are missing). A common technique in such cases is to drop such features since they do not impart any knowledge to the model. However, taking a closer look at the value of the non-missing data, we find that the missing values in these features carry an implicit meaning of ‘no’ or a negative response.</p>
+<p>Attention must be paid to the distribution of the missing values. If the missing values are concentrated within a specific feature (along columns) as opposed to being evenly distributed across the dataset (along columns &amp; rows), it may indicate that they carry an implicit meaning. A novice data scientist may hastily drop such features however in doing so they alter the original information portrait by dataset.</p>
+<h2 id="strings-in-human-friendly-formats">Strings in Human-friendly Formats</h2>
+<p>The <em>netfix</em> dataset contains information regarding content on the popular entertainment streaming service. The dataset contains information regarding movies &amp; TV shows along with their duration.</p>
+<p>Although the duration for movies can be easily converted to a numerical representation, doing the same for TV shows poses several challenges and requires further effort and domain expertise.</p>
+<h1 id="discussion">Discussion</h1>
+<p>In this section I will present two high level observations from this study.</p>
+<h2 id="lack-of-proper-documentation">Lack of Proper Documentation</h2>
+<p>We saw several instances where a lack of proper documentation was felt. The <em>heart</em> dataset contains very cryptic column names and understanding the information contained within these column require domain expertise. The <em>sex</em> feature within the same dataset is label encoded however we do not know which number represents which gender. The <em>cancer</em> dataset contains several numerical features but we do not know the unit in which the measurements were recorded.</p>
+<p>Every dataset is unique &amp; contains its own idiosyncrasies and we require proper documentation to understand them. Documentation provides useful metadata &amp; context to data scientists who are getting started with a dataset &amp; also help re-familiarise them to the dataset quickly when they come back at a later time.</p>
+<h2 id="lack-of-best-practices">Lack of Best Practices</h2>
+<p>We also found several instances of technical debt from lack of best practices in upstream processes. Going back to the <em>netflix</em> dataset where extracting numerical duration for TV shows was found to be challenging, or the <em>heart</em> dataset with its cryptic column names and the <em>cancer</em> dataset where the unit was not recorded. In all these instances, technical debt could have been avoided by simply using better column names or providing documentation. By following standardised procedures in the upstream data collection/creation stages, technical debt in the downstream stages can be avoided.</p>
+<p>We feel that data smells can help identify such sources of technical debt in the early stages of a ML pipeline where the complexity is relatively lower, and fixes are cheaper and easier to implement. This becomes especially important when working with external stakeholders within financial constraints.</p>
+<h1 id="limitations-future-work">Limitations &amp; Future Work</h1>
+<p>Lets take a look at the limitations of our current study and directions for future work.</p>
+<h2 id="limitations">Limitations</h2>
+<p>We opted for a <em>shallow</em> as opposed to a <em>deep</em> analysis of this datasets. This means that we did not fit a model to each dataset and carry out a supervised learning task. While such a workflow may reveal more smells, we believe that the smells also become specific to the dataset, model or problem we are trying to solve. Our intention was to pick the smallest subset of analysis tasks that can be scaled across several datasets.</p>
+<p>The smells are linked to the version of the dataset analysed. Unfortunately this is true for all data-centric work. However we do our best to make our results reproducible by providing the version of the data that was analysed in our paper.</p>
+<p>We do not know the impact of the smells. For instance, if we consider the missing units smell, we do not know if and to what extent this smell affects the performance of a model. This was considered beyond the scope of this project however remains to be a viable extension to our current work.</p>
+<p>Finally, smells are subjective to the human. But this is true for code smells as well. Not all long methods are bad and god classes still exist in public software projects.</p>
+<h2 id="future-work">Future Work</h2>
+<p>Growing the catalogue using more datasets is a low-hanging fruit. It would also be interesting to explore the notion of smells for semi-structured and unstructured datasets. Finally, it would be interesting to understand the co-occurance and evolution of smells throughout the ML lifecycle.</p>
+</body>
+</html>
