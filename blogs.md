@@ -14,6 +14,16 @@ your keywords to search within my blog posts. Your milage may vary as
 I don't perform any SEO optimisation so the search engine may not have
 indexed all my pages.
 
+# [2022-05-08 Sun 18:28] Effortless Parallel Execution with xargs & Friends {#effortless-parallel-execution-xargs}
+
+Recently, I had to run [Tensorflow Data
+Validation](https://github.com/tensorflow/data-validation) on over 500
+public datasets from [Kaggle](https://kaggle.com/) to generate a
+baseline schema file for further analysis. I chose to do this using
+the xargs unix command.
+
+[[html](2022-05-08--blog--effortless-parallel-execution-xargs)]
+
 # [2022-03-04 Fri 22:48] There and Back Again A Tale of Website Management
 
 After years of using [orgmode](https://orgmode.org) along with the
