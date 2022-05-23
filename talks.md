@@ -4,13 +4,13 @@ title: Talks
 
 Following is a list of talks I have given in the past.
 
-# [2022-05-16 Mon] Data Validation for Machine Learning {#data-validation-remla}
+# [2022-05-16 Mon] Data Validation for Machine Learning {#remla-data-validation}
 
 I gave a guest lecture on Data Validation for ML using Tensorflow Data
 Validation at the [REMLA
 course](https://se.ewi.tudelft.nl//remla/2022/), TU Delft.
 
-[[slides](LINKME)]
+[[html](2022-05-16_talk_remla-data-validation)][[slides](https://docs.google.com/presentation/d/1xhqbR1mj7oNamLVnKRfMfh1dXI6fq89dUjmvkGrXC6o/edit?usp=sharing)]
 
 # [2022-05-04 Wed] Data Smells in Public Datasets {#data-smells-cain}
 
