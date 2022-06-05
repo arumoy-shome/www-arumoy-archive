@@ -20,6 +20,8 @@ directions of work.
 
 # Problem & Contributions
 
+![](assets/image/ml-mature-pillars.svg)
+
 Compared to traditional software systems---which typically mature by
 experiencing change in the *code*---machine learning systems
 experience change in the *code, model & data*. These three pillars of
@@ -48,6 +50,8 @@ data smells by analysing 25 popular public datasets.
 
 # Methodology
 
+![](assets/image/data-smells-methodology.svg)
+
 Our methodology consists of 3 distinct phases.
 
 We start with the data selection phase. We used Kaggle---a popular
@@ -69,6 +73,8 @@ and create the final catalogue.
 
 # Results
 
+![](assets/image/data-smells-2d-histplot.svg)
+
 This 2 dimensional histogram presents a nice overview of the "meta"
 analysis of the datasets & smells. The plot presents the datasets
 along the X axis and the smells along the Y axis which allows us to
@@ -84,6 +90,8 @@ interesting and hope will spark some discussion.
 
 ##  Correlated Features
 
+![](assets/image/data-smells-red-corr.svg)
+
 I will start with the presence of correlated features smell which many
 of us are perhaps already familiar with. I want to start with this
 smell as it was most frequently observed in our sample of datasets.
@@ -96,6 +104,8 @@ smalls---counts. Small datasets ultimately are easier to understand,
 faster to train a model on & take up less storage.
 
 ## Presence of Sensitive Features
+
+![](assets/image/data-smells-misc-sensitive.svg)
 
 I want to motivate this smell with this figure. This is a probability
 density plot from the adult census dataset. This dataset consists
@@ -119,6 +129,8 @@ threat using video surveillance.
 
 ## Hierarchy from Label Encoding
 
+![](assets/image/data-smells-cat-hierarchy.svg)
+
 The figure presents a probability density plot from the adult census
 dataset. Here we compare the income class of individuals to their
 level of education. We can see that for this dataset, an individual
@@ -135,6 +147,8 @@ feature. However applying the same encoding scheme for the *race* or
 where non should exist.
 
 ## Binary Missing Values
+
+![](assets/image/data-smells-miss-bin.svg)
 
 Two features from the permit dataset contain a lot of missing values
 (over 90% of the data in these features are missing). A common
@@ -153,6 +167,8 @@ however in doing so they alter the original information portrait by
 dataset.
 
 ## Strings in Human-friendly Formats
+
+![](assets/image/data-smells-str-human.svg)
 
 The *netfix* dataset contains information regarding content on the
 popular entertainment streaming service. The dataset contains
