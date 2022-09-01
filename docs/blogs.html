@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,15 +137,26 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
@@ -172,44 +186,107 @@
 <header id="title-block-header">
 <h1 class="title">Blogs</h1>
 </header>
-<p>This page contains links to some of my writings on topics that interest me. Usually, they are inspired by problems that I experience in my day-to-day life.</p>
+<p>This page contains links to some of my writings on topics that
+interest me. Usually, they are inspired by problems that I experience in
+my day-to-day life.</p>
 <p>I like pondering over the act or the process of doing something.</p>
-<p>To search my website using keywords, use a search engine. For instance, in Google you can type <code>site:arumoy.me</code> followed by your keywords to search within my blog posts. Your milage may vary as I don’t perform any SEO optimisation so the search engine may not have indexed all my pages.</p>
-<h1 id="effortless-parallel-execution-xargs">[2022-05-08 Sun 18:28] Effortless Parallel Execution with xargs &amp; Friends</h1>
-<p>Recently, I had to run <a href="https://github.com/tensorflow/data-validation">Tensorflow Data Validation</a> on over 500 public datasets from <a href="https://kaggle.com/">Kaggle</a> to generate a baseline schema file for further analysis. I chose to do this using the xargs unix command.</p>
-<p>[<a href="2022-05-08--blog--effortless-parallel-execution-xargs">html</a>]</p>
-<h1 id="fri-2248-there-and-back-again-a-tale-of-website-management">[2022-03-04 Fri 22:48] There and Back Again A Tale of Website Management</h1>
-<p>After years of using <a href="https://orgmode.org">orgmode</a> along with the <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">org-publish</a> package to run my website, I came back to markdown, shell &amp; vim.</p>
+<p>To search my website using keywords, use a search engine. For
+instance, in Google you can type <code>site:arumoy.me</code> followed by
+your keywords to search within my blog posts. Your milage may vary as I
+don’t perform any SEO optimisation so the search engine may not have
+indexed all my pages.</p>
+<h1 id="effortless-parallel-execution-xargs">[2022-05-08 Sun 18:28]
+Effortless Parallel Execution with xargs &amp; Friends</h1>
+<p>Recently, I had to run <a
+href="https://github.com/tensorflow/data-validation">Tensorflow Data
+Validation</a> on over 500 public datasets from <a
+href="https://kaggle.com/">Kaggle</a> to generate a baseline schema file
+for further analysis. I chose to do this using the xargs unix
+command.</p>
+<p>[<a
+href="2022-05-08--blog--effortless-parallel-execution-xargs">html</a>]</p>
+<h1
+id="fri-2248-there-and-back-again-a-tale-of-website-management">[2022-03-04
+Fri 22:48] There and Back Again A Tale of Website Management</h1>
+<p>After years of using <a href="https://orgmode.org">orgmode</a> along
+with the <a
+href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">org-publish</a>
+package to run my website, I came back to markdown, shell &amp; vim.</p>
 <p>[<a href="2022-03-04--blog--website-management-pandoc">html</a>]</p>
-<h1 id="thu-0222-timestamps-in-the-shell-today">[2022-03-03 Thu 02:22] Timestamps in the Shell (today)</h1>
-<p>I often work with text files containing pros (such as blog posts and git commit messages) and require adding a timestamp containing the current date, day &amp; time.</p>
+<h1 id="thu-0222-timestamps-in-the-shell-today">[2022-03-03 Thu 02:22]
+Timestamps in the Shell (today)</h1>
+<p>I often work with text files containing pros (such as blog posts and
+git commit messages) and require adding a timestamp containing the
+current date, day &amp; time.</p>
 <p>[<a href="2022-03-03--blog--today">html</a>]</p>
-<h1 id="wed-1616-keeping-terminal-vim-colors-in-sync">[2022-03-02 Wed 16:16] Keeping Terminal &amp; Vim Colors in Sync</h1>
-<p>When you are staring at text all day long, little things such as the colors of your terminal screen &amp; text editor start to matter. There is vast information &amp; knowledge on color theory but very few colorscheme authors take this into account.</p>
+<h1 id="wed-1616-keeping-terminal-vim-colors-in-sync">[2022-03-02 Wed
+16:16] Keeping Terminal &amp; Vim Colors in Sync</h1>
+<p>When you are staring at text all day long, little things such as the
+colors of your terminal screen &amp; text editor start to matter. There
+is vast information &amp; knowledge on color theory but very few
+colorscheme authors take this into account.</p>
 <p>[<a href="2022-03-02--blog--terminal-vim-color-sync">html</a>]</p>
-<h1 id="mon-0327-arus-information-management-system-aims">[2022-02-28 Mon 03:27] Aru’s Information Management System (AIMS)</h1>
-<p>AIMS or Aru’s Information Management System is a collection of shellscripts to manage information in plaintext. It is inspired by <a href="orgmode.org/">org-mode</a>, and tries to replicate a subset of its functionalities which I frequently use. AIMS is completely tuned towards my workflow as a researcher and how I manage my digital notes.</p>
+<h1 id="mon-0327-arus-information-management-system-aims">[2022-02-28
+Mon 03:27] Aru’s Information Management System (AIMS)</h1>
+<p>AIMS or Aru’s Information Management System is a collection of
+shellscripts to manage information in plaintext. It is inspired by <a
+href="orgmode.org/">org-mode</a>, and tries to replicate a subset of its
+functionalities which I frequently use. AIMS is completely tuned towards
+my workflow as a researcher and how I manage my digital notes.</p>
 <p>[<a href="2022-02-28--blog--aims">html</a>]</p>
-<h1 id="mon-1349-reflections-on-scientific-research">[2021-12-13 Mon 13:49] Reflections on Scientific Research</h1>
-<p>I have been working as a researcher for several months now and have been working towards my first publication for the past few weeks. I have a few points of reflection on the scientific process and what constitutes as a good researcher.</p>
-<p>[<a href="2021-12-13--blog--reflections-scientific-research">html</a>]</p>
-<h1 id="sat-1531-computational-notebooks-using-emacs-org-mode">[2021-11-13 Sat 15:31] Computational Notebooks using Emacs &amp; org-mode</h1>
-<p>I tried an experiment where I did data analysis in the terminal. I wrote a python module consisting of all the analysis code (where each method corresponds to a cell). I redirected the output to files/images and viewed the results using unix commands/vim. I wrote down my observations and interpretations of the results in a separate markdown file.</p>
-<p>[<a href="2021-11-13--blog--computational-notebooks-orgmode">html</a>]</p>
+<h1 id="mon-1349-reflections-on-scientific-research">[2021-12-13 Mon
+13:49] Reflections on Scientific Research</h1>
+<p>I have been working as a researcher for several months now and have
+been working towards my first publication for the past few weeks. I have
+a few points of reflection on the scientific process and what
+constitutes as a good researcher.</p>
+<p>[<a
+href="2021-12-13--blog--reflections-scientific-research">html</a>]</p>
+<h1
+id="sat-1531-computational-notebooks-using-emacs-org-mode">[2021-11-13
+Sat 15:31] Computational Notebooks using Emacs &amp; org-mode</h1>
+<p>I tried an experiment where I did data analysis in the terminal. I
+wrote a python module consisting of all the analysis code (where each
+method corresponds to a cell). I redirected the output to files/images
+and viewed the results using unix commands/vim. I wrote down my
+observations and interpretations of the results in a separate markdown
+file.</p>
+<p>[<a
+href="2021-11-13--blog--computational-notebooks-orgmode">html</a>]</p>
 <h1 id="fri-1917-ethics-ai">[2021-10-08 Fri 19:17] Ethics &amp; AI</h1>
-<p>I attended the <a href="https://icai.ai/">ICAI</a> session on <em>Ethics &amp; AI</em>. It was a really informative session which touched upon some very interesting and intriguing topics. In this article, I share some of my thoughts on the matter.</p>
+<p>I attended the <a href="https://icai.ai/">ICAI</a> session on
+<em>Ethics &amp; AI</em>. It was a really informative session which
+touched upon some very interesting and intriguing topics. In this
+article, I share some of my thoughts on the matter.</p>
 <p>[<a href="2021-10-08--blog--ethics-ai">html</a>]</p>
-<h1 id="sun-1512-vim-vs.-emacs">[2021-08-01 Sun 15:12] Vim vs. Emacs</h1>
-<p>After 5 years of using vim, I switched to emacs in 2021. In this article, I lay down some of my observations along with my rationale for ultimately switching back to vim.</p>
+<h1 id="sun-1512-vim-vs.-emacs">[2021-08-01 Sun 15:12] Vim
+vs. Emacs</h1>
+<p>After 5 years of using vim, I switched to emacs in 2021. In this
+article, I lay down some of my observations along with my rationale for
+ultimately switching back to vim.</p>
 <p>[<a href="2021-08-01--blog--vim-vs-emacs">html</a>]</p>
-<h1 id="wed-0103-arus-org-capture-template-aocp.el">[2021-06-16 Wed 01:03] Aru’s Org Capture Template (aocp.el)</h1>
-<p>After observing my workflow of managing bibliographic information in Emacs, I extracted the repeated actions into an Emacs package.</p>
+<h1 id="wed-0103-arus-org-capture-template-aocp.el">[2021-06-16 Wed
+01:03] Aru’s Org Capture Template (aocp.el)</h1>
+<p>After observing my workflow of managing bibliographic information in
+Emacs, I extracted the repeated actions into an Emacs package.</p>
 <p>[<a href="2021-06-16--blog--aocp">html</a>]</p>
-<h1 id="wed-1626-scientific-paper-discovery">[2021-06-09 Wed 16:26] Scientific Paper Discovery</h1>
-<p>In this article I describe my process for discovering relevant and important papers in a new scientific field. Researchers need to read a lot to develop a deep understanding of their field of research and stay current on the latest developments.</p>
+<h1 id="wed-1626-scientific-paper-discovery">[2021-06-09 Wed 16:26]
+Scientific Paper Discovery</h1>
+<p>In this article I describe my process for discovering relevant and
+important papers in a new scientific field. Researchers need to read a
+lot to develop a deep understanding of their field of research and stay
+current on the latest developments.</p>
 <p>[<a href="2021-06-09--blog--scientific-paper-discovery">html</a>]</p>
-<h1 id="thu-1725-research-workflow">[2021-06-03 Thu 17:25] Research Workflow</h1>
-<p>Here I outline a workflow which I have developed to handle the non-linear nature of scientific research. There are days when one reads several papers without making much sense of them. However, a single paper the next day can result in a clear picture of the domain. The workflow acknowledges the fact that there are many more failures rather than successes in research. However, a failure is still an outcome—and this is what helps us decide what to do next—so it should still be recorded.</p>
+<h1 id="thu-1725-research-workflow">[2021-06-03 Thu 17:25] Research
+Workflow</h1>
+<p>Here I outline a workflow which I have developed to handle the
+non-linear nature of scientific research. There are days when one reads
+several papers without making much sense of them. However, a single
+paper the next day can result in a clear picture of the domain. The
+workflow acknowledges the fact that there are many more failures rather
+than successes in research. However, a failure is still an outcome—and
+this is what helps us decide what to do next—so it should still be
+recorded.</p>
 <p>[<a href="2021-06-03--blog--research-workflow">html</a>]</p>
 </body>
 </html>

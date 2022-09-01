@@ -4,6 +4,13 @@ title: Talks
 
 Following is a list of talks I have given in the past.
 
+# [2022-09-05 Mon] GNG: Data-centric AI Engineering
+
+I presented a review of my scientific contributions after the first
+year of my Phd at the GNG meeting.
+
+[[pdf](assets/pdf/portfolio.pdf)][[slides](https://docs.google.com/presentation/d/1URWuRLK8JDcppoQAPczGea1FusBm_IvisiOp9Duod54/edit?usp=sharing)]
+
 # [2022-05-16 Mon] Data Validation for Machine Learning {#remla-data-validation}
 
 I gave a guest lecture on Data Validation for ML using Tensorflow Data

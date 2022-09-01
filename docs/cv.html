@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,15 +137,26 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
@@ -172,89 +186,155 @@
 <header id="title-block-header">
 <h1 class="title">Curriculum Vitae</h1>
 </header>
-<p>[<a href="mailto:contact@arumoy.me">email</a>][<a href="https://github.com/arumoy-shome">Github</a>][<a href="https://www.linkedin.com/in/arumoyshome/">LinkedIn</a>]</p>
+<p>[<a href="mailto:contact@arumoy.me">email</a>][<a
+href="https://github.com/arumoy-shome">Github</a>][<a
+href="https://www.linkedin.com/in/arumoyshome/">LinkedIn</a>]</p>
 <h1 id="education">Education</h1>
-<h2 id="phd.-software-engineering-for-ai">[2021-2025] PhD. Software Engineering for AI</h2>
+<h2 id="phd.-software-engineering-for-ai">[2021-2025] PhD. Software
+Engineering for AI</h2>
 <p><em>Technische Universiteit Delft, Delft, The Netherlands</em></p>
-<h2 id="msc.-computer-science-big-data-engineering">[2018-2020] Msc. Computer Science, Big Data Engineering</h2>
-<p><em>Vrije Universiteit Amsterdam &amp; Universiteit van Amsterdam, Amsterdam, The Netherlands</em></p>
-<h2 id="bsc.-honours-system-design-engineering-entrepreneurship-option">[2012-2018] Bsc. Honours System Design Engineering, Entrepreneurship Option</h2>
+<h2 id="msc.-computer-science-big-data-engineering">[2018-2020] Msc.
+Computer Science, Big Data Engineering</h2>
+<p><em>Vrije Universiteit Amsterdam &amp; Universiteit van Amsterdam,
+Amsterdam, The Netherlands</em></p>
+<h2
+id="bsc.-honours-system-design-engineering-entrepreneurship-option">[2012-2018]
+Bsc. Honours System Design Engineering, Entrepreneurship Option</h2>
 <p><em>University of Waterloo, Waterloo, Canada</em></p>
 <h1 id="publications">Publications</h1>
-<h2 id="ace-art-color-and-emotions">[2019] ACE: Art, Color and Emotions</h2>
+<h2 id="ace-art-color-and-emotions">[2019] ACE: Art, Color and
+Emotions</h2>
 <p><em>ACM International Conference</em></p>
 <ul>
-<li>Created a data driven platform for exploring visual sentiment and emotion in artistic paintings over time.</li>
-<li>Trained a custom visual artistic sentiment extraction model using the OmniArt dataset.</li>
+<li>Created a data driven platform for exploring visual sentiment and
+emotion in artistic paintings over time.</li>
+<li>Trained a custom visual artistic sentiment extraction model using
+the OmniArt dataset.</li>
 <li>The platform is web based and built using D3.js and Javascript.</li>
-<li>The paper can be accessed via the <a href="https://dl.acm.org/doi/10.1145/3343031.3350588">ACM Digital Library</a> and a short demo of the application can be found on <a href="https://youtu.be/B1ZM6EQgEvU">Youtube</a>.</li>
+<li>The paper can be accessed via the <a
+href="https://dl.acm.org/doi/10.1145/3343031.3350588">ACM Digital
+Library</a> and a short demo of the application can be found on <a
+href="https://youtu.be/B1ZM6EQgEvU">Youtube</a>.</li>
 </ul>
 <h1 id="public-projects">Public Projects</h1>
 <h2 id="d-kadaster">[2018] 3D Kadaster</h2>
 <ul>
-<li>Developed a 3D model of all buildings in The Netherlands using AHN2 point cloud dataset and BAG building polygons dataset.</li>
-<li>Processed data using Apache Spark, ran algorithms on SurfSara’s Hathi cluster and created visualisations using Three.js.</li>
-<li>Detailed information on the research question, datasets and methodology can be found in the <a href="assets/pdf/kadaster.pdf">paper</a> and the visualisation can be viewed on the <a href="https://arumoy.me/3d-kadaster/">project website</a>.</li>
-<li>The project received recognition and was added to the course instructor’s <a href="https://event.cwi.nl/lsde/2018/showcase_c1.shtml">Hall of Fame</a>.</li>
+<li>Developed a 3D model of all buildings in The Netherlands using AHN2
+point cloud dataset and BAG building polygons dataset.</li>
+<li>Processed data using Apache Spark, ran algorithms on SurfSara’s
+Hathi cluster and created visualisations using Three.js.</li>
+<li>Detailed information on the research question, datasets and
+methodology can be found in the <a
+href="assets/pdf/kadaster.pdf">paper</a> and the visualisation can be
+viewed on the <a href="https://arumoy.me/3d-kadaster/">project
+website</a>.</li>
+<li>The project received recognition and was added to the course
+instructor’s <a
+href="https://event.cwi.nl/lsde/2018/showcase_c1.shtml">Hall of
+Fame</a>.</li>
 </ul>
-<h2 id="knowledge-acquisition-from-commoncrawl">[2018] Knowledge Acquisition from CommonCrawl</h2>
+<h2 id="knowledge-acquisition-from-commoncrawl">[2018] Knowledge
+Acquisition from CommonCrawl</h2>
 <ul>
-<li>Applied a complete knowledge acquisition pipeline to WARC datasets using natural language processing, part of speech tagging, named entity recognition and entity linking.</li>
-<li>The algorithms were run in parallel using Apache Spark on the <a href="https://www.cs.vu.nl/das4/">DAS4 cluster</a>.</li>
-<li>Proposed a novel idea to improve entity retrieval using machine learning, details for which can be found in the <a href="assets/pdf/wdp.pdf">paper</a>.</li>
+<li>Applied a complete knowledge acquisition pipeline to WARC datasets
+using natural language processing, part of speech tagging, named entity
+recognition and entity linking.</li>
+<li>The algorithms were run in parallel using Apache Spark on the <a
+href="https://www.cs.vu.nl/das4/">DAS4 cluster</a>.</li>
+<li>Proposed a novel idea to improve entity retrieval using machine
+learning, details for which can be found in the <a
+href="assets/pdf/wdp.pdf">paper</a>.</li>
 </ul>
 <h2 id="elevate">[2018] Elevate</h2>
 <ul>
-<li>Collaborated with the Waterloo Regional Down Syndrome Society, Canada and Fundacion Paraiso Down, El Salvador.</li>
-<li>Developed an improved and cheaper alternative to the state-of-the-art cognitive assessment tool for individuals with Down Syndrome using a Systems approach.</li>
-<li>Developed a business plan and presented the product at several startup incubators and pitch competitions to procure funding.</li>
-<li>An overview of user research, design methodology and engineering solution can be found on the <a href="https://arumoy.me/elevate/">project website</a> with additional details in the <a href="assets/pdf/elevate.pdf">paper</a>.</li>
+<li>Collaborated with the Waterloo Regional Down Syndrome Society,
+Canada and Fundacion Paraiso Down, El Salvador.</li>
+<li>Developed an improved and cheaper alternative to the
+state-of-the-art cognitive assessment tool for individuals with Down
+Syndrome using a Systems approach.</li>
+<li>Developed a business plan and presented the product at several
+startup incubators and pitch competitions to procure funding.</li>
+<li>An overview of user research, design methodology and engineering
+solution can be found on the <a
+href="https://arumoy.me/elevate/">project website</a> with additional
+details in the <a href="assets/pdf/elevate.pdf">paper</a>.</li>
 </ul>
 <h1 id="work-experience">Work Experience</h1>
 <h2 id="marsep-2020-research-intern">[Mar–Sep 2020] Research Intern</h2>
 <p><em>Netherlands eScience Center, Amsterdam, The Netherlands</em></p>
 <ul>
-<li>Conducted interdisciplinary research in the field of Computer Science, Artificial Intelligence and Particle Physics.</li>
-<li>Worked in collaboration with researchers from 3 institutes namely Universiteit van Amsterdam, Netherlands eScience Center and Nikhef.</li>
-<li>Conducted signal processing using multi layer perceptrons to identify highly elusive neutrino particles.</li>
-<li>Implemented a novel data processing pipeline for the <a href="https://km3net.org">KM3NeT Neutrino Telescope</a> using state-of-the-art graph convolutional networks.</li>
-<li>The pipeline was implemented using Python and deep learning models were developed using PyTorch.</li>
-<li>Details on the research question, dataset and methodology can be found in the <a href="assets/pdf/km3net.pdf">paper</a>. The project is open sourced and available on <a href="https://github.com/arumoy-shome/km3net">Github</a>.</li>
+<li>Conducted interdisciplinary research in the field of Computer
+Science, Artificial Intelligence and Particle Physics.</li>
+<li>Worked in collaboration with researchers from 3 institutes namely
+Universiteit van Amsterdam, Netherlands eScience Center and Nikhef.</li>
+<li>Conducted signal processing using multi layer perceptrons to
+identify highly elusive neutrino particles.</li>
+<li>Implemented a novel data processing pipeline for the <a
+href="https://km3net.org">KM3NeT Neutrino Telescope</a> using
+state-of-the-art graph convolutional networks.</li>
+<li>The pipeline was implemented using Python and deep learning models
+were developed using PyTorch.</li>
+<li>Details on the research question, dataset and methodology can be
+found in the <a href="assets/pdf/km3net.pdf">paper</a>. The project is
+open sourced and available on <a
+href="https://github.com/arumoy-shome/km3net">Github</a>.</li>
 </ul>
-<h2 id="aprjun-2020-graduate-teaching-assistant">[Apr–Jun 2020] Graduate Teaching Assistant</h2>
+<h2 id="aprjun-2020-graduate-teaching-assistant">[Apr–Jun 2020] Graduate
+Teaching Assistant</h2>
 <p><em>Vrije Universiteit Amsterdam, Amsterdam, The Netherlands</em></p>
 <ul>
-<li>Part-time teaching assistant to the Data Mining Techniques graduate course at Vrije Universiteit Amsterdam presented by <a href="https://www.cs.vu.nl/~mhoogen/">Dr. Mark Hoogendorn</a>.</li>
-<li>Managed 17 student teams and helped them with practical assignments presented in Python.</li>
-<li>Conducted weekly online tutorial sessions with students and clarified doubts regarding course logistics, concepts and theory.</li>
-<li>Graded 70+ student assignments and provided constructive feedback. Managed students performed well in the course with an average grade of 8.7.</li>
+<li>Part-time teaching assistant to the Data Mining Techniques graduate
+course at Vrije Universiteit Amsterdam presented by <a
+href="https://www.cs.vu.nl/~mhoogen/">Dr. Mark Hoogendorn</a>.</li>
+<li>Managed 17 student teams and helped them with practical assignments
+presented in Python.</li>
+<li>Conducted weekly online tutorial sessions with students and
+clarified doubts regarding course logistics, concepts and theory.</li>
+<li>Graded 70+ student assignments and provided constructive feedback.
+Managed students performed well in the course with an average grade of
+8.7.</li>
 <li>Received highly positive remarks from student evaluation.</li>
 </ul>
 <h2 id="web-developer-intern">[2015–2016] Web Developer Intern</h2>
 <p><em>Shopify, Ottawa, Canada</em></p>
 <ul>
-<li>Worked as part of a dynamic team of developer, designers and product managers to implement numerous features such as web components, animations and styling on a mature Ruby on Rails project using Ruby, Javascript, HTML &amp; SCSS.</li>
-<li>Practised object oriented design principles and test driven development to refactor code and improve test coverage.</li>
-<li>Used object relational mapping to lazy load data, reduce database calls and minimise server response time thus improving the application load time.</li>
+<li>Worked as part of a dynamic team of developer, designers and product
+managers to implement numerous features such as web components,
+animations and styling on a mature Ruby on Rails project using Ruby,
+Javascript, HTML &amp; SCSS.</li>
+<li>Practised object oriented design principles and test driven
+development to refactor code and improve test coverage.</li>
+<li>Used object relational mapping to lazy load data, reduce database
+calls and minimise server response time thus improving the application
+load time.</li>
 </ul>
 <h2 id="intern-freelance">[2014–2015] Intern &amp; Freelance</h2>
-<p><em>Various Employees &amp; Clients, Various Locations, Canada</em></p>
+<p><em>Various Employees &amp; Clients, Various Locations,
+Canada</em></p>
 <ul>
-<li>Worked at several large and small scale companies as part of University of Waterloo’s Co-op program.</li>
-<li>Worked as a freelance Ruby on Rails developer and created web applications as per client specifications.</li>
-<li>Developed soft skills such as critical thinking, clear communication and conflict resolution which are vital in a professional environment.</li>
-<li>Successfully completed technical projects such as designing, creating, testing and maintaining web applications.</li>
+<li>Worked at several large and small scale companies as part of
+University of Waterloo’s Co-op program.</li>
+<li>Worked as a freelance Ruby on Rails developer and created web
+applications as per client specifications.</li>
+<li>Developed soft skills such as critical thinking, clear communication
+and conflict resolution which are vital in a professional
+environment.</li>
+<li>Successfully completed technical projects such as designing,
+creating, testing and maintaining web applications.</li>
 <li>Wrote shell scripts to automate testing frameworks.</li>
-<li>More information can be found on <a href="https://linkedin.com/in/arumoyshome">LinkedIn</a>.</li>
+<li>More information can be found on <a
+href="https://linkedin.com/in/arumoyshome">LinkedIn</a>.</li>
 </ul>
 <h1 id="skills">Skills</h1>
 <h2 id="technical">Technical</h2>
 <ul>
-<li>Proficient in <em>Python, Ruby, Javascript, Latex &amp; Shell Scripting</em>.</li>
+<li>Proficient in <em>Python, Ruby, Javascript, Latex &amp; Shell
+Scripting</em>.</li>
 </ul>
 <h2 id="communication">Communication</h2>
 <ul>
-<li>Native or bi-lingual proficiency in <em>English &amp; Hindi</em>.</li>
+<li>Native or bi-lingual proficiency in <em>English &amp;
+Hindi</em>.</li>
 <li>Elementary proficiency in <em>Dutch</em>.</li>
 </ul>
 </body>

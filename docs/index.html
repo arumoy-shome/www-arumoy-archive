@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,15 +137,26 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
@@ -172,11 +186,56 @@
 <header id="title-block-header">
 <h1 class="title">Arumoy Shome</h1>
 </header>
-<p>I am a researcher at <a href="https://www.tudelft.nl/en/">TU Delft</a>, working towards my doctorate as part of the <a href="https://se.ewi.tudelft.nl/">Software Engineering Research Group</a>. My research interests lie at the intersection of Data Science, Software Engineering and Design. Here I am developing tools, techniques and best practises which allow us to build, test, deploy, scale and maintain modern software systems with Machine Learning (ML) components. While we must look to the micro to identify and understand a problem, I try to keep an eye towards the current era of big-data and large-scale ML as a long-term area of research. You can find a list of my publications <a href="publications">here</a>.</p>
-<p>I completed my Msc. in Computer Science from the <a href="https://www.vu.nl/en">Vrije Universiteit Amsterdam</a> and <a href="https://www.uva.nl/en">Universiteit van Amsterdam</a> in the Netherlands, specializing in Big Data Engineering. As part of my thesis, I conducted interdisciplinary research with <a href="https://www.nikhef.nl/en/">Nikhef</a> and <a href="https://www.esciencecenter.nl/">The Netherlands eScience Center</a> to improve the data processing pipeline of the <a href="https://www.km3net.org/">KM3NeT Neutrino Telescope</a> using Graph Convolutional Neural Networks.</p>
-<p>I obtained my Bachelor’s in The Applied Sciences from the <a href="https://uwaterloo.ca/">University of Waterloo</a> in Canada, specializing in System Design Engineering with an option in Entrepreneurship. Here, I learned to bring creative solutions to complex problems with multiple facets such as society, economics, environment and politics. I also learned how to nurture an idea at it’s inception, develop it using systems theory and successfully bring it to the market as a finished product.</p>
-<p>My professional experience is two pronged. I have over 5 years of software development experience through professional web development positions at <a href="https://linkedin.com/in/arumoyshome">large and small companies</a>. I am also versed with <a href="projects">data driven, research oriented projects</a> rooted in diverse topics such as Large Scale Data Engineering, Data Visualization and Artificial Intelligence. One such project, ACE: Art, Color and Emotions was published as part of the <a href="https://dl.acm.org/doi/abs/10.1145/3343031.3350588">ACM International Conference on Multimedia, 2019</a>. You can find more details about my professional experience in my Curriculum Vitae[<a href="cv">html</a>][<a href="assets/pdf/cv-redacted.pdf">pdf</a>].</p>
-<p>I enjoy sharing knowledge and having discussions and am always happy to <a href="talks">engage with other publicly</a>. Sometimes, I <a href="blogs">write about my day-to-day challenges</a> as a software engineering, data scientist &amp; researcher. All materials (excluding links to external websites or third party products) on this website are open sourced under the <a href="license">Creative Commons BY-NC-SA 3.0 license</a>.</p>
-<p>[<a href="mailto:contact@arumoy.me">email</a>][<a href="https://github.com/arumoy-shome">Github</a>][<a href="https://www.linkedin.com/in/arumoyshome/">LinkedIn</a>]</p>
+<p>I am a researcher at <a href="https://www.tudelft.nl/en/">TU
+Delft</a>, working towards my doctorate as part of the <a
+href="https://se.ewi.tudelft.nl/">Software Engineering Research
+Group</a>. My research interests lie at the intersection of Data
+Science, Software Engineering and Design. Here I am developing tools,
+techniques and best practises which allow us to build, test, deploy,
+scale and maintain modern software systems with Machine Learning (ML)
+components. While we must look to the micro to identify and understand a
+problem, I try to keep an eye towards the current era of big-data and
+large-scale ML as a long-term area of research. You can find a list of
+my publications <a href="publications">here</a>.</p>
+<p>I completed my Msc. in Computer Science from the <a
+href="https://www.vu.nl/en">Vrije Universiteit Amsterdam</a> and <a
+href="https://www.uva.nl/en">Universiteit van Amsterdam</a> in the
+Netherlands, specializing in Big Data Engineering. As part of my thesis,
+I conducted interdisciplinary research with <a
+href="https://www.nikhef.nl/en/">Nikhef</a> and <a
+href="https://www.esciencecenter.nl/">The Netherlands eScience
+Center</a> to improve the data processing pipeline of the <a
+href="https://www.km3net.org/">KM3NeT Neutrino Telescope</a> using Graph
+Convolutional Neural Networks.</p>
+<p>I obtained my Bachelor’s in The Applied Sciences from the <a
+href="https://uwaterloo.ca/">University of Waterloo</a> in Canada,
+specializing in System Design Engineering with an option in
+Entrepreneurship. Here, I learned to bring creative solutions to complex
+problems with multiple facets such as society, economics, environment
+and politics. I also learned how to nurture an idea at it’s inception,
+develop it using systems theory and successfully bring it to the market
+as a finished product.</p>
+<p>My professional experience is two pronged. I have over 5 years of
+software development experience through professional web development
+positions at <a href="https://linkedin.com/in/arumoyshome">large and
+small companies</a>. I am also versed with <a href="projects">data
+driven, research oriented projects</a> rooted in diverse topics such as
+Large Scale Data Engineering, Data Visualization and Artificial
+Intelligence. One such project, ACE: Art, Color and Emotions was
+published as part of the <a
+href="https://dl.acm.org/doi/abs/10.1145/3343031.3350588">ACM
+International Conference on Multimedia, 2019</a>. You can find more
+details about my professional experience in my Curriculum Vitae[<a
+href="cv">html</a>][<a href="assets/pdf/cv-redacted.pdf">pdf</a>].</p>
+<p>I enjoy sharing knowledge and having discussions and am always happy
+to <a href="talks">engage with other publicly</a>. Sometimes, I <a
+href="blogs">write about my day-to-day challenges</a> as a software
+engineering, data scientist &amp; researcher. All materials (excluding
+links to external websites or third party products) on this website are
+open sourced under the <a href="license">Creative Commons BY-NC-SA 3.0
+license</a>.</p>
+<p>[<a href="mailto:contact@arumoy.me">email</a>][<a
+href="https://github.com/arumoy-shome">Github</a>][<a
+href="https://www.linkedin.com/in/arumoyshome/">LinkedIn</a>]</p>
 </body>
 </html>

@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,15 +137,26 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
@@ -172,7 +186,16 @@
 <header id="title-block-header">
 <h1 class="title">License</h1>
 </header>
-<p>All materials (excluding links to external websites and third party websites) on this website are open sourced under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. In brief, you are free to <strong>share</strong> and <strong>adapt</strong> all materials in any way you wish provided that you cite my work, don’t sell the adapted work for money and share it under the same license.</p>
-<p>The above text was adapted from <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">this website</a>. You can also read <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">the full license</a>.</p>
+<p>All materials (excluding links to external websites and third party
+websites) on this website are open sourced under the Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported license. In brief, you
+are free to <strong>share</strong> and <strong>adapt</strong> all
+materials in any way you wish provided that you cite my work, don’t sell
+the adapted work for money and share it under the same license.</p>
+<p>The above text was adapted from <a
+href="https://creativecommons.org/licenses/by-nc-sa/3.0/">this
+website</a>. You can also read <a
+href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">the
+full license</a>.</p>
 </body>
 </html>

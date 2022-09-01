@@ -32,6 +32,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -136,15 +139,26 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
@@ -176,9 +190,22 @@
 <p class="author">Arumoy Shome</p>
 <p class="date">2022-03-04 Fri 22:48</p>
 </header>
-<p>After years of using <a href="https://orgmode.org">orgmode</a> along with the <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">org-publish</a> package to run my website, I came back to markdown, shell &amp; vim.</p>
-<p>In my humble shell dwelling days—before I began my journey into Emacs land—I was using <a href="https://jekyllrb.com/">Jekyll</a>. Rather, I was fighting with it. Github requires a <code>CNAME</code> file in the directory from which the website should be served. Now, the <code>github-pages</code> gem can be used to instruct Github Pages (GHP) to automatically build and serve the website. But I faced several challenges getting the compatible versions of the <code>github-pages</code>, <code>jekyll</code> and <code>ruby</code> to match.</p>
-<p>I decided to forgo this madness and just use html &amp; css to build my website. I used org-publish to accomplish this using the following setup in my <code>init.el</code>.</p>
+<p>After years of using <a href="https://orgmode.org">orgmode</a> along
+with the <a
+href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">org-publish</a>
+package to run my website, I came back to markdown, shell &amp; vim.</p>
+<p>In my humble shell dwelling days—before I began my journey into Emacs
+land—I was using <a href="https://jekyllrb.com/">Jekyll</a>. Rather, I
+was fighting with it. Github requires a <code>CNAME</code> file in the
+directory from which the website should be served. Now, the
+<code>github-pages</code> gem can be used to instruct Github Pages (GHP)
+to automatically build and serve the website. But I faced several
+challenges getting the compatible versions of the
+<code>github-pages</code>, <code>jekyll</code> and <code>ruby</code> to
+match.</p>
+<p>I decided to forgo this madness and just use html &amp; css to build
+my website. I used org-publish to accomplish this using the following
+setup in my <code>init.el</code>.</p>
 <pre class="elisp"><code>(setq org-publish-project-alist
  &#39;((&quot;org&quot; :components (&quot;org-posts&quot; &quot;org-static&quot;))
    (&quot;website-posts&quot;
@@ -203,11 +230,29 @@
     :include (&quot;CNAME&quot;)
     :publishing-function org-publish-attachment)
    (&quot;website&quot; :components (&quot;website-posts&quot; &quot;website-static&quot; &quot;website-cname&quot;))))</code></pre>
-<p>Since org-publish wipes the <code>:publishing-directory</code> clean prior to each build, I copy the <code>CNAME</code> file back in there.</p>
-<p>I was very pleased with its simplicity and its text-centric nature. The fact that it just worked out of the box was a pleasant surprise. However this intricate setup only worked in Emacs and this did not sit well with me. So I decided to find a more universal solution and landed on <a href="https://pandoc.org/">Pandoc</a>.</p>
-<p>Pandoc has the <code>--standalone</code> flag which produces a document which is valid on its own (think HTML documents with header and footer). One can write custom templates to produce documents styled to their liking. The default template can be viewed using <code>pandoc -R FORMAT</code>. A custom template can be specified using the <code>--template</code> flag. See <a href="https://pandoc.org/MANUAL.html#templates">section on templates</a> in the pandoc manual for more info.</p>
-<p>Following the advice laid out by <a href="Web%20design%20in%204%20minutes">https://jgthms.com/web-design-in-4-minutes/</a>, I designed a minimal pandoc custom template which you can find my in <a href="https://github.com/arumoy-shome/dotfiles">dotfiles</a> repo.</p>
-<p>My current workflow comprises of authoring content in markdown which I edit in vim. I use GNU make to automate the html generation using pandoc. The contents of my Makefile are as follows.</p>
+<p>Since org-publish wipes the <code>:publishing-directory</code> clean
+prior to each build, I copy the <code>CNAME</code> file back in
+there.</p>
+<p>I was very pleased with its simplicity and its text-centric nature.
+The fact that it just worked out of the box was a pleasant surprise.
+However this intricate setup only worked in Emacs and this did not sit
+well with me. So I decided to find a more universal solution and landed
+on <a href="https://pandoc.org/">Pandoc</a>.</p>
+<p>Pandoc has the <code>--standalone</code> flag which produces a
+document which is valid on its own (think HTML documents with header and
+footer). One can write custom templates to produce documents styled to
+their liking. The default template can be viewed using
+<code>pandoc -R FORMAT</code>. A custom template can be specified using
+the <code>--template</code> flag. See <a
+href="https://pandoc.org/MANUAL.html#templates">section on templates</a>
+in the pandoc manual for more info.</p>
+<p>Following the advice laid out by <a
+href="Web%20design%20in%204%20minutes">https://jgthms.com/web-design-in-4-minutes/</a>,
+I designed a minimal pandoc custom template which you can find my in <a
+href="https://github.com/arumoy-shome/dotfiles">dotfiles</a> repo.</p>
+<p>My current workflow comprises of authoring content in markdown which
+I edit in vim. I use GNU make to automate the html generation using
+pandoc. The contents of my Makefile are as follows.</p>
 <pre class="make"><code># Taken from &lt;https://gist.github.com/kristopherjohnson/7466917&gt;
 
 SRCFILES:= $(wildcard *.md)
