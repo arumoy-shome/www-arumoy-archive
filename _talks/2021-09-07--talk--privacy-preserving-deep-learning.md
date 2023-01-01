@@ -1,9 +1,12 @@
 ---
 title: Privacy Preserving Deep Learning
+filename: 2021-09-07--talk--privacy-preserving-deep-learning
 date: 2021-09-07
 author: Arumoy Shome
-tag: talk
-template: public
+abstract: |
+    A talk on Privacy Preserving Deep Learning (PPDL) I gave to my
+    research group. It was largly based on a literature review I did
+    during my Msc.
 ---
 
 Good morning all, thank you for being here. Today I wanted to share my

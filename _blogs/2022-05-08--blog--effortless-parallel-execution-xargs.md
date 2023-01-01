@@ -1,7 +1,14 @@
 ---
 title: Effortless Parallel Execution with xargs & Friends
+filename: 2022-05-08--blog--effortless-parallel-execution-xargs
 date: 2022-05-08
 author: Arumoy Shome
+abstract: |
+    Recently, I had to run [Tensorflow Data
+    Validation](https://github.com/tensorflow/data-validation) on over 500
+    public datasets from [Kaggle](https://kaggle.com/) to generate a
+    baseline schema file for further analysis. I chose to do this using
+    the xargs unix command.
 ---
 
 Recently, I had to run [Tensorflow Data

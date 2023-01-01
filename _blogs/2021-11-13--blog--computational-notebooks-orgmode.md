@@ -1,7 +1,11 @@
 ---
 title: Computational Notebooks using Emacs & org-mode
+filename: 2021-11-13--blog--computational-notebooks-orgmode
 author: Arumoy Shome
-date: [2021-11-13 Sat 15:31]
+date: 2021-11-13 Sat 15:31
+abstract: |
+    My observations and lessons learned from using Emacs and org-mode
+    to perform data analytics.
 ---
 
 I tried an experiment where I did data analysis in the

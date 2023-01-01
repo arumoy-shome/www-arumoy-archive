@@ -1,7 +1,11 @@
 ---
 title: Keeping Terminal & Vim Colors in Sync
+filename: 2022-03-02--blog--terminal-vim-color-sync
 author: Arumoy Shome
-date: [2022-03-02 Wed 16:16]
+date: 2022-03-02 Wed 16:16
+abstract: |
+    Keeping terminal and (neo)vim colors in sync. All from the
+    terminal of course.
 ---
 
 When you are staring at text all day long, little things such as the

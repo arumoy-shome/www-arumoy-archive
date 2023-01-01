@@ -1,7 +1,13 @@
 ---
 title: Ethics & AI
+filename: 2021-10-08--blog--ethics-ai
 author: Arumoy Shome
-date: [2021-10-08 Fri 19:17]
+date: 2021-10-08 Fri 19:17
+abstract: |
+    I attended the ICAI session on *Ethics & AI*. It was a really
+    informative session which touched upon some very interesting and
+    intriguing topics. In this article, I share some of my thoughts on
+    the matter.
 ---
 
 I attended the [ICAI](https://icai.ai/) session on *Ethics & AI*. It

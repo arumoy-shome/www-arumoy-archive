@@ -1,7 +1,11 @@
 ---
 title: Reflections on Scientific Research
+filename: 2021-12-13--blog--reflections-scientific-research
 author: Arumoy Shome
-date: [2021-12-13 Mon 13:49]
+date: 2021-12-13 Mon 13:49
+abstract: |
+    Reflections on the scientific process and what constitutes being
+    a good researcher.
 ---
 
 I have been working as a researcher for several months now and have

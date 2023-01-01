@@ -1,7 +1,11 @@
 ---
 title: Research Workflow
+filename: 2021-06-03--blog--research-workflow
 author: Arumoy Shome
-date: [2021-06-03 Thu 17:25]
+date: 2021-06-03 Thu 17:25
+abstract: |
+    An outline of my research workflow which I have developed to
+    handle the non-linear nature of scientific work.
 ---
 
 Here I outline a workflow which I have developed to handle the

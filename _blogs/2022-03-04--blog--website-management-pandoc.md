@@ -1,8 +1,10 @@
 ---
 title: There and Back Again A Tale of Website Management
+filename: 2022-03-04--blog--website-management-pandoc
 author: Arumoy Shome
-date: [2022-03-04 Fri 22:48]
-keywords: [markdown, vim, emacs, pandoc, make, shell]
+date: 2022-03-04 Fri 22:48
+abstract: |
+    Managing websites using markdown, shell and vim.
 ---
 
 After years of using [orgmode](https://orgmode.org) along with the

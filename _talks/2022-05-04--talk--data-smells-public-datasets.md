@@ -1,7 +1,20 @@
 ---
 title: Data Smells in Public Datasets
+filename: 2022-05-04--talk--data-smells-public-datasets
 author: Arumoy Shome
-date: [2022-05-04 Wed]
+date: 2022-05-04 Wed
+abstract: |
+    In this talk I will present our recent paper titled *Data Smells in
+    Public Datasets* which was published at the *[1^st^ International
+    Conference on AI Engineering (CAIN)
+    2022](https://conf.researchr.org/home/cain-2022)*. I will first
+    present the problem we are trying to solve along with the
+    contributions that we made. I will present the methodology which was
+    followed along with the results obtained. I will present a select few
+    smells which I personally find interesting & hope will generate some
+    discussion. Finally, we will conclude the talk with some high level
+    takeaways from our study along with the limitations & future
+    directions of work.
 ---
 
 # Introduction

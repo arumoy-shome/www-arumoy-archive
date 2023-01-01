@@ -1,7 +1,11 @@
 ---
 title: Vim vs. Emacs
+filename: 2021-08-01--blog--vim-vs-emacs
 author: Arumoy Shome
-date: [2021-08-01 Sun 15:12]
+date: 2021-08-01 Sun 15:12
+abstract: |
+    Reflections on using vim and emacs for text editing and
+    prosperity.
 ---
 
 After 5 years of using vim, I switched to emacs in 2021. In this

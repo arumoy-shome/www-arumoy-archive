@@ -1,7 +1,11 @@
 ---
 title: Scientific Paper Discovery
+filename: 2021-06-09--blog--scientific-paper-discovery
 author: Arumoy Shome
-date: [2021-06-09 Wed 16:26]
+date: 2021-06-09 Wed 16:26
+abstract: |
+    My process of discovering relevant and important papers in a new
+    scientific field.
 ---
 
 In this article I describe my process for discovering relevant and

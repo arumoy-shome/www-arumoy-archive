@@ -1,7 +1,10 @@
 ---
 title: Timestamps in the Shell (today)
-date: [2022-03-03 Thu 02:22]
+filename: 2022-03-03--blog--today
+date: 2022-03-03 Thu 02:22
 author: Arumoy Shome
+abstract: |
+    Creating timestamps in the terminal.
 ---
 
 I often work with text files containing pros (such as blog posts and

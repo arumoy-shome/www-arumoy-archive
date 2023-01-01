@@ -1,7 +1,17 @@
 ---
 title: Data Validation with TFDV
+filename: 2022-05-16--talk--remla-data-validation
 author: Arumoy Shome
-date: [2022-05-16 Mon]
+date: 2022-05-16 Mon
+abstract: |
+    In this lecture we will go over the basics of data validation. The
+    first half of this lecture will be a talk on the fundamentals of data
+    validation. We will answer *what is data validation?*, *why should we
+    validate our data?* and *how we can validate our data?*. The second
+    half of the lecture will be a hands-on tutorial on using [Tensorflow
+    Data Validation](https://github.com/tensorflow/data-validation),
+    instructions & code for which can be found on [this github
+    repo](https://github.com/arumoy-shome/remla).
 ---
 
 In this lecture we will go over the basics of data validation. The

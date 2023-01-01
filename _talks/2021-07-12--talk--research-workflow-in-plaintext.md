@@ -1,9 +1,18 @@
 ---
 title: Research Workflow in Plaintext
+filename: 2021-07-12--talk--research-workflow-in-plaintext
 author: Arumoy Shome
 date: 2021-07-12
-tag: talk
-template: public
+abstract: |
+    In this talk I will go over how we can use Emacs and org-mode to
+    craft a research workflow. We will look at how we can leverage the
+    power of Emacs and org-mode to capture, store, search and retrieve
+    research data, all in plain text! The talk will touch upon how
+    org-mode can be used as an environment for literate programming
+    and reproducible research. I do not assume any prior knowledge of
+    emacs or org-mode and I want this to be more of a discussion
+    rather than a talk. Please ask me questions as I go along and
+    share your thoughts, tips and techniques with others!
 ---
 
 # Introduction

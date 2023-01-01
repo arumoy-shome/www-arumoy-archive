@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# generate blogs.md
+TMP=$(mktemp)
+[[ -e blogs.md ]] && rm blogs.md
+find _blogs -name '*.md' |
+  sort --reverse |
+  while read -r file; do
+    pandoc --template=_templates/index.md "$file" --to=markdown >>"$TMP"
+  done
+
+cat _templates/blogs-intro.md "$TMP" >>blogs.md
+rm "$TMP"
+
+# generate talks.md
+TMP=$(mktemp)
+[[ -e talks.md ]] && rm talks.md
+find _talks -name '*.md' |
+  sort --reverse |
+  while read -r file; do
+    pandoc --template=_templates/index.md "$file" --to=markdown >>"$TMP"
+  done
+
+cat _templates/talks-intro.md "$TMP" >>talks.md
+rm "$TMP"
