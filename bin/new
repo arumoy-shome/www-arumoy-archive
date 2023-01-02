@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import sys
+import argparse
+from datetime import datetime
+
+EXT = ".md"
+TIMESTAMP = datetime.now()
+TIMESTAMP = TIMESTAMP.__format__("%Y-%m-%d %a %H:%M")
+TODAY = datetime.now()
+TODAY = TODAY.__format__("%Y-%m-%d")
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "title",
+    help="Title of new content",
+)
+parser.add_argument(
+    "-t",
+    "--type",
+    help="Type of content",
+    choices=[
+        "blog",
+        "talk",
+    ],
+)
+parser.add_argument(
+    "-x",
+    "--noedit",
+    help="Do not open new file in EDITOR",
+    action="store_true",
+)
+parser.add_argument(
+    "-f",
+    "--force",
+    help="Do not ask for confirmation",
+    action="store_true",
+)
+args = parser.parse_args()
+
+if args.type:
+    TYPE = args.type
+else:
+    TYPE = "blog"
+
+TITLE = args.title.strip().lower().replace(" ", "-")
+NAME = "--".join([TODAY, TYPE, TITLE])
+FILE = f"_{TYPE}s/{NAME}{EXT}"
+
+FRONTMATTER = [
+    "---",
+    "\n",
+    f"title: {TITLE}",
+    "\n",
+    f"date: {TIMESTAMP}",
+    "\n",
+    f"filename: {NAME}",
+    "\n",
+    "author: Arumoy Shome",
+    "\n",
+    "abstract: |",
+    "\n",
+    "---",
+]
+
+if not args.force:
+    confirm = input(f"Create {FILE}? [y]es/[n]o: ")
+
+    if confirm.lower()[0] == "n":
+        sys.exit("Terminated by user")
+
+try:
+    with open(f"{FILE}", "x") as f:
+        f.writelines(FRONTMATTER)
+except FileExistsError:
+    sys.exit(f"{FILE} already exists")
+
+if not args.noedit:
+    subprocess.run([os.getenv("EDITOR"), f"{FILE}"])
+
+sys.exit(f"{FILE} created")
