@@ -149,7 +149,7 @@
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: 1;}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -187,45 +187,52 @@
 <h1 class="title">Talks</h1>
 </header>
 <p>Following is a list of talks I have given in the past.</p>
-<h1 id="mon-gng-data-centric-ai-engineering">[2022-09-05 Mon] GNG:
-Data-centric AI Engineering</h1>
-<p>I presented a review of my scientific contributions after the first
-year of my Phd at the GNG meeting.</p>
-<p>[<a href="assets/pdf/portfolio.pdf">pdf</a>][<a
-href="https://docs.google.com/presentation/d/1URWuRLK8JDcppoQAPczGea1FusBm_IvisiOp9Duod54/edit?usp=sharing">slides</a>]</p>
-<h1 id="remla-data-validation">[2022-05-16 Mon] Data Validation for
-Machine Learning</h1>
-<p>I gave a guest lecture on Data Validation for ML using Tensorflow
-Data Validation at the <a
-href="https://se.ewi.tudelft.nl//remla/2022/">REMLA course</a>, TU
-Delft.</p>
-<p>[<a href="2022-05-16_talk_remla-data-validation">html</a>][<a
-href="https://docs.google.com/presentation/d/1xhqbR1mj7oNamLVnKRfMfh1dXI6fq89dUjmvkGrXC6o/edit?usp=sharing">slides</a>]</p>
-<h1 id="data-smells-cain">[2022-05-04 Wed] Data Smells in Public
-Datasets</h1>
-<p>I presented our paper titled <em>Data Smells in Public Datasets</em>
-at the <a
+<h1 id="mon-data-validation-with-tfdv">2022-05-16 Mon Data Validation
+with TFDV</h1>
+<p>In this lecture we will go over the basics of data validation. The
+first half of this lecture will be a talk on the fundamentals of data
+validation. We will answer <em>what is data validation?</em>, <em>why
+should we validate our data?</em> and <em>how we can validate our
+data?</em>. The second half of the lecture will be a hands-on tutorial
+on using <a
+href="https://github.com/tensorflow/data-validation">Tensorflow Data
+Validation</a>, instructions &amp; code for which can be found on <a
+href="https://github.com/arumoy-shome/remla">this github repo</a>.</p>
+<p>[<a href="2022-05-16--talk--remla-data-validation">html</a>]</p>
+<h1 id="wed-data-smells-in-public-datasets">2022-05-04 Wed Data Smells
+in Public Datasets</h1>
+<p>In this talk I will present our recent paper titled <em>Data Smells
+in Public Datasets</em> which was published at the <em><a
 href="https://conf.researchr.org/home/cain-2022">1<sup>st</sup>
-International Conference on AI Engineering</a>.</p>
-<p>[<a href="2022-05-04_talk_data-smells-public-datasets">html</a>][<a
-href="https://arxiv.org/abs/2203.08007">preprint</a>][<a
-href="https://docs.google.com/presentation/d/1ZC93nJs6bZHGRpN-I6xxyJfL7vKEc1ViGCepwzb5tM4/edit?usp=sharing">slides</a>]</p>
-<h1 id="ppdl">[2021-09-08 Wed] Privacy Preserving Deep Learning</h1>
-<p>I gave a talk to the <a href="https://se.ewi.tudelft.nl/">SERG</a>
-and <a href="https://se.ewi.tudelft.nl/ai4fintech/">AFR</a> groups on
-privacy preserving deep learning for medical imaging.</p>
+International Conference on AI Engineering (CAIN) 2022</a></em>. I will
+first present the problem we are trying to solve along with the
+contributions that we made. I will present the methodology which was
+followed along with the results obtained. I will present a select few
+smells which I personally find interesting &amp; hope will generate some
+discussion. Finally, we will conclude the talk with some high level
+takeaways from our study along with the limitations &amp; future
+directions of work.</p>
 <p>[<a
-href="2021-09-07--talk--privacy-preserving-deep-learning">html</a>][<a
-href="https://docs.google.com/presentation/d/1uN-YCxvvbOsUNJwpClJBCn98DVKlmD2x-vd8s7tDvdA/edit?usp=sharing">slides</a>][<a
-href="assets/pdf/ppdl.pdf">paper</a>]</p>
-<h1 id="research-workflow-plaintext">[2021-07-14 Wed] Research Workflow
-in Plaintext</h1>
-<p>I gave a talk to the <a href="https://se.ewi.tudelft.nl/">SERG</a>
-and <a href="https://se.ewi.tudelft.nl/ai4fintech/">AFR</a> groups on
-managing scientific work and crafting workflows in plaintext, using
-Emacs and org-mode.</p>
+href="2022-05-04--talk--data-smells-public-datasets">html</a>]</p>
+<h1 id="privacy-preserving-deep-learning">2021-09-07 Privacy Preserving
+Deep Learning</h1>
+<p>A talk on Privacy Preserving Deep Learning (PPDL) I gave to my
+research group. It was largly based on a literature review I did during
+my Msc.</p>
 <p>[<a
-href="2021-07-12--talk--research-workflow-in-plaintext">html</a>][<a
-href="org/assets/pdf/2021-07-12--talk--research-workflow-in-plaintext.pdf">pdf</a>]</p>
+href="2021-09-07--talk--privacy-preserving-deep-learning">html</a>]</p>
+<h1 id="research-workflow-in-plaintext">2021-07-12 Research Workflow in
+Plaintext</h1>
+<p>In this talk I will go over how we can use Emacs and org-mode to
+craft a research workflow. We will look at how we can leverage the power
+of Emacs and org-mode to capture, store, search and retrieve research
+data, all in plain text! The talk will touch upon how org-mode can be
+used as an environment for literate programming and reproducible
+research. I do not assume any prior knowledge of emacs or org-mode and I
+want this to be more of a discussion rather than a talk. Please ask me
+questions as I go along and share your thoughts, tips and techniques
+with others!</p>
+<p>[<a
+href="2021-07-12--talk--research-workflow-in-plaintext">html</a>]</p>
 </body>
 </html>
