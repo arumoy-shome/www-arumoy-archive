@@ -15,6 +15,15 @@ I don't perform any SEO optimisation so the search engine may not have
 indexed all my pages.
 
 
+# 2023-02-03 Fri 14:38 CMS using Pandoc and Friends
+
+Some tools & techniques I use to run a no non-sense blog using static
+html pages. All powered by a sane file naming convension, plaintext
+documents writing in markdown and exported to html using pandoc and
+other unix cli tools.
+
+[[html](2023-02-03--blog--cms-pandoc)]
+
 # 2022-05-08 Effortless Parallel Execution with xargs & Friends
 
 Recently, I had to run [Tensorflow Data
