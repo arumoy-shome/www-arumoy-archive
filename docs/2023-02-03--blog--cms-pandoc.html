@@ -455,18 +455,9 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="
 <code>all</code> target which simply runs the
 <code>create-indices</code> and <code>publish</code> scripts in the
 right order.</p>
-<pre class="make"><code>SRCFILES:= $(wildcard *.md)
-PUBFILES=$(SRCFILES:.md=.html)
-
-%.html: %.md
-    pandoc --template=public -o docs/$@ $&lt;
-
-publish: $(PUBFILES)
-
-clean:
-    rm $(PUBFILES)
-
-.PHONY: publish clean</code></pre>
+<pre class="make"><code>all:
+    bin/create-indices
+    bin/publish</code></pre>
 <h1 id="further-optimisations">Further optimisations</h1>
 <p>The <code>create-indices</code> script is currently sequential. You
 can imagine that this will keep getting slower as the number of posts

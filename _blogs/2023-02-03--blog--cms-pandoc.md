@@ -224,18 +224,9 @@ To automate the entire build process I use GNU make. I have a single
 scripts in the right order.
 
 ```make
-SRCFILES:= $(wildcard *.md)
-PUBFILES=$(SRCFILES:.md=.html)
-
-%.html: %.md
-	pandoc --template=public -o docs/$@ $<
-
-publish: $(PUBFILES)
-
-clean:
-	rm $(PUBFILES)
-
-.PHONY: publish clean
+all:
+	bin/create-indices
+	bin/publish
 ```
 
 # Further optimisations
