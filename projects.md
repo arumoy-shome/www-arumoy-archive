@@ -12,6 +12,15 @@ project whilst the papers can be read if one wishes for more depth on
 the matter. I usually host my projects on Github, the README can be
 consulted to get familiar with the structure of the repository.
 
+# [2023] Automatic Trailer Generation Using Genetic Algorithms
+
+In collaboration with [RTL](https://www.rtl.nl/) and [ICT with
+Industry](https://www.lorentzcenter.nl/ictwi2023), we developed a
+prototype to automatically generate a trailer for a given episode of
+*Goede Tijd, Slechte Tijd*, a popular Dutch TV Show.
+
+Unfortunately, the project is not open source.
+
 # [2021] aocp.el
 
 *elisp*

@@ -4,6 +4,29 @@ title: Publications
 
 This page contains links to my scientific publications.
 
+# [2023] Towards Understanding Machine Learning Testing in Practise
+
+Visualisations drive all aspects of the Machine Learning (ML)
+Development Cycle but remain a vastly untapped resource by the
+research community. ML testing is a highly interactive and cognitive
+process which demands a human-in-the-loop approach. Besides writing
+tests for the code base, bulk of the evaluation requires application
+of domain expertise to generate and interpret visualisations. To gain
+a deeper insight into the process of testing ML systems, we propose to
+study visualisations of ML pipelines by mining Jupyter notebooks. We
+propose a two prong approach in conducting the analysis. First, gather
+general insights and trends using a qualitative study of a smaller
+sample of notebooks. And then use the knowledge gained from the
+qualitative study to design an empirical study using a larger sample
+of notebooks. Computational notebooks provide a rich source of
+information in three formats---text, code and images. We hope to
+utilise existing work in image analysis and Natural Language
+Processing for text and code, to analyse the information present in
+notebooks. We hope to gain a new perspective into program
+comprehension and debugging in the context of ML testing.
+
+[[Preprint](LINKME)][[Publication](LINKME)]
+
 # [2022] Data Smells in Public Datasets
 
 *Python, Pandas, Matplotlib, org-mode*
@@ -20,11 +43,26 @@ technical debt in machine learning systems. To understand the
 prevalence of data quality issues in datasets, we analyse 25 public
 datasets and identify 14 data smells.
 
-[[Preprint](https://arxiv.org/abs/2203.08007)][[Publication](LINKME)][[Website](https://arumoy.me/data-smells)]
+[[Preprint](https://arxiv.org/abs/2203.08007)][[Publication](https://dl.acm.org/doi/abs/10.1145/3522664.3528621)]
 
 ```bibtex
-TODO
+@inproceedings{shome2022data,
+author = {Shome, Arumoy and Cruz, Lu\'{\i}s and van Deursen, Arie},
+title = {Data Smells in Public Datasets},
+year = {2022},
+isbn = {9781450392754},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3522664.3528621},
+doi = {10.1145/3522664.3528621},
+booktitle = {Proceedings of the 1st International Conference on AI Engineering: Software Engineering for AI},
+pages = {205–216},
+numpages = {12},
+location = {Pittsburgh, Pennsylvania},
+series = {CAIN '22}
+}
 ```
+
 # [2019] ACE: Art, Color and Emotions
 
 *JavaScript, D3.js*

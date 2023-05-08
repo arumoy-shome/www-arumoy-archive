@@ -145,6 +145,28 @@ Amsterdam, The Netherlands*
 + More information can be found on
   [LinkedIn](https://linkedin.com/in/arumoyshome).
 
+# Additional Scientific Contributions
+## [2023] Ethics and Energy session chair at MSR
+I chaired the session on Ethics and Energy at [MSR
+2023](https://conf.researchr.org/home/msr-2023).
+
+## [Jan 2023--Present] Edx MOOC Course Moderator
+I am the course moderator for the MOOC course [Unix Tools: Data
+Software and Production
+Engineering](https://online-learning.tudelft.nl/courses/unix-tools-data-software-and-production-engineering/)
+on edX.
+
+## [2022] ICSE Remote Student Volunteer
+I was a remote student volunteer at [ICSE
+2022](https://conf.researchr.org/home/icse-2022).
+
+## [2022] Guest Lecture on Data Validation at REMLA
+
+I gave a [guest lecture on data
+validation](2022-05-16--talk--remla-data-validation) at the [Release
+Engineering for Machine Learning
+Applications](https://se.ewi.tudelft.nl/remla/) course.
+
 # Skills
 
 ## Technical

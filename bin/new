@@ -17,6 +17,13 @@ parser.add_argument(
     "title",
     help="Title of new content",
 )
+
+parser.add_argument(
+  "-d",
+  "--date",
+  help="Date of content in YYYY-MM-DD format",
+)
+
 parser.add_argument(
     "-t",
     "--type",
@@ -45,6 +52,9 @@ if args.type:
 else:
     TYPE = "blog"
 
+if args.date:
+  TODAY = args.date
+
 TITLE = args.title.strip().lower().replace(" ", "-")
 NAME = "--".join([TODAY, TYPE, TITLE])
 FILE = f"_{TYPE}s/{NAME}{EXT}"
@@ -52,7 +62,7 @@ FILE = f"_{TYPE}s/{NAME}{EXT}"
 FRONTMATTER = [
     "---",
     "\n",
-    f"title: {TITLE}",
+    f"title: {args.title}",
     "\n",
     f"date: {TIMESTAMP}",
     "\n",
